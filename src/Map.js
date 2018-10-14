@@ -7,8 +7,8 @@ export class Map extends Component {
   componentDidMount() {
     OpenSeadragon({
       element: this.container.current,
-      prefixUrl: `/${process.env.PUBLIC_URL}/tiles_files/`,
-      tileSources: '/tiles.dzi',
+      prefixUrl: `${process.env.PUBLIC_URL}/tiles_files/`,
+      tileSources: `${process.env.PUBLIC_URL}/tiles.dzi`,
     })
   }
 
