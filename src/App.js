@@ -1,6 +1,7 @@
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Typography from '@material-ui/core/Typography'
 import React, { Component } from 'react'
+import {Map} from './Map'
 
 class App extends Component {
   render() {
@@ -8,9 +9,8 @@ class App extends Component {
       <div>
         <React.Fragment>
           <CssBaseline />
-          <Typography variant={'h1'}>Hello World</Typography>
-          <Typography variant={'h2'}>This is a starting point</Typography>
-          <Typography variant={'body1'}>Lorem Ipsum Dolor</Typography>
+          <Typography variant={'h2'}>Amerasia Map</Typography>
+          <Map/>
         </React.Fragment>
       </div>
     )
