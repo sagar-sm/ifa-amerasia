@@ -19,22 +19,35 @@ export class Map extends Component {
     })
   }
 
+  makeMarkerClickHandler = (point) => () => {
+    this.props.history.push(point.id)
+    const target = new OpenSeadragon.Point(point.x, point.y)
+    this.viewer.viewport.zoomTo(3, target)
+    this.viewer.viewport.panTo(target)
+  }
+
   generateOverlays = (size) => {
     return Array(size).fill(0).map((_, i) => {
 
+      const id = `location-marker-${i}`
+      const pointOptions = {
+        id,
+        x: (Math.random() * 0.8) + 0.2,
+        y: (Math.random() * 0.5),
+        placement: OpenSeadragon.Placement.CENTER,
+      }
+
       const locationMarker = <LocationOn
-        id={`location-marker-${i}`}
+        id={id}
         style={{fontSize: '2em', color: yellow[400], cursor: 'pointer'}}
-        onClick={() => {this.props.history.push(`/location-marker-${i}`)}}
+        onClick={this.makeMarkerClickHandler(pointOptions)}
       />
 
       const locationMarkerContainer = document.createElement('div')
       ReactDOM.render(locationMarker, locationMarkerContainer)
       return ({
+        ...pointOptions,
         element: locationMarkerContainer,
-        x: (Math.random() * 0.8) + 0.2,
-        y: (Math.random() * 0.5),
-        placement: OpenSeadragon.Placement.CENTER,
       })
     })
   }
