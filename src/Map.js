@@ -1,13 +1,19 @@
 import {yellow} from '@material-ui/core/colors'
+import Dialog from '@material-ui/core/Dialog/Dialog'
 import Typography from '@material-ui/core/Typography/Typography'
+import LocationOn from '@material-ui/icons/LocationOn'
+import loremIpsum from 'lorem-ipsum'
+import OpenSeadragon from 'openseadragon'
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
-import OpenSeadragon from 'openseadragon'
-import LocationOn from '@material-ui/icons/LocationOn'
-
 
 export class Map extends Component {
   container = React.createRef()
+
+  state = {
+    dialogOpen: true,
+    selectedHtml: '',
+  }
 
   componentDidMount() {
     this.viewer = OpenSeadragon({
@@ -24,6 +30,10 @@ export class Map extends Component {
     const target = new OpenSeadragon.Point(point.x, point.y)
     this.viewer.viewport.zoomTo(3, target)
     this.viewer.viewport.panTo(target)
+    this.setState({
+      dialogOpen: true,
+      selectedHtml: point.html,
+    })
   }
 
   generateOverlays = (size) => {
@@ -35,6 +45,12 @@ export class Map extends Component {
         x: (Math.random() * 0.8) + 0.2,
         y: (Math.random() * 0.5),
         placement: OpenSeadragon.Placement.CENTER,
+        html: `
+          <h1>Lorem Ipsum</h1>
+          <h2>${id}</h2>
+          <p>${loremIpsum({count: 2})}</p>
+          <image src="/favicon.ico"/>
+        `
       }
 
       const locationMarker = <LocationOn
@@ -52,11 +68,22 @@ export class Map extends Component {
     })
   }
 
+  onPopoverClose = () => {
+    this.setState({dialogOpen: false})
+  }
+
   render() {
     return (
       <>
         <Typography variant={'h2'}>Amerasia Map</Typography>
         <div ref={this.container} id={'test'} style={{height: '80vh', width: '100vw'}}/>
+        <Dialog
+          open={this.state.dialogOpen}
+          onClose={this.onPopoverClose}
+          BackdropProps={{invisible: true}}
+        >
+          <div dangerouslySetInnerHTML={{__html: this.state.selectedHtml}} />
+        </Dialog>
       </>
     )
   }
