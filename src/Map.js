@@ -6,30 +6,36 @@ import OpenSeadragon from 'openseadragon'
 import LocationOn from '@material-ui/icons/LocationOn'
 
 
-const generateOverlays = (size) => {
-  return Array(size).fill(0).map(() => {
-    const arrowContainer = document.createElement('div')
-    ReactDOM.render(<LocationOn style={{fontSize: '2em', color: yellow[400]}}/>, arrowContainer)
-    return ({
-      element: arrowContainer,
-      x: (Math.random() * 0.8) + 0.2,
-      y: (Math.random() * 0.5),
-      placement: OpenSeadragon.Placement.CENTER,
-    })
-  })
-}
-
 export class Map extends Component {
   container = React.createRef()
 
   componentDidMount() {
-    const overlays = generateOverlays(10)
-    console.log(overlays)
     this.viewer = OpenSeadragon({
       element: this.container.current,
       prefixUrl: `${process.env.PUBLIC_URL}/tiles_files/`,
       tileSources: `${process.env.PUBLIC_URL}/tiles.dzi`,
-      overlays: overlays,
+      overlays: this.generateOverlays(10),
+      zoomPerClick: 1, // disable zoom on click
+    })
+  }
+
+  generateOverlays = (size) => {
+    return Array(size).fill(0).map((_, i) => {
+
+      const locationMarker = <LocationOn
+        id={`location-marker-${i}`}
+        style={{fontSize: '2em', color: yellow[400], cursor: 'pointer'}}
+        onClick={() => {this.props.history.push(`/location-marker-${i}`)}}
+      />
+
+      const locationMarkerContainer = document.createElement('div')
+      ReactDOM.render(locationMarker, locationMarkerContainer)
+      return ({
+        element: locationMarkerContainer,
+        x: (Math.random() * 0.8) + 0.2,
+        y: (Math.random() * 0.5),
+        placement: OpenSeadragon.Placement.CENTER,
+      })
     })
   }
 

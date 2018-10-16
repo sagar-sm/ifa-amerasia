@@ -1,6 +1,5 @@
 import CssBaseline from '@material-ui/core/CssBaseline'
-import Typography from '@material-ui/core/Typography'
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import {Map} from './Map'
 import {MapDebug} from './MapDebug'
@@ -13,7 +12,9 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route exact path={'/'} component={Map} />
-            <Route path={'/debug'} component={MapDebug} />
+            {/*TODO: fix*/}
+            <Route path={'/:id'} component={Map} />
+            <Route exact path={'/debug'} component={MapDebug} />
           </Switch>
         </BrowserRouter>
       </>
