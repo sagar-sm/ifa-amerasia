@@ -1,4 +1,5 @@
 import {yellow} from '@material-ui/core/colors'
+import Typography from '@material-ui/core/Typography/Typography'
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import OpenSeadragon from 'openseadragon'
@@ -34,7 +35,10 @@ export class Map extends Component {
 
   render() {
     return (
-      <div ref={this.container} id={'test'} style={{height: '80vh', width: '100vw'}}/>
+      <>
+        <Typography variant={'h2'}>Amerasia Map</Typography>
+        <div ref={this.container} id={'test'} style={{height: '80vh', width: '100vw'}}/>
+      </>
     )
   }
 }
