@@ -88,7 +88,8 @@ export class Map extends Component {
 
     if (this.props.match.params.id) {
       const point = find(DATA, {id: this.props.match.params.id})
-      this.navigateTo(point)
+
+      setTimeout(() => this.navigateTo(point), 700)
     }
   }
 
