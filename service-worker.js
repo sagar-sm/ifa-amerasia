@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/ifa-amerasia/precache-manifest.56719872809cd8d3e977b8c644a47fa0.js"
+  "/ifa-amerasia/precache-manifest.38802fc2672231a6a684458f1c1af0ab.js"
 );
 
 workbox.clientsClaim();
