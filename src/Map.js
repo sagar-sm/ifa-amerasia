@@ -1,17 +1,25 @@
+import {withStyles} from '@material-ui/core'
 import {yellow} from '@material-ui/core/colors'
+import Drawer from '@material-ui/core/Drawer/Drawer'
 import LocationOn from '@material-ui/icons/LocationOn'
 import OpenSeadragon from 'openseadragon'
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
-import ArticleDrawer from './ArticleDrawer'
 import {headerHeight} from './NavBar'
 import {DATA} from './data'
+
+const styles = (theme) => ({
+  drawerPaper: {
+    marginTop: headerHeight,
+    width: 500,
+  }
+})
 
 export class Map extends Component {
   container = React.createRef()
 
   state = {
-    drawerOpen: true,
+    drawerOpen: false,
     selectedHtml: '',
   }
 
@@ -20,7 +28,7 @@ export class Map extends Component {
       element: this.container.current,
       prefixUrl: `${process.env.PUBLIC_URL}/tiles_files/`,
       tileSources: `${process.env.PUBLIC_URL}/tiles.dzi`,
-      overlays: this.generateOverlays(10),
+      overlays: this.generateOverlays(),
       zoomPerClick: 1, // disable zoom on click
     })
     this.viewer.viewport.minZoomLevel = 0.5
@@ -31,6 +39,7 @@ export class Map extends Component {
     const target = new OpenSeadragon.Point(point.x, point.y)
     this.viewer.viewport.zoomTo(2, target)
     this.viewer.viewport.panTo(target)
+    console.log(point)
     this.setState({
       drawerOpen: true,
       selectedHtml: point.html,
@@ -60,6 +69,7 @@ export class Map extends Component {
   }
 
   render() {
+    const {classes} = this.props
     return (
       <>
         <div
@@ -71,15 +81,19 @@ export class Map extends Component {
             width: '100%',
           }}
         />
-        <ArticleDrawer
+        <Drawer
+          variant={'persistent'}
+          anchor={'right'}
           open={this.state.drawerOpen}
           onClose={this.onDrawerClose}
           BackdropProps={{invisible: true}}
+          classes={{paper: classes.drawerPaper}}
         >
-          <div dangerouslySetInnerHTML={{__html: this.state.selectedHtml}} />
-        </ArticleDrawer>
+          <div dangerouslySetInnerHTML={{__html: this.state.selectedHtml}}/>
+        </Drawer>
       </>
     )
   }
 }
 
+export default withStyles(styles)(Map)
