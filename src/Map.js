@@ -1,19 +1,41 @@
-import {withStyles} from '@material-ui/core'
+import {withStyles, withWidth} from '@material-ui/core'
 import {yellow} from '@material-ui/core/colors'
 import Drawer from '@material-ui/core/Drawer/Drawer'
+import {isWidthUp} from '@material-ui/core/withWidth'
 import LocationOn from '@material-ui/icons/LocationOn'
 import OpenSeadragon from 'openseadragon'
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import {headerHeight} from './NavBar'
 import {DATA} from './data'
-import {get, find} from 'lodash'
+import {get, flow, find, debounce} from 'lodash'
+
+const drawerWidth = 500
 
 const styles = (theme) => ({
   drawerPaper: {
-    marginTop: headerHeight,
-    width: 500,
-  }
+    width: '100vw',
+    height: '50vh',
+    marginTop: 0,
+  },
+  mapContainer: {
+    width: `100vw`,
+    height: '50vh',
+  },
+
+  // Large screens
+  [theme.breakpoints.up('sm')]: {
+    drawerPaper: {
+      marginTop: headerHeight,
+      width: drawerWidth,
+      height: '100vh',
+    },
+    mapContainer: {
+      height: `calc(100vh - ${headerHeight}px)`,
+      marginTop: headerHeight,
+      transition: theme.transitions.create(['width'])
+    },
+  },
 })
 
 export class Map extends Component {
@@ -85,21 +107,22 @@ export class Map extends Component {
   }
 
   render() {
-    const {classes} = this.props
+    const {classes, width} = this.props
     return (
       <>
         <div
           ref={this.container}
           id={'test'}
+          className={classes.mapContainer}
           style={{
-            height: `calc(100vh - ${headerHeight}px)`,
-            marginTop: headerHeight,
-            width: '100%',
+            width: isWidthUp('sm', width) && this.state.drawerOpen
+              ? `calc(100vw - ${drawerWidth}px`
+              : '100vw'
           }}
         />
         <Drawer
           variant={'persistent'}
-          anchor={'right'}
+          anchor={isWidthUp('sm', width) ? 'right' : 'bottom'}
           open={this.state.drawerOpen}
           onClose={this.onDrawerClose}
           BackdropProps={{invisible: true}}
@@ -112,4 +135,7 @@ export class Map extends Component {
   }
 }
 
-export default withStyles(styles)(Map)
+export default flow([
+  withWidth(),
+  withStyles(styles, {withTheme: true})
+])(Map)
