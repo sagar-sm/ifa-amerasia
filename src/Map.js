@@ -6,12 +6,13 @@ import loremIpsum from 'lorem-ipsum'
 import OpenSeadragon from 'openseadragon'
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
+import ArticleDrawer from './ArticleDrawer'
 
 export class Map extends Component {
   container = React.createRef()
 
   state = {
-    dialogOpen: true,
+    drawerOpen: true,
     selectedHtml: '',
   }
 
@@ -23,6 +24,7 @@ export class Map extends Component {
       overlays: this.generateOverlays(10),
       zoomPerClick: 1, // disable zoom on click
     })
+    this.viewer.viewport.minZoomLevel = 0.5
   }
 
   makeMarkerClickHandler = (point) => () => {
@@ -31,7 +33,7 @@ export class Map extends Component {
     this.viewer.viewport.zoomTo(3, target)
     this.viewer.viewport.panTo(target)
     this.setState({
-      dialogOpen: true,
+      drawerOpen: true,
       selectedHtml: point.html,
     })
   }
@@ -46,7 +48,7 @@ export class Map extends Component {
         y: (Math.random() * 0.5),
         placement: OpenSeadragon.Placement.CENTER,
         html: `
-          <h1>Lorem Ipsum</h1>
+          <h1 class="heading">Lorem Ipsum</h1>
           <h2>${id}</h2>
           <p>${loremIpsum({count: 2})}</p>
           <image src="/favicon.ico"/>
@@ -68,22 +70,21 @@ export class Map extends Component {
     })
   }
 
-  onPopoverClose = () => {
-    this.setState({dialogOpen: false})
+  onDrawerClose = () => {
+    this.setState({drawerOpen: false})
   }
 
   render() {
     return (
       <>
-        <Typography variant={'h2'}>Amerasia Map</Typography>
-        <div ref={this.container} id={'test'} style={{height: '80vh', width: '100vw'}}/>
-        <Dialog
-          open={this.state.dialogOpen}
-          onClose={this.onPopoverClose}
+        <div ref={this.container} id={'test'} style={{height: 'calc(100vh - 64px)', width: '100%'}}/>
+        <ArticleDrawer
+          open={this.state.drawerOpen}
+          onClose={this.onDrawerClose}
           BackdropProps={{invisible: true}}
         >
           <div dangerouslySetInnerHTML={{__html: this.state.selectedHtml}} />
-        </Dialog>
+        </ArticleDrawer>
       </>
     )
   }
