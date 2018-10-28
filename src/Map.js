@@ -1,13 +1,11 @@
 import {yellow} from '@material-ui/core/colors'
-import Dialog from '@material-ui/core/Dialog/Dialog'
-import Typography from '@material-ui/core/Typography/Typography'
 import LocationOn from '@material-ui/icons/LocationOn'
-import loremIpsum from 'lorem-ipsum'
 import OpenSeadragon from 'openseadragon'
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import ArticleDrawer from './ArticleDrawer'
 import {headerHeight} from './NavBar'
+import {DATA} from './data'
 
 export class Map extends Component {
   container = React.createRef()
@@ -39,33 +37,19 @@ export class Map extends Component {
     })
   }
 
-  generateOverlays = (size) => {
-    return Array(size).fill(0).map((_, i) => {
-
-      const id = `location-marker-${i}`
-      const pointOptions = {
-        id,
-        x: (Math.random() * 0.8) + 0.2,
-        y: (Math.random() * 0.5),
-        placement: OpenSeadragon.Placement.CENTER,
-        html: `
-          <h1 class="heading">Lorem Ipsum</h1>
-          <h2>${id}</h2>
-          <p>${loremIpsum({count: 2})}</p>
-          <image src="/favicon.ico"/>
-        `
-      }
-
+  generateOverlays = () => {
+    return DATA.map((point) => {
       const locationMarker = <LocationOn
-        id={id}
+        id={point.id}
         style={{fontSize: '2em', color: yellow[400], cursor: 'pointer'}}
-        onClick={this.makeMarkerClickHandler(pointOptions)}
+        onClick={this.makeMarkerClickHandler(point)}
       />
 
       const locationMarkerContainer = document.createElement('div')
       ReactDOM.render(locationMarker, locationMarkerContainer)
       return ({
-        ...pointOptions,
+        ...point,
+        placement: OpenSeadragon.Placement.CENTER,
         element: locationMarkerContainer,
       })
     })
