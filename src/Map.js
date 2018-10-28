@@ -7,6 +7,7 @@ import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import {headerHeight} from './NavBar'
 import {DATA} from './data'
+import {get, find} from 'lodash'
 
 const styles = (theme) => ({
   drawerPaper: {
@@ -32,18 +33,33 @@ export class Map extends Component {
       zoomPerClick: 1, // disable zoom on click
     })
     this.viewer.viewport.minZoomLevel = 0.5
+
+    if (this.props.match.params.id) {
+      const point = find(DATA, {id: this.props.match.params.id})
+      this.navigateTo(point)
+    }
   }
 
-  makeMarkerClickHandler = (point) => () => {
-    this.props.history.push(point.id)
+  componentDidUpdate(prevProps) {
+    if (prevProps.match.params.id !== this.props.match.params.id) {
+      const point = find(DATA, {id: this.props.match.params.id})
+      this.navigateTo(point)
+    }
+  }
+
+  navigateTo = (point) => {
     const target = new OpenSeadragon.Point(point.x, point.y)
     this.viewer.viewport.zoomTo(2, target)
     this.viewer.viewport.panTo(target)
-    console.log(point)
     this.setState({
       drawerOpen: true,
       selectedHtml: point.html,
     })
+  }
+
+
+  makeMarkerClickHandler = (point) => () => {
+    this.props.history.push(point.id)
   }
 
   generateOverlays = () => {
