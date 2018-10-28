@@ -9,6 +9,8 @@ const styles = (theme) => ({
   },
 })
 
+export const headerHeight = 64
+
 class NavBar extends Component {
   render() {
     const {classes} = this.props

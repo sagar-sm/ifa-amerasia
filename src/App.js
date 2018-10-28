@@ -6,6 +6,7 @@ import {MapDebug} from './MapDebug'
 import NavBar from './NavBar'
 import Page from './Page'
 import {theme} from './theme'
+import './base.css'
 
 class App extends Component {
   render() {

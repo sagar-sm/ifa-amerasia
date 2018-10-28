@@ -7,6 +7,7 @@ import OpenSeadragon from 'openseadragon'
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import ArticleDrawer from './ArticleDrawer'
+import {headerHeight} from './NavBar'
 
 export class Map extends Component {
   container = React.createRef()
@@ -30,7 +31,7 @@ export class Map extends Component {
   makeMarkerClickHandler = (point) => () => {
     this.props.history.push(point.id)
     const target = new OpenSeadragon.Point(point.x, point.y)
-    this.viewer.viewport.zoomTo(3, target)
+    this.viewer.viewport.zoomTo(2, target)
     this.viewer.viewport.panTo(target)
     this.setState({
       drawerOpen: true,
@@ -77,7 +78,15 @@ export class Map extends Component {
   render() {
     return (
       <>
-        <div ref={this.container} id={'test'} style={{height: 'calc(100vh - 64px)', width: '100%'}}/>
+        <div
+          ref={this.container}
+          id={'test'}
+          style={{
+            height: `calc(100vh - ${headerHeight}px)`,
+            marginTop: headerHeight,
+            width: '100%',
+          }}
+        />
         <ArticleDrawer
           open={this.state.drawerOpen}
           onClose={this.onDrawerClose}
