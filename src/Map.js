@@ -1,18 +1,44 @@
 import {withStyles, withWidth} from '@material-ui/core'
 import {yellow} from '@material-ui/core/colors'
 import Drawer from '@material-ui/core/Drawer/Drawer'
+import IconButton from '@material-ui/core/IconButton/IconButton'
+import Tooltip from '@material-ui/core/Tooltip/Tooltip'
 import {isWidthUp} from '@material-ui/core/withWidth'
 import LocationOn from '@material-ui/icons/LocationOn'
+import ZoomIn from '@material-ui/icons/ZoomIn'
+import ZoomOut from '@material-ui/icons/ZoomOut'
+import ZoomOutMap from '@material-ui/icons/ZoomOutMap'
+import {debounce, find, flow, get} from 'lodash'
 import OpenSeadragon from 'openseadragon'
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
-import {headerHeight} from './NavBar'
 import {DATA} from './data'
-import {get, flow, find, debounce} from 'lodash'
+import {headerHeight} from './NavBar'
 
 const drawerWidth = 500
 
 const styles = (theme) => ({
+  buttons: {
+    position: 'absolute',
+    display: 'flex',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    // marginTop: headerHeight + theme.spacing.unit,
+    zIndex: theme.zIndex.appBar,
+  },
+  actionButton: {
+
+    margin: 4,
+    transition: theme.transitions.create(['background']),
+    background: 'rgba(255, 255, 255, 0.7)',
+    '&:hover': {
+      background: 'rgba(255, 255, 255, 1)',
+    }
+  },
+  icon: {
+    width: 20,
+    height: 20,
+  },
   drawerPaper: {
     width: '100vw',
     height: '50vh',
@@ -44,6 +70,7 @@ export class Map extends Component {
   state = {
     drawerOpen: false,
     selectedHtml: '',
+    canvasHovered: false,
   }
 
   componentDidMount() {
@@ -51,8 +78,11 @@ export class Map extends Component {
       element: this.container.current,
       prefixUrl: `${process.env.PUBLIC_URL}/tiles_files/`,
       tileSources: `${process.env.PUBLIC_URL}/tiles.dzi`,
-      overlays: this.generateOverlays(),
-      zoomPerClick: 1, // disable zoom on click
+      overlays: this.createOverlaysFromData(),
+      zoomPerClick: 1.5, // disable zoom on click
+      zoomInButton: 'zoom-in-button',
+      zoomOutButton: 'zoom-out-button',
+      homeButton: 'home-button',
     })
     this.viewer.viewport.minZoomLevel = 0.5
 
@@ -80,17 +110,21 @@ export class Map extends Component {
   }
 
 
-  makeMarkerClickHandler = (point) => () => {
+  makeMarkerClickHandler = (point) => (event) => {
+    event.preventDefault()
+    event.stopPropagation()
     this.props.history.push(point.id)
   }
 
-  generateOverlays = () => {
+  createOverlaysFromData = () => {
     return DATA.map((point) => {
-      const locationMarker = <LocationOn
-        id={point.id}
-        style={{fontSize: '2em', color: yellow[400], cursor: 'pointer'}}
-        onClick={this.makeMarkerClickHandler(point)}
-      />
+      const locationMarker = (
+        <IconButton id={point.id} onClick={this.makeMarkerClickHandler(point)}>
+          <LocationOn
+            style={{fontSize: '1.2em', color: yellow[400], cursor: 'pointer'}}
+          />
+        </IconButton>
+      )
 
       const locationMarkerContainer = document.createElement('div')
       ReactDOM.render(locationMarker, locationMarkerContainer)
@@ -106,6 +140,14 @@ export class Map extends Component {
     this.setState({drawerOpen: false})
   }
 
+  onCanvasEnter = () => {
+    this.setState({canvasHovered: true})
+  }
+
+  onCanvasLeave = () => {
+    this.setState({canvasHovered: false})
+  }
+
   render() {
     const {classes, width} = this.props
     return (
@@ -119,7 +161,27 @@ export class Map extends Component {
               ? `calc(100vw - ${drawerWidth}px`
               : '100vw'
           }}
-        />
+          onMouseEnter={this.onCanvasEnter}
+          onMouseLeave={this.onCanvasLeave}
+        >
+          <div className={classes.buttons} style={{opacity: this.state.canvasHovered ? 1 : 0}}>
+            <Tooltip title={'Zoom In'}>
+              <IconButton mini  className={classes.actionButton} id={'zoom-in-button'} aria-label={'zoom-in'}>
+                <ZoomIn className={classes.icon}/>
+              </IconButton>
+            </Tooltip>
+            <Tooltip title={'Zoom Out'}>
+              <IconButton mini  className={classes.actionButton} id={'zoom-out-button'} aria-label={'zoom-out'}>
+                <ZoomOut className={classes.icon}/>
+              </IconButton>
+            </Tooltip>
+            <Tooltip title={'Reset Zoom'}>
+              <IconButton mini  className={classes.actionButton} id={'home-button'} aria-label={'home'}>
+                <ZoomOutMap className={classes.icon}/>
+              </IconButton>
+            </Tooltip>
+          </div>
+        </div>
         <Drawer
           variant={'persistent'}
           anchor={isWidthUp('sm', width) ? 'right' : 'bottom'}
