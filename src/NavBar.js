@@ -1,8 +1,6 @@
 import {AppBar, withStyles} from '@material-ui/core'
-import IconButton from '@material-ui/core/IconButton/IconButton'
 import Toolbar from '@material-ui/core/Toolbar/Toolbar'
 import Typography from '@material-ui/core/Typography/Typography'
-import Close from '@material-ui/icons/Close'
 import React, {Component} from 'react'
 
 const styles = (theme) => ({
@@ -20,7 +18,6 @@ class NavBar extends Component {
       <AppBar className={classes.root} position={'absolute'} color={'default'}>
         <Toolbar>
           <Typography variant={'h4'}>Amerasia</Typography>
-          <IconButton><Close/></IconButton>
         </Toolbar>
       </AppBar>
     )

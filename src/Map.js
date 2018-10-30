@@ -1,10 +1,13 @@
 import {withStyles, withWidth} from '@material-ui/core'
 import {yellow} from '@material-ui/core/colors'
 import Drawer from '@material-ui/core/Drawer/Drawer'
+import Grid from '@material-ui/core/Grid/Grid'
 import IconButton from '@material-ui/core/IconButton/IconButton'
 import Tooltip from '@material-ui/core/Tooltip/Tooltip'
 import {isWidthUp} from '@material-ui/core/withWidth'
+import Close from '@material-ui/icons/Close'
 import LocationOn from '@material-ui/icons/LocationOn'
+import MyLocation from '@material-ui/icons/MyLocation'
 import ZoomIn from '@material-ui/icons/ZoomIn'
 import ZoomOut from '@material-ui/icons/ZoomOut'
 import ZoomOutMap from '@material-ui/icons/ZoomOutMap'
@@ -23,11 +26,9 @@ const styles = (theme) => ({
     display: 'flex',
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
-    // marginTop: headerHeight + theme.spacing.unit,
     zIndex: theme.zIndex.appBar,
   },
   actionButton: {
-
     margin: 4,
     transition: theme.transitions.create(['background']),
     background: 'rgba(255, 255, 255, 0.7)',
@@ -48,7 +49,7 @@ const styles = (theme) => ({
   },
   mapContainer: {
     width: `100vw`,
-    height: '50vh',
+    transition: theme.transitions.create(['width', 'height'])
   },
 
   // Large screens
@@ -61,7 +62,6 @@ const styles = (theme) => ({
     mapContainer: {
       height: `calc(100vh - ${headerHeight}px)`,
       marginTop: headerHeight,
-      transition: theme.transitions.create(['width'])
     },
   },
 })
@@ -115,18 +115,25 @@ export class Map extends Component {
     })
   }
 
-  makeMarkerClickHandler = (point) => (event) => {
-    // event.preventDefault()
-    // event.stopPropagation()
+  makeMarkerClickHandler = (point) => () => {
     if (this.props.match.params.id !== point.id) {
       this.props.history.push(point.id)
     }
   }
 
+  focusPointOnMap = () => {
+    const point = find(DATA, {id: this.props.match.params.id})
+    if (point) {
+      this.navigateTo(point)
+    }
+  }
+
   createOverlaysFromData = () => {
     return DATA.map((point) => {
+      const clickHandler = this.makeMarkerClickHandler(point)
+
       const locationMarker = (
-        <IconButton id={point.id} aria-label={point.id}>
+        <IconButton id={point.id} aria-label={point.id} onClick={clickHandler}>
           <LocationOn style={{fontSize: '1.2em', color: yellow[400], cursor: 'pointer'}}/>
         </IconButton>
       )
@@ -134,9 +141,10 @@ export class Map extends Component {
       const locationMarkerContainer = document.createElement('div')
       ReactDOM.render(locationMarker, locationMarkerContainer)
 
+      // Note: we only need this for mobile support for now
       new OpenSeadragon.MouseTracker({
         element: locationMarkerContainer,
-        clickHandler: this.makeMarkerClickHandler(point),
+        clickHandler: clickHandler,
       })
 
       return ({
@@ -149,6 +157,7 @@ export class Map extends Component {
 
   onDrawerClose = () => {
     this.setState({drawerOpen: false})
+    this.props.history.push('/')
   }
 
   onCanvasEnter = () => {
@@ -170,7 +179,10 @@ export class Map extends Component {
           style={{
             width: isWidthUp('sm', width) && this.state.drawerOpen
               ? `calc(100vw - ${drawerWidth}px`
-              : '100vw'
+              : '100vw',
+            height: isWidthUp(width, 'sm') && this.state.drawerOpen
+              ? '50vh'
+              : '100vh'
           }}
           onMouseEnter={this.onCanvasEnter}
           onMouseLeave={this.onCanvasLeave}
@@ -201,6 +213,22 @@ export class Map extends Component {
           BackdropProps={{invisible: true}}
           classes={{paper: classes.drawerPaper}}
         >
+          <Grid container justify={'flex-end'}>
+            <Grid item>
+              <Tooltip title={'Focus on Map '}>
+                <IconButton aria-label={'Focus on Map'} onClick={this.focusPointOnMap}>
+                  <MyLocation/>
+                </IconButton>
+              </Tooltip>
+            </Grid>
+            <Grid item>
+              <Tooltip title={'Close'}>
+                <IconButton aria-label={'Close Sidebar'} onClick={this.onDrawerClose}>
+                  <Close/>
+                </IconButton>
+              </Tooltip>
+            </Grid>
+          </Grid>
           <div dangerouslySetInnerHTML={{__html: this.state.selectedHtml}}/>
         </Drawer>
       </>
