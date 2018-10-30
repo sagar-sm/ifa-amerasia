@@ -42,7 +42,9 @@ const styles = (theme) => ({
   drawerPaper: {
     width: '100vw',
     height: '50vh',
+    padding: 2 * theme.spacing.unit,
     marginTop: 0,
+    paddingBottom: 100,
   },
   mapContainer: {
     width: `100vw`,
@@ -79,12 +81,12 @@ export class Map extends Component {
       prefixUrl: `${process.env.PUBLIC_URL}/tiles_files/`,
       tileSources: `${process.env.PUBLIC_URL}/tiles.dzi`,
       overlays: this.createOverlaysFromData(),
-      zoomPerClick: 1.5, // disable zoom on click
       zoomInButton: 'zoom-in-button',
       zoomOutButton: 'zoom-out-button',
       homeButton: 'home-button',
     })
     this.viewer.viewport.minZoomLevel = 0.5
+    this.viewer.gestureSettingsMouse.clickToZoom = false;
 
     if (this.props.match.params.id) {
       const point = find(DATA, {id: this.props.match.params.id})
@@ -113,23 +115,30 @@ export class Map extends Component {
     })
   }
 
-
   makeMarkerClickHandler = (point) => (event) => {
-    event.preventDefault()
-    event.stopPropagation()
-    this.props.history.push(point.id)
+    // event.preventDefault()
+    // event.stopPropagation()
+    if (this.props.match.params.id !== point.id) {
+      this.props.history.push(point.id)
+    }
   }
 
   createOverlaysFromData = () => {
     return DATA.map((point) => {
       const locationMarker = (
-        <IconButton id={point.id} onClick={this.makeMarkerClickHandler(point)} aria-label={point.id}>
+        <IconButton id={point.id} aria-label={point.id}>
           <LocationOn style={{fontSize: '1.2em', color: yellow[400], cursor: 'pointer'}}/>
         </IconButton>
       )
 
       const locationMarkerContainer = document.createElement('div')
       ReactDOM.render(locationMarker, locationMarkerContainer)
+
+      new OpenSeadragon.MouseTracker({
+        element: locationMarkerContainer,
+        clickHandler: this.makeMarkerClickHandler(point),
+      })
+
       return ({
         ...point,
         placement: OpenSeadragon.Placement.CENTER,
