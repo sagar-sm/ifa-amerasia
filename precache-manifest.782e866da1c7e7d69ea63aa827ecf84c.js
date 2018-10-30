@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "b308656fa8a3cda57555f4e71d038702",
-    "url": "/ifa-amerasia/static/media/crimson-text-latin-700.b308656f.woff2"
+    "revision": "b79c0dafcb7e059bb486b506362855e9",
+    "url": "/ifa-amerasia/static/media/crimson-text-latin-700italic.b79c0daf.woff2"
   },
   {
-    "revision": "b6321cd71db3767e1fa1",
+    "revision": "f6cb2f6a52cc4ba65e3c",
     "url": "/ifa-amerasia/static/css/main.b3caa254.chunk.css"
   },
   {
@@ -12,20 +12,20 @@ self.__precacheManifest = [
     "url": "/ifa-amerasia/static/media/crimson-text-latin-700italic.16977c5d.woff"
   },
   {
-    "revision": "b1a06ec13fea076fa6fd",
-    "url": "/ifa-amerasia/static/js/1.b1a06ec1.chunk.js"
+    "revision": "b3d250b60d829fb3601a",
+    "url": "/ifa-amerasia/static/js/1.b3d250b6.chunk.js"
   },
   {
     "revision": "e31a20dc566f89a3db40",
     "url": "/ifa-amerasia/static/js/runtime~main.e31a20dc.js"
   },
   {
-    "revision": "3bb46ecd000153dc08b82b8d27f148ed",
-    "url": "/ifa-amerasia/static/media/crimson-text-latin-400italic.3bb46ecd.woff2"
-  },
-  {
     "revision": "6195353b1df70e0b79679234acb4a4be",
     "url": "/ifa-amerasia/static/media/crimson-text-latin-400.6195353b.woff2"
+  },
+  {
+    "revision": "3bb46ecd000153dc08b82b8d27f148ed",
+    "url": "/ifa-amerasia/static/media/crimson-text-latin-400italic.3bb46ecd.woff2"
   },
   {
     "revision": "a238ae17f0e92a5633d77c344c2077cb",
@@ -36,12 +36,12 @@ self.__precacheManifest = [
     "url": "/ifa-amerasia/static/media/crimson-text-latin-600italic.bc1acaaf.woff2"
   },
   {
-    "revision": "b6321cd71db3767e1fa1",
-    "url": "/ifa-amerasia/static/js/main.b6321cd7.chunk.js"
+    "revision": "f6cb2f6a52cc4ba65e3c",
+    "url": "/ifa-amerasia/static/js/main.f6cb2f6a.chunk.js"
   },
   {
-    "revision": "b79c0dafcb7e059bb486b506362855e9",
-    "url": "/ifa-amerasia/static/media/crimson-text-latin-700italic.b79c0daf.woff2"
+    "revision": "b308656fa8a3cda57555f4e71d038702",
+    "url": "/ifa-amerasia/static/media/crimson-text-latin-700.b308656f.woff2"
   },
   {
     "revision": "0c503eb209806a4d203aa60b210cd9d3",
@@ -64,11 +64,11 @@ self.__precacheManifest = [
     "url": "/ifa-amerasia/static/media/crimson-text-latin-600italic.cf08fd57.woff"
   },
   {
-    "revision": "b1a06ec13fea076fa6fd",
+    "revision": "b3d250b60d829fb3601a",
     "url": "/ifa-amerasia/static/css/1.70475c42.chunk.css"
   },
   {
-    "revision": "d2f311c870b92f1df43c465edb93a06f",
+    "revision": "8e42f67cec0e95644231dbbd45b1c680",
     "url": "/ifa-amerasia/index.html"
   }
 ];
