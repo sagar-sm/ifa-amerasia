@@ -1,11 +1,11 @@
 import {CssBaseline, MuiThemeProvider} from '@material-ui/core'
 import React, {Component} from 'react'
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import {HashRouter, Route, Switch} from 'react-router-dom'
+import './base.css'
 import Map from './Map'
 import {MapDebug} from './MapDebug'
 import NavBar from './NavBar'
 import {theme} from './theme'
-import './base.css'
 
 class App extends Component {
   render() {
@@ -14,14 +14,14 @@ class App extends Component {
         <MuiThemeProvider theme={theme}>
           <CssBaseline />
           <NavBar />
-          <BrowserRouter>
+          <HashRouter hashType={'noslash'}>
             <Switch>
               <Route exact path={'/'} component={Map} />
               {/*TODO: fix*/}
               <Route path={'/:id'} component={Map} />
               <Route exact path={'/debug'} component={MapDebug} />
             </Switch>
-          </BrowserRouter>
+          </HashRouter>
         </MuiThemeProvider>
       </>
     )
