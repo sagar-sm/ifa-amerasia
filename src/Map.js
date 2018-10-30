@@ -123,10 +123,8 @@ export class Map extends Component {
   createOverlaysFromData = () => {
     return DATA.map((point) => {
       const locationMarker = (
-        <IconButton id={point.id} onClick={this.makeMarkerClickHandler(point)}>
-          <LocationOn
-            style={{fontSize: '1.2em', color: yellow[400], cursor: 'pointer'}}
-          />
+        <IconButton id={point.id} onClick={this.makeMarkerClickHandler(point)} aria-label={point.id}>
+          <LocationOn style={{fontSize: '1.2em', color: yellow[400], cursor: 'pointer'}}/>
         </IconButton>
       )
 
@@ -170,17 +168,17 @@ export class Map extends Component {
         >
           <div className={classes.buttons} style={{opacity: this.state.canvasHovered ? 1 : 0}}>
             <Tooltip title={'Zoom In'}>
-              <IconButton mini  className={classes.actionButton} id={'zoom-in-button'} aria-label={'zoom-in'}>
+              <IconButton className={classes.actionButton} id={'zoom-in-button'} aria-label={'zoom-in'}>
                 <ZoomIn className={classes.icon}/>
               </IconButton>
             </Tooltip>
             <Tooltip title={'Zoom Out'}>
-              <IconButton mini  className={classes.actionButton} id={'zoom-out-button'} aria-label={'zoom-out'}>
+              <IconButton className={classes.actionButton} id={'zoom-out-button'} aria-label={'zoom-out'}>
                 <ZoomOut className={classes.icon}/>
               </IconButton>
             </Tooltip>
             <Tooltip title={'Reset Zoom'}>
-              <IconButton mini  className={classes.actionButton} id={'home-button'} aria-label={'home'}>
+              <IconButton className={classes.actionButton} id={'home-button'} aria-label={'home'}>
                 <ZoomOutMap className={classes.icon}/>
               </IconButton>
             </Tooltip>
