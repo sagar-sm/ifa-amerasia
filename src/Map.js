@@ -186,21 +186,23 @@ export class Map extends Component {
           onMouseLeave={this.onCanvasLeave}
         >
           <div className={classes.buttons} style={{opacity: this.state.canvasHovered ? 1 : 0}}>
-            <Tooltip title={'Zoom In'}>
-              <IconButton className={classes.actionButton} id={'zoom-in-button'} aria-label={'zoom-in'}>
-                <ZoomIn className={classes.icon}/>
-              </IconButton>
-            </Tooltip>
-            <Tooltip title={'Zoom Out'}>
-              <IconButton className={classes.actionButton} id={'zoom-out-button'} aria-label={'zoom-out'}>
-                <ZoomOut className={classes.icon}/>
-              </IconButton>
-            </Tooltip>
-            <Tooltip title={'Reset Zoom'}>
-              <IconButton className={classes.actionButton} id={'home-button'} aria-label={'home'}>
-                <ZoomOutMap className={classes.icon}/>
-              </IconButton>
-            </Tooltip>
+            <Grid container direction={'column'}>
+              <Tooltip title={'Zoom In'}>
+                <IconButton className={classes.actionButton} id={'zoom-in-button'} aria-label={'zoom-in'}>
+                  <ZoomIn className={classes.icon}/>
+                </IconButton>
+              </Tooltip>
+              <Tooltip title={'Zoom Out'}>
+                <IconButton className={classes.actionButton} id={'zoom-out-button'} aria-label={'zoom-out'}>
+                  <ZoomOut className={classes.icon}/>
+                </IconButton>
+              </Tooltip>
+              <Tooltip title={'Reset Zoom'}>
+                <IconButton className={classes.actionButton} id={'home-button'} aria-label={'home'}>
+                  <ZoomOutMap className={classes.icon}/>
+                </IconButton>
+              </Tooltip>
+            </Grid>
           </div>
         </div>
         <Drawer
