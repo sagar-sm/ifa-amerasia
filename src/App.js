@@ -2,6 +2,7 @@ import {CssBaseline, MuiThemeProvider} from '@material-ui/core'
 import React, {Component} from 'react'
 import {HashRouter, Route, Switch} from 'react-router-dom'
 import AboutPage from './AboutPage'
+import AccessibilityPage from './AccessibilityPage'
 import './base.css'
 import CreditsPage from './CreditsPage'
 import Map from './Map'
@@ -22,6 +23,7 @@ class App extends Component {
               <Route exact path={'/debug'} component={MapDebug} />
               <Route exact path={'/about'} component={AboutPage} />
               <Route exact path={'/credits'} component={CreditsPage} />
+              <Route exact path={'/accessibility'} component={AccessibilityPage} />
 
               {/* IMPORTANT NOTE: This route MUST be at the end */}
               <Route exact path={'/:id'} component={Map} />
