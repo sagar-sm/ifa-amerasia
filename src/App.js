@@ -16,18 +16,20 @@ class App extends Component {
       <>
         <MuiThemeProvider theme={theme}>
           <CssBaseline />
-          <NavBar />
           <HashRouter hashType={'noslash'}>
-            <Switch>
-              <Route exact path={'/'} component={MapPage} />
-              <Route exact path={'/debug'} component={MapDebugPage} />
-              <Route exact path={'/about'} component={AboutPage} />
-              <Route exact path={'/credits'} component={CreditsPage} />
-              <Route exact path={'/accessibility'} component={AccessibilityPage} />
+            <>
+              <NavBar />
+              <Switch>
+                <Route exact path={'/'} component={MapPage} />
+                <Route exact path={'/debug'} component={MapDebugPage} />
+                <Route exact path={'/about'} component={AboutPage} />
+                <Route exact path={'/credits'} component={CreditsPage} />
+                <Route exact path={'/accessibility'} component={AccessibilityPage} />
 
-              {/* IMPORTANT NOTE: This route MUST be at the end */}
-              <Route exact path={'/:id'} component={MapPage} />
-            </Switch>
+                {/* IMPORTANT NOTE: This route MUST be at the end */}
+                <Route exact path={'/:id'} component={MapPage} />
+              </Switch>
+            </>
           </HashRouter>
         </MuiThemeProvider>
       </>

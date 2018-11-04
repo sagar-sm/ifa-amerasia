@@ -6,6 +6,10 @@ body {
     overflow: hidden;
 }
 
+a {
+    text-decoration: none;
+}
+
 p {
     font-weight: normal;
     color: rgba(0, 0, 0, 0.87);
