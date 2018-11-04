@@ -3,6 +3,7 @@ import React, {Component} from 'react'
 import {HashRouter, Route, Switch} from 'react-router-dom'
 import AboutPage from './AboutPage'
 import './base.css'
+import CreditsPage from './CreditsPage'
 import Map from './Map'
 import MapDebug from './MapDebug'
 import NavBar from './NavBar'
@@ -20,6 +21,7 @@ class App extends Component {
               <Route exact path={'/'} component={Map} />
               <Route exact path={'/debug'} component={MapDebug} />
               <Route exact path={'/about'} component={AboutPage} />
+              <Route exact path={'/credits'} component={CreditsPage} />
 
               {/* IMPORTANT NOTE: This route MUST be at the end */}
               <Route exact path={'/:id'} component={Map} />

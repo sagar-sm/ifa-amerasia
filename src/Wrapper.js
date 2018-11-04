@@ -11,9 +11,14 @@ const styles = (theme) => ({
   },
   [theme.breakpoints.down('md')]: {
     root: {
-      width: '100vw',
+      width: '70vw',
     }
-  }
+  },
+  [theme.breakpoints.down('sm')]: {
+    root: {
+      width: '100vw',
+    },
+  },
 })
 
 class Wrapper extends Component {
