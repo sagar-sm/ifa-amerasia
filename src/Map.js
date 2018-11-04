@@ -48,7 +48,6 @@ const styles = (theme) => ({
     paddingBottom: 100,
   },
   mapContainer: {
-    width: `100vw`,
     transition: theme.transitions.create(['width', 'height'])
   },
 
@@ -60,7 +59,6 @@ const styles = (theme) => ({
       height: '100vh',
     },
     mapContainer: {
-      height: `calc(100vh - ${headerHeight}px)`,
       marginTop: headerHeight,
     },
   },
@@ -180,9 +178,9 @@ export class Map extends Component {
             width: isWidthUp('sm', width) && this.state.drawerOpen
               ? `calc(100vw - ${drawerWidth}px`
               : '100vw',
-            height: isWidthUp(width, 'sm') && this.state.drawerOpen
+            height: !isWidthUp('sm', width) && this.state.drawerOpen
               ? '50vh'
-              : '100vh'
+              : `calc(100vh - ${headerHeight}px)`
           }}
           onMouseEnter={this.onCanvasEnter}
           onMouseLeave={this.onCanvasLeave}
