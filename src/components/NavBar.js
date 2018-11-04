@@ -16,15 +16,21 @@ const styles = theme => ({
     width: '100%',
     zIndex: theme.zIndex.drawer + 1,
   },
+  navLink: {
+    textDecoration: 'none',
+  },
   grow: {
     flexGrow: 1,
+  },
+  headerItem: {
+    width: '33.33%',
   },
   menuButton: {
     marginLeft: -12,
     marginRight: 20,
   },
   title: {
-    display: 'none',
+    // display: 'none',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
@@ -38,11 +44,8 @@ const styles = theme => ({
     },
     marginLeft: 0,
     width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      width: 300,
-    },
-    [theme.breakpoints.up('md')]: {
-      width: 500,
+    [theme.breakpoints.down('sm')]: {
+      display: 'none'
     }
   },
   searchIcon: {
@@ -72,7 +75,13 @@ const styles = theme => ({
       },
     },
   },
-});
+  navLinksContainer: {
+    display: 'flex',
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
+  },
+})
 
 class NavBar extends React.Component {
   render() {
@@ -82,14 +91,14 @@ class NavBar extends React.Component {
         <AppBar position={'absolute'} color={'default'}>
           <Toolbar>
             <Grid container justify={'space-between'} alignItems={'center'}>
-              <Grid item>
-                <Link to={'/'}>
-                  <Typography className={classes.title} variant='h4' noWrap>
+              <Grid item className={classes.headerItem}>
+                <Link to={'/'} className={classes.navLink}>
+                  <Typography className={classes.title} variant='h5' noWrap>
                     Amerasia
                   </Typography>
                 </Link>
               </Grid>
-              <Grid item>
+              <Grid item className={classes.headerItem}>
                 <div className={classes.search}>
                   <div className={classes.searchIcon}>
                     <SearchIcon/>
@@ -103,20 +112,20 @@ class NavBar extends React.Component {
                   />
                 </div>
               </Grid>
-              <Grid item>
-                <Grid container spacing={16}>
+              <Grid item className={`${classes.headerItem} ${classes.navLinksContainer}`}>
+                <Grid container spacing={16} justify={'flex-end'}>
                   <Grid item>
-                    <Link to={'/about'}>
+                    <Link to={'/about'} className={classes.navLink}>
                       <Typography variant={'button'}>ABOUT</Typography>
                     </Link>
                   </Grid>
                   <Grid item>
-                    <Link to={'/credits'}>
+                    <Link to={'/credits'} className={classes.navLink}>
                       <Typography variant={'button'}>CREDITS</Typography>
                     </Link>
                   </Grid>
                   <Grid item>
-                    <Link to={'/accessibility'}>
+                    <Link to={'/accessibility'} className={classes.navLink}>
                       <Typography variant={'button'}>ACCESSIBILITY</Typography>
                     </Link>
                   </Grid>
