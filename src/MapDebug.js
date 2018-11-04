@@ -35,8 +35,8 @@ class MapDebug extends Component {
   componentDidMount() {
     this.viewer = OpenSeadragon({
       element: this.container.current,
-      prefixUrl: `${process.env.PUBLIC_URL}/tiles_files/`,
-      tileSources: `${process.env.PUBLIC_URL}/tiles.dzi`,
+      prefixUrl: `${process.env.PUBLIC_URL}/map/vopel_files/`,
+      tileSources: `${process.env.PUBLIC_URL}/map/vopel.dzi`,
       zoomInButton: 'zoom-in-button',
       zoomOutButton: 'zoom-out-button',
       homeButton: 'home-button',

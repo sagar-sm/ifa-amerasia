@@ -48,6 +48,7 @@ const styles = (theme) => ({
     paddingBottom: 100,
   },
   mapContainer: {
+    background: '#4c221a',
     transition: theme.transitions.create(['width', 'height'])
   },
 
@@ -76,8 +77,8 @@ export class Map extends Component {
   componentDidMount() {
     this.viewer = OpenSeadragon({
       element: this.container.current,
-      prefixUrl: `${process.env.PUBLIC_URL}/tiles_files/`,
-      tileSources: `${process.env.PUBLIC_URL}/tiles.dzi`,
+      prefixUrl: `${process.env.PUBLIC_URL}/map/vopel_files/`,
+      tileSources: `${process.env.PUBLIC_URL}/map/vopel.dzi`,
       overlays: this.createOverlaysFromData(),
       zoomInButton: 'zoom-in-button',
       zoomOutButton: 'zoom-out-button',
