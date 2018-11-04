@@ -15,7 +15,7 @@ import {find, flow} from 'lodash'
 import OpenSeadragon from 'openseadragon'
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
-import {DATA} from './data'
+import {DATA} from '../data'
 import {headerHeight} from './NavBar'
 
 const drawerWidth = 500
@@ -65,7 +65,7 @@ const styles = (theme) => ({
   },
 })
 
-export class Map extends Component {
+export class MapPage extends Component {
   container = React.createRef()
 
   state = {
@@ -240,4 +240,4 @@ export class Map extends Component {
 export default flow([
   withWidth(),
   withStyles(styles, {withTheme: true})
-])(Map)
+])(MapPage)

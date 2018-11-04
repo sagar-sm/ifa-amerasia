@@ -25,7 +25,7 @@ const styles = (theme) => ({
   },
 })
 
-class MapDebug extends Component {
+class MapDebugPage extends Component {
   container = React.createRef()
   state = {
     coordinates: '',
@@ -115,4 +115,4 @@ class MapDebug extends Component {
   }
 }
 
-export default withStyles(styles)(MapDebug)
+export default withStyles(styles)(MapDebugPage)
