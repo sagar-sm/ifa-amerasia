@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 import {HashRouter, Route, Switch} from 'react-router-dom'
 import './base.css'
 import Map from './Map'
-import {MapDebug} from './MapDebug'
+import MapDebug from './MapDebug'
 import NavBar from './NavBar'
 import {theme} from './theme'
 
@@ -18,8 +18,8 @@ class App extends Component {
             <Switch>
               <Route exact path={'/'} component={Map} />
               {/*TODO: fix*/}
-              <Route path={'/:id'} component={Map} />
               <Route exact path={'/debug'} component={MapDebug} />
+              <Route exact path={'/:id'} component={Map} />
             </Switch>
           </HashRouter>
         </MuiThemeProvider>

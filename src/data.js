@@ -1,11 +1,12 @@
 export const DATA = [
   {
     id: 'america',
-    x: 0.2,
-    y: 0.2,
+    x: 0.469,
+    y: 0.302,
     html: require('./articles/america.html'),
   },
-  { id: 'asia',
+  {
+    id: 'asia',
     x: 0.5,
     y: 0.5,
     html: require('./articles/asia.html'),
