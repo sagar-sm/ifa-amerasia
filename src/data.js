@@ -9,8 +9,8 @@ export const DATA = [
   },
   {
     id: 'asia',
-    x: 0.5,
-    y: 0.5,
+    x: 0.621,
+    y: 0.147,
     html: require('./articles/asia.html'),
     title: 'West Lake, China',
     keywords: 'Sun, moon, drama, saturn',
