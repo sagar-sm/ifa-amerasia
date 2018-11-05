@@ -34,7 +34,15 @@ const styles = theme => ({
     marginLeft: -12,
     marginRight: 20,
   },
+  titleContainer: {
+    [theme.breakpoints.down('sm')]: {
+      width: '25%',
+    },
+  },
   title: {
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 16,
+    }
   },
   search: {
     position: 'relative',
@@ -48,7 +56,7 @@ const styles = theme => ({
   },
   searchContainer: {
     [theme.breakpoints.down('sm')]: {
-      width: '45%',
+      width: '60%',
     },
   },
   searchIcon: {
@@ -119,6 +127,9 @@ class NavBar extends React.Component {
           value={value}
           onChange={onChange}
           inputRef={ref}
+          inputProps={{
+            'aria-label': 'Search'
+          }}
           {...rest}
         />
       </div>
@@ -152,7 +163,7 @@ class NavBar extends React.Component {
         <AppBar position={'absolute'} color={'default'}>
           <Toolbar>
             <Grid container justify={'space-between'} alignItems={'center'}>
-              <Grid item className={classes.headerItem}>
+              <Grid item className={`${classes.headerItem} ${classes.titleContainer}`}>
                 <Link to={'/'} className={classes.navLink}>
                   <Typography className={classes.title} variant='h5' noWrap>
                     Amerasia
