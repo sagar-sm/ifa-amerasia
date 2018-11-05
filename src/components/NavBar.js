@@ -188,16 +188,24 @@ class NavBar extends React.Component {
               onClose={this.closeNavMenu}
             >
               <Link to={'/'} className={classes.navLink}>
-                <MenuItem onClick={this.closeNavMenu}>HOME</MenuItem>
+                <MenuItem onClick={this.closeNavMenu}>
+                  <Typography variant={'button'}>HOME</Typography>
+                </MenuItem>
               </Link>
               <Link to={'/about'} className={classes.navLink}>
-                <MenuItem onClick={this.closeNavMenu}>ABOUT</MenuItem>
+                <MenuItem onClick={this.closeNavMenu}>
+                  <Typography variant={'button'}>ABOUT</Typography>
+                </MenuItem>
               </Link>
               <Link to={'/credits'} className={classes.navLink}>
-                <MenuItem onClick={this.closeNavMenu}>CREDITS</MenuItem>
+                <MenuItem onClick={this.closeNavMenu}>
+                  <Typography variant={'button'}>CREDITS</Typography>
+                </MenuItem>
               </Link>
               <Link to={'/accessibility'} className={classes.navLink}>
-                <MenuItem onClick={this.closeNavMenu}>ACCESSIBILITY</MenuItem>
+                <MenuItem onClick={this.closeNavMenu}>
+                  <Typography variant={'button'}>ACCESSIBILITY</Typography>
+                </MenuItem>
               </Link>
             </Menu>
             <Popover
