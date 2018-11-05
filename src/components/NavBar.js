@@ -1,11 +1,18 @@
 import AppBar from '@material-ui/core/AppBar'
 import Grid from '@material-ui/core/Grid/Grid'
+import IconButton from '@material-ui/core/IconButton/IconButton'
 import InputBase from '@material-ui/core/InputBase'
+import Menu from '@material-ui/core/Menu/Menu'
+import MenuItem from '@material-ui/core/MenuItem/MenuItem'
+import Popover from '@material-ui/core/Popover/Popover'
 import {withStyles} from '@material-ui/core/styles'
 import {fade} from '@material-ui/core/styles/colorManipulator'
 import Toolbar from '@material-ui/core/Toolbar'
+import Tooltip from '@material-ui/core/Tooltip/Tooltip'
 import Typography from '@material-ui/core/Typography'
+import MoreVertIcon from '@material-ui/icons/MoreVert'
 import SearchIcon from '@material-ui/icons/Search'
+import {memoize} from 'lodash'
 import React from 'react'
 import {Link} from 'react-router-dom'
 
@@ -81,9 +88,42 @@ const styles = theme => ({
       display: 'none',
     },
   },
+  minifiedAppBar: {
+    display: 'none',
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+    },
+  },
 })
 
 class NavBar extends React.Component {
+  state = {
+    minifiedNavMenuOpen: false,
+    minifiedSearchOpen: false,
+  }
+
+  anchorEl = null
+
+  openNavMenu = (event) => {
+    this.anchorEl = event.target
+    this.setState({minifiedNavMenuOpen: true})
+  }
+
+  closeNavMenu = () => {
+    this.anchorEl = null
+    this.setState({minifiedNavMenuOpen: false})
+  }
+
+  openSearch = (event) => {
+    this.anchorEl = event.target
+    this.setState({minifiedSearchOpen: true})
+  }
+
+  closeSearch = () => {
+    this.anchorEl = null
+    this.setState({minifiedSearchOpen: false})
+  }
+
   render() {
     const {classes} = this.props
     return (
@@ -131,7 +171,53 @@ class NavBar extends React.Component {
                   </Grid>
                 </Grid>
               </Grid>
+              <Grid item className={classes.minifiedAppBar}>
+                <Grid container spacing={16} justify={'flex-end'}>
+                  <Tooltip title={'Search'}>
+                    <IconButton onClick={this.openSearch}><SearchIcon/></IconButton>
+                  </Tooltip>
+                  <Tooltip title={'More'}>
+                    <IconButton onClick={this.openNavMenu}><MoreVertIcon/></IconButton>
+                  </Tooltip>
+                </Grid>
+              </Grid>
             </Grid>
+            <Menu
+              anchorEl={this.anchorEl}
+              open={this.state.minifiedNavMenuOpen}
+              onClose={this.closeNavMenu}
+            >
+              <Link to={'/'} className={classes.navLink}>
+                <MenuItem onClick={this.closeNavMenu}>HOME</MenuItem>
+              </Link>
+              <Link to={'/about'} className={classes.navLink}>
+                <MenuItem onClick={this.closeNavMenu}>ABOUT</MenuItem>
+              </Link>
+              <Link to={'/credits'} className={classes.navLink}>
+                <MenuItem onClick={this.closeNavMenu}>CREDITS</MenuItem>
+              </Link>
+              <Link to={'/accessibility'} className={classes.navLink}>
+                <MenuItem onClick={this.closeNavMenu}>ACCESSIBILITY</MenuItem>
+              </Link>
+            </Menu>
+            <Popover
+              anchorEl={this.anchorEl}
+              open={this.state.minifiedSearchOpen}
+              onClose={this.closeSearch}
+            >
+              <div style={{width: 300}}>
+                <div className={classes.searchIcon}>
+                  <SearchIcon/>
+                </div>
+                <InputBase
+                  placeholder='Search'
+                  classes={{
+                    root: classes.inputRoot,
+                    input: classes.inputInput,
+                  }}
+                />
+              </div>
+            </Popover>
           </Toolbar>
         </AppBar>
       </div>
