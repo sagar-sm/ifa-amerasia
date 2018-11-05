@@ -126,7 +126,7 @@ class NavBar extends React.Component {
   }
 
   renderSearchResult = (item, isHighlighted) => {
-    return <MenuItem style={{background: isHighlighted ? 'lightgray' : 'white'}}>
+    return <MenuItem key={`search-result-${item.id}`} style={{background: isHighlighted ? 'lightgray' : 'white'}}>
       {item.title}
     </MenuItem>
   }
