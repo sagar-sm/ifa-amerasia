@@ -109,8 +109,11 @@ export class MapPage extends Component {
 
   navigateTo = (point) => {
     const target = new OpenSeadragon.Point(point.x, point.y)
-    this.viewer.viewport.zoomTo(2, target)
     this.viewer.viewport.panTo(target)
+    // Timeout to cancel out race condition with zoom animation
+    setTimeout(() => {
+      this.viewer.viewport.zoomTo(9, target)
+    }, 700)
     this.setState({
       drawerOpen: true,
       selectedHtml: point.html,
@@ -171,25 +174,32 @@ export class MapPage extends Component {
   }
 
   calcMapDimensions = () => {
+    const height = isWidthUp('sm', this.props.width)
+      ? `calc(100vh - ${headerHeight}px)`
+      : '50vh'
+
     if (!this.state.drawerOpen) {
       return {
         width: '100vw',
-        height: `calc(100vh - ${headerHeight}px)`
+        height,
       }
     }
     if (isWidthUp('sm', this.props.width)) {
       return {
         width: `calc(100vw - ${drawerWidthMd}px)`,
-        height: '100vh',
+        height,
       }
     } else if (isWidthUp('md', this.props.width)) {
       return {
         width: `calc(100vw - ${drawerWidth}px)`,
-        height: '100vh',
+        height,
       }
     }
 
-    return {width: drawerWidthSm, height: '50vh'}
+    return {
+      width: drawerWidthSm,
+      height,
+    }
   }
 
   render() {
