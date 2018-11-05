@@ -1,4 +1,5 @@
 import {withStyles, withWidth} from '@material-ui/core'
+import ButtonBase from '@material-ui/core/ButtonBase/ButtonBase'
 import {yellow} from '@material-ui/core/colors'
 import Drawer from '@material-ui/core/Drawer/Drawer'
 import Grid from '@material-ui/core/Grid/Grid'
@@ -18,6 +19,8 @@ import ReactDOM from 'react-dom'
 import {DATA} from '../data'
 import {headerHeight} from './NavBar'
 
+const IMMEDIATE_PAN_NAVIGATION = false
+
 const drawerWidth = 500
 const drawerWidthMd = 350
 const drawerWidthSm = '100vw'
@@ -31,7 +34,11 @@ const styles = (theme) => ({
     zIndex: theme.zIndex.appBar,
   },
   actionButton: {
+    width: 28,
+    height: 28,
+    padding: 4,
     margin: 4,
+    borderRadius: theme.shape.borderRadius,
     transition: theme.transitions.create(['background']),
     background: 'rgba(255, 255, 255, 0.7)',
     '&:hover': {
@@ -52,13 +59,13 @@ const styles = (theme) => ({
     [theme.breakpoints.up('sm')]: {
       marginTop: headerHeight,
       width: drawerWidthMd,
-      height: '100vh',
+      height: `calc(100vh - ${headerHeight}px)`,
     },
 
     [theme.breakpoints.up('md')]: {
       marginTop: headerHeight,
       width: drawerWidth,
-      height: '100vh',
+      height: `calc(100vh - ${headerHeight}px)`,
     },
   },
   mapContainer: {
@@ -74,7 +81,6 @@ export class MapPage extends Component {
   state = {
     drawerOpen: false,
     selectedHtml: '',
-    canvasHovered: false,
   }
 
   componentDidMount() {
@@ -109,7 +115,7 @@ export class MapPage extends Component {
 
   navigateTo = (point) => {
     const target = new OpenSeadragon.Point(point.x, point.y)
-    this.viewer.viewport.panTo(target)
+    this.viewer.viewport.panTo(target, IMMEDIATE_PAN_NAVIGATION)
     // Timeout to cancel out race condition with zoom animation
     setTimeout(() => {
       this.viewer.viewport.zoomTo(9, target)
@@ -165,25 +171,18 @@ export class MapPage extends Component {
     this.props.history.push('/')
   }
 
-  onCanvasEnter = () => {
-    this.setState({canvasHovered: true})
-  }
-
-  onCanvasLeave = () => {
-    this.setState({canvasHovered: false})
-  }
-
   calcMapDimensions = () => {
+    if (!this.state.drawerOpen) {
+      return {
+        width: '100vw',
+        height: '100vh',
+      }
+    }
+
     const height = isWidthUp('sm', this.props.width)
       ? `calc(100vh - ${headerHeight}px)`
       : '50vh'
 
-    if (!this.state.drawerOpen) {
-      return {
-        width: '100vw',
-        height,
-      }
-    }
     if (isWidthUp('sm', this.props.width)) {
       return {
         width: `calc(100vw - ${drawerWidthMd}px)`,
@@ -208,28 +207,25 @@ export class MapPage extends Component {
       <>
         <div
           ref={this.container}
-          id={'test'}
           className={classes.mapContainer}
           style={this.calcMapDimensions()}
-          onMouseEnter={this.onCanvasEnter}
-          onMouseLeave={this.onCanvasLeave}
         >
-          <div className={classes.buttons} style={{opacity: this.state.canvasHovered ? 1 : 0}}>
+          <div className={classes.buttons}>
             <Grid container direction={'column'}>
-              <Tooltip title={'Zoom In'}>
-                <IconButton className={classes.actionButton} id={'zoom-in-button'} aria-label={'zoom-in'}>
+              <Tooltip title={'Zoom In'} placement={'left'}>
+                <ButtonBase className={classes.actionButton} id={'zoom-in-button'} aria-label={'zoom-in'}>
                   <ZoomIn className={classes.icon}/>
-                </IconButton>
+                </ButtonBase>
               </Tooltip>
-              <Tooltip title={'Zoom Out'}>
-                <IconButton className={classes.actionButton} id={'zoom-out-button'} aria-label={'zoom-out'}>
+              <Tooltip title={'Zoom Out'} placement={'left'}>
+                <ButtonBase className={classes.actionButton} id={'zoom-out-button'} aria-label={'zoom-out'}>
                   <ZoomOut className={classes.icon}/>
-                </IconButton>
+                </ButtonBase>
               </Tooltip>
-              <Tooltip title={'Reset Zoom'}>
-                <IconButton className={classes.actionButton} id={'home-button'} aria-label={'home'}>
+              <Tooltip title={'Reset Zoom'} placement={'left'}>
+                <ButtonBase className={classes.actionButton} id={'home-button'} aria-label={'home'}>
                   <ZoomOutMap className={classes.icon}/>
-                </IconButton>
+                </ButtonBase>
               </Tooltip>
             </Grid>
           </div>
