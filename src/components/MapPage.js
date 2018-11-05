@@ -19,6 +19,8 @@ import {DATA} from '../data'
 import {headerHeight} from './NavBar'
 
 const drawerWidth = 500
+const drawerWidthMd = 350
+const drawerWidthSm = '100vw'
 
 const styles = (theme) => ({
   buttons: {
@@ -41,27 +43,28 @@ const styles = (theme) => ({
     height: 20,
   },
   drawerPaper: {
-    width: '100vw',
+    width: drawerWidthSm,
     height: '50vh',
     padding: 2 * theme.spacing.unit,
     marginTop: 0,
     paddingBottom: 100,
-  },
-  mapContainer: {
-    background: '#4c221a',
-    transition: theme.transitions.create(['width', 'height'])
-  },
 
-  // Large screens
-  [theme.breakpoints.up('sm')]: {
-    drawerPaper: {
+    [theme.breakpoints.up('sm')]: {
+      marginTop: headerHeight,
+      width: drawerWidthMd,
+      height: '100vh',
+    },
+
+    [theme.breakpoints.up('md')]: {
       marginTop: headerHeight,
       width: drawerWidth,
       height: '100vh',
     },
-    mapContainer: {
-      marginTop: headerHeight,
-    },
+  },
+  mapContainer: {
+    background: '#4c221a',
+    marginTop: headerHeight,
+    transition: theme.transitions.create(['width', 'height']),
   },
 })
 
@@ -167,6 +170,28 @@ export class MapPage extends Component {
     this.setState({canvasHovered: false})
   }
 
+  calcMapDimensions = () => {
+    if (!this.state.drawerOpen) {
+      return {
+        width: '100vw',
+        height: `calc(100vh - ${headerHeight}px)`
+      }
+    }
+    if (isWidthUp('sm', this.props.width)) {
+      return {
+        width: `calc(100vw - ${drawerWidthMd}px)`,
+        height: '100vh',
+      }
+    } else if (isWidthUp('md', this.props.width)) {
+      return {
+        width: `calc(100vw - ${drawerWidth}px)`,
+        height: '100vh',
+      }
+    }
+
+    return {width: drawerWidthSm, height: '50vh'}
+  }
+
   render() {
     const {classes, width} = this.props
     return (
@@ -175,14 +200,7 @@ export class MapPage extends Component {
           ref={this.container}
           id={'test'}
           className={classes.mapContainer}
-          style={{
-            width: isWidthUp('sm', width) && this.state.drawerOpen
-              ? `calc(100vw - ${drawerWidth}px`
-              : '100vw',
-            height: !isWidthUp('sm', width) && this.state.drawerOpen
-              ? '50vh'
-              : `calc(100vh - ${headerHeight}px)`
-          }}
+          style={this.calcMapDimensions()}
           onMouseEnter={this.onCanvasEnter}
           onMouseLeave={this.onCanvasLeave}
         >
