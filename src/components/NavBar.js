@@ -160,7 +160,7 @@ class NavBar extends React.Component {
     const {classes} = this.props
     return (
       <div className={classes.root}>
-        <AppBar position={'absolute'} color={'default'}>
+        <AppBar position={'relative'} color={'default'}>
           <Toolbar>
             <Grid container justify={'space-between'} alignItems={'center'}>
               <Grid item className={`${classes.headerItem} ${classes.titleContainer}`}>

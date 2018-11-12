@@ -2,10 +2,6 @@
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
-body {
-    overflow: hidden;
-}
-
 p {
     font-weight: normal;
     color: rgba(0, 0, 0, 0.87);

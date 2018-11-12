@@ -53,24 +53,21 @@ const styles = (theme) => ({
     width: drawerWidthSm,
     height: '50vh',
     padding: 2 * theme.spacing.unit,
-    marginTop: 0,
     paddingBottom: 100,
+    marginTop: headerHeight,
 
     [theme.breakpoints.up('sm')]: {
-      marginTop: headerHeight,
       width: drawerWidthMd,
       height: `calc(100vh - ${headerHeight}px)`,
     },
 
     [theme.breakpoints.up('md')]: {
-      marginTop: headerHeight,
       width: drawerWidth,
       height: `calc(100vh - ${headerHeight}px)`,
     },
   },
   mapContainer: {
     background: '#4c221a',
-    marginTop: headerHeight,
     transition: theme.transitions.create(['width', 'height']),
   },
 })
@@ -175,7 +172,7 @@ export class MapPage extends Component {
     if (!this.state.drawerOpen) {
       return {
         width: '100vw',
-        height: '100vh',
+        height: `calc(100vh - ${headerHeight}px)`,
       }
     }
 
@@ -240,17 +237,17 @@ export class MapPage extends Component {
         >
           <Grid container justify={'flex-end'}>
             <Grid item>
-              <Tooltip title={'Focus on Map '}>
-                <IconButton aria-label={'Focus on Map'} onClick={this.focusPointOnMap}>
-                  <MyLocation/>
-                </IconButton>
+              <Tooltip title={'Locate on map '}>
+                <ButtonBase className={classes.actionButton} aria-label={'Locate on map'} onClick={this.focusPointOnMap}>
+                  <MyLocation className={classes.icon}/>
+                </ButtonBase>
               </Tooltip>
             </Grid>
             <Grid item>
               <Tooltip title={'Close'}>
-                <IconButton aria-label={'Close Sidebar'} onClick={this.onDrawerClose}>
-                  <Close/>
-                </IconButton>
+                <ButtonBase className={classes.actionButton} aria-label={'Close sidebar'} onClick={this.onDrawerClose}>
+                  <Close className={classes.icon}/>
+                </ButtonBase>
               </Tooltip>
             </Grid>
           </Grid>
