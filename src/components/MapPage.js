@@ -178,7 +178,7 @@ export class MapPage extends Component {
 
     const height = isWidthUp('sm', this.props.width)
       ? `calc(100vh - ${headerHeight}px)`
-      : '50vh'
+      : `calc(50vh - ${headerHeight}px)`
 
     if (isWidthUp('sm', this.props.width)) {
       return {
