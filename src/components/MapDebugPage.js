@@ -12,12 +12,11 @@ import {headerHeight} from './NavBar'
 const styles = (theme) => ({
   mapContainer: {
     width: '80vw',
-    height: '100vh',
+    height: `calc(100vh - ${headerHeight}px)`,
   },
   debugContainer: {
     width: '20vw',
     padding: 2 * theme.spacing.unit,
-    marginTop: headerHeight,
     borderLeft: `2px solid ${theme.palette.grey[300]}`,
   },
   pre: {
@@ -52,8 +51,15 @@ class MapDebugPage extends Component {
     }).setTracking(true)
   }
 
+  getNormalizedPointCoords = (event) =>
+    new OpenSeadragon.Point(
+      event.position.x,
+      event.position.y + headerHeight,
+    )
+
   onMouseTrackerMove = (event) => {
-    const viewportPoint = this.viewer.viewport.windowToViewportCoordinates(event.position);
+    const normalizedPoint = this.getNormalizedPointCoords(event)
+    const viewportPoint = this.viewer.viewport.windowToViewportCoordinates(normalizedPoint);
     if (!this.state.frozen) {
       this.setState({
         coordinates: `{\n  x: ${round(viewportPoint.x, 3)},\n  y: ${round(viewportPoint.y, 3)},\n}`,
@@ -70,9 +76,12 @@ class MapDebugPage extends Component {
       this.overlay = document.createElement('div')
       ReactDOM.render(locationMarker, this.overlay)
 
+      // normalize mouse coordinates
+      const normalizedPoint = this.getNormalizedPointCoords(event)
+
       this.viewer.addOverlay(
         this.overlay,
-        this.viewer.viewport.windowToViewportCoordinates(event.position),
+        this.viewer.viewport.windowToViewportCoordinates(normalizedPoint),
         OpenSeadragon.Placement.CENTER
       )
       this.setState({frozen: true})
