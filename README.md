@@ -4,7 +4,7 @@
 
 * [Setup guide](#setup-guide)
   * [Running the app locally](#running-the-app-locally)
-  * [Editing/Writing new code](#editing-writing-new-code)
+  * [Editing/Writing new code](#editingwriting-new-code)
 * [Updating the data on the Map with debug mode](#updating-the-data-on-the-Map-with-debug-mode)
 * [Updating other pages](#updating-other-pages)
 * [Adding new pages](#adding-new-pages)
