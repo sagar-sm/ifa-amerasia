@@ -5,6 +5,7 @@
 * [Setup guide](#setup-guide)
   * [Running the app locally](#running-the-app-locally)
   * [Editing/Writing new code](#editingwriting-new-code)
+    * [Folder Structure](#folder-structure)
 * [Updating the data on the Map with debug mode](#updating-the-data-on-the-Map-with-debug-mode)
 * [Updating other pages](#updating-other-pages)
 * [Adding new pages](#adding-new-pages)
