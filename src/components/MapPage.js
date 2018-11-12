@@ -54,15 +54,16 @@ const styles = (theme) => ({
     height: '50vh',
     padding: 2 * theme.spacing.unit,
     paddingBottom: 100,
-    marginTop: headerHeight,
 
     [theme.breakpoints.up('sm')]: {
       width: drawerWidthMd,
+      marginTop: headerHeight,
       height: `calc(100vh - ${headerHeight}px)`,
     },
 
     [theme.breakpoints.up('md')]: {
       width: drawerWidth,
+      marginTop: headerHeight,
       height: `calc(100vh - ${headerHeight}px)`,
     },
   },
