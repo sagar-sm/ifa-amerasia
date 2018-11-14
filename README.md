@@ -35,7 +35,7 @@ repository in your home folder at `~/ifa-amerasia/`.
     * `npm install`: reads the list of 3rd party libraries from file `package.json` and downloads them into a folder called `node_modules` 
     * `npm start`: Builds and starts the app at `localhost:3000` on a development server locally.
     * Visit [localhost:3000](localhost:3000) in your browser to see the app running.
-    * Hit Ctrl + C on your Terminal window to stop the development server.
+    * Hit <kbd>Control + C</kbd> on your Terminal window to stop the development server.
     
 ### Editing/Writing new code
 * It is strongly recommended that you use either [Webstorm](https://www.jetbrains.com/webstorm/) 
