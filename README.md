@@ -89,7 +89,7 @@ Only files inside `public` can be used from `public/index.html`.
  
 ## Updating the data on the Map with debug mode
 
-All the data that is displayed on your map is sourced from this file: `src/data.js`.
+All the data that is displayed on your map is sourced from this file: [`src/data.js`](https://github.com/sagar-sm/ifa-amerasia/blob/master/src/data.js).
 To update the data on your map, you will need to use the special debug mode page.
 It can be found on `localhost:3000/#debug`. Don't forget the `#`.
 
