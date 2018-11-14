@@ -33,14 +33,15 @@ repository in your home folder at `~/ifa-amerasia/`.
     <br>In your terminal:
     * `cd ~/ifa-amerasia`: changes the directory to the location you've downloaded/cloned this repository.
     * `npm install`: reads the list of 3rd party libraries from file `package.json` and downloads them into a folder called `node_modules` 
-    * `npm start`: Builds and starts the app at `localhost:3000`
+    * `npm start`: Builds and starts the app at `localhost:3000` on a development server locally.
     * Visit [localhost:3000](localhost:3000) in your browser to see the app running.
+    * Hit Ctrl + C on your Terminal window to stop the development server.
     
 ### Editing/Writing new code
 * It is strongly recommended that you use either [Webstorm](https://www.jetbrains.com/webstorm/) 
 or [Visual Studio Code](https://code.visualstudio.com/) to write/edit code in this app.
  
-* You can apply for a free education license for Webstorm [here](https://code.visualstudio.com/).
+* You can apply for a free education license for Webstorm [here](https://www.jetbrains.com/student/).
 Visual Studio Code is free.
 
 ### Folder Structure
