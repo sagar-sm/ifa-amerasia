@@ -95,8 +95,20 @@ It can be found on `localhost:3000/#debug`. Don't forget the `#`.
 
 You can use it to find the coordinates of the new data point you want to add.
 
-Inside the `data.js` file, copy and paste a point as per the comments, 
-and edit the contents as per your liking.
+Copy the point coordinates from the debug mode page and paste it in `data.js` as per the inline comments in that file, 
+and edit other fields like title, html, id,  as per your liking. Here is the complete list of fields and their descriptions that are supported on each data item supports:
+```javascript
+{
+  id: 'america',                            // This is the URL displayed in the address bar: localhost:3000/#america
+  x: 0.469,                                 // Use the debug page to find the x coordinate of the point
+  y: 0.302,                                 // Use the debug page to find the y coordinate of the point
+  html: require('./articles/america.html'), // link to the HTML page in the articles directory
+  title: 'Dumbo, Brooklyn',                 // Title to be displayed in search results
+  keywords: 'Sample, list, of, keywords',   // Keywords to be used for search
+},
+```
+
+> ⚠️ Please note that the `title` field here is the title that is displayed in the search results and not the one displayed on the page itself. The page is entirely loaded from the html template you provide. In order for a datum to show up in the search results you must define `title` and `keywords` on that datum.
 
 To add new HTML articles, you should create an HTML file inside the `/articles` directory.
 Within `data.js` you can refer to your newly created file as `require('./articles/asia.html')`.
@@ -170,11 +182,11 @@ This will download and install the [sharp](https://sharp.dimens.io/en/stable/) l
 You only have to do this **once** and not every time you want to tile an image.
 
 > Note that the image resolution pixel limit for sharp is 268402689 (width * height) pixels. 
-This is a high enough resoultion for our map. If the image you are tiling is too large you might have to resize
+This resolution is sufficiently high for our map. If the image you are tiling is too large you might have to resize
 so that image `width * height` is less than 268402689. You can do so using Photoshop, Preview or 
 through the command line with `imagemagick`
 
-`magick convert -resize 84% out.jpg out_small.jpg`
+`magick convert -resize 84% inputImage.jpg outputImage.jpg`
 
 ### Tile it!
 To tile the image, 
