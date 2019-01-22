@@ -27,7 +27,7 @@ Please refer to the [CRA docs](https://github.com/sagar-sm/ifa-amerasia/blob/mas
     `git clone https://github.com/sagar-sm/ifa-amerasia.git`
     * Alternatively you can also download the zip from Github and save it in a location of your choice.
     * For simplicity, this README file assumes that you have cloned or downloaded this 
-repository in your home folder at `~/ifa-amerasia/`.
+repository in your home folder at `~/amerasia/`.
 
 3. Running this app is easy,
     <br>In your terminal:
