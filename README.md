@@ -31,7 +31,7 @@ repository in your home folder at `~/ifa-amerasia/`.
 
 3. Running this app is easy,
     <br>In your terminal:
-    * `cd ~/ifa-amerasia`: changes the directory to the location you've downloaded/cloned this repository.
+    * `cd ~/amerasia`: changes the directory to the location you've downloaded/cloned this repository.
     * `npm install`: reads the list of 3rd party libraries from file `package.json` and downloads them into a folder called `node_modules` 
     * `npm start`: Builds and starts the app at `localhost:3000` on a development server locally.
     * Visit [localhost:3000](localhost:3000) in your browser to see the app running.
@@ -49,7 +49,7 @@ Visual Studio Code is free.
 After successfully setting up, your project should look like this:
 
 ```
-ifa-amerasia/
+amerasia/
   README.md
   node_modules/
   package.json
