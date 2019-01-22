@@ -168,7 +168,7 @@ Additionally, add the following for the mobile navigation menu with the other li
 
 ## Building and deploying
 Run:
-1. `cd ~/ifa-amerasia`  : or a directory location of your choice
+1. `cd ~/amerasia`  : or a directory location of your choice
 2. `npm install`        : download and install all the libraries, if you haven't already
 3. `npm run build`      : builds the app for production
 4. Copy everything from the `/build` directory on to an FTP server of your choice. 
