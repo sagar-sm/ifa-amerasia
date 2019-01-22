@@ -14,7 +14,7 @@
 * [Tiling and updating the Map image](#tiling-and-updating-the-map-image)
 
 This project was scaffolded using `create-react-app` (CRA).
-Please refer to the [CRA docs](https://github.com/sagar-sm/ifa-amerasia/blob/master/config/README.md) here for additional instructions.
+Please refer to the [CRA docs](https://github.com/nyuifa/amerasia/blob/master/config/README.md) here for additional instructions.
 
 ## Setup guide
 
