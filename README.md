@@ -24,7 +24,7 @@ Please refer to the [CRA docs](https://github.com/sagar-sm/ifa-amerasia/blob/mas
 
 2. Clone or download this repository as a zip file.
     * For cloning, open the Terminal, `cd` into a directory of your choice (in our case the home folder on macOS: `cd ~`) and run <br/>
-    `git clone https://github.com/sagar-sm/ifa-amerasia.git`
+    `git clone https://github.com/nyuifa/amerasia.git`
     * Alternatively you can also download the zip from Github and save it in a location of your choice.
     * For simplicity, this README file assumes that you have cloned or downloaded this 
 repository in your home folder at `~/amerasia/`.
@@ -89,7 +89,7 @@ Only files inside `public` can be used from `public/index.html`.
  
 ## Updating the data on the Map with debug mode
 
-All the data that is displayed on your map is sourced from this file: [`src/data.js`](https://github.com/sagar-sm/ifa-amerasia/blob/master/src/data.js).
+All the data that is displayed on your map is sourced from this file: [`src/data.js`](https://github.com/nyuifa/amerasia/blob/master/src/data.js).
 To update the data on your map, you will need to use the special debug mode page.
 It can be found on `localhost:3000/#debug`. Don't forget the `#`.
 
