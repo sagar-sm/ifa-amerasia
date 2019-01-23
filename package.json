@@ -2,7 +2,7 @@
   "name": "ifa-amerasia",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sagar-sm.github.io/ifa-amerasia/",
+  "homepage": "https://nyuifa.github.io/amerasia/",
   "dependencies": {
     "@babel/core": "7.1.0",
     "@material-ui/core": "^3.4.0",
