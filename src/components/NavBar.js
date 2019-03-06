@@ -26,9 +26,11 @@ const styles = theme => ({
   },
   navLink: {
     textDecoration: 'none',
+
   },
   headerItem: {
     width: '33.33%',
+      paddingTop: '10px',
   },
   menuButton: {
     marginLeft: -12,
@@ -47,10 +49,8 @@ const styles = theme => ({
   search: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.black, 0.09),
-    '&:hover': {
-      backgroundColor: fade(theme.palette.common.black, 0.05),
-    },
+    backgroundColor: 'lightgray',
+
     marginLeft: 0,
     width: '100%',
   },
@@ -91,6 +91,15 @@ const styles = theme => ({
     [theme.breakpoints.down('sm')]: {
       display: 'flex',
     },
+  },
+
+  byline: {
+      [theme.breakpoints.down('sm')]: {
+          display: 'none',
+      },
+      fontSize: '13px',
+      marginBottom: '10px',
+      marginLeft: '1%',
   },
 })
 
@@ -165,9 +174,10 @@ class NavBar extends React.Component {
             <Grid container justify={'space-between'} alignItems={'center'}>
               <Grid item className={`${classes.headerItem} ${classes.titleContainer}`}>
                 <Link to={'/'} className={classes.navLink}>
-                  <Typography className={classes.title} variant='h5' noWrap>
-                    Amerasia
-                  </Typography>
+<span className={classes.logo}>
+    <img src={"amerasia-logo-black.png"}  height={"25px"}></img></span>
+
+                    <Typography className={classes.byline}>An inquiry into early modern imaginative geography</Typography>
                 </Link>
               </Grid>
               <Grid item className={`${classes.headerItem} ${classes.searchContainer}`}>
