@@ -80,18 +80,18 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="14" />
-          <entry key="js" value="841" />
+          <entry key="js" value="1206" />
           <entry key="json" value="5" />
           <entry key="lock" value="2" />
-          <entry key="txt" value="369" />
+          <entry key="txt" value="415" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="14" />
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="841" />
-          <entry key="PLAIN_TEXT" value="369" />
+          <entry key="JavaScript" value="1206" />
+          <entry key="PLAIN_TEXT" value="415" />
           <entry key="yarn.lock" value="2" />
         </counts>
       </usages-collector>
@@ -107,8 +107,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/MapPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="749">
-              <caret line="77" column="21" lean-forward="true" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
+            <state relative-caret-position="473">
+              <caret line="181" column="17" lean-forward="true" selection-start-line="181" selection-start-column="17" selection-end-line="181" selection-end-column="17" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
               </folding>
@@ -260,7 +260,7 @@
       <updated>1542041891058</updated>
       <workItem from="1542041893608" duration="3007000" />
       <workItem from="1552410411501" duration="4137000" />
-      <workItem from="1552414768185" duration="2289000" />
+      <workItem from="1552414768185" duration="2951000" />
     </task>
     <task id="LOCAL-00001" summary="height fix for Safari mobile">
       <created>1542043474788</created>
@@ -360,11 +360,25 @@
       <option name="project" value="LOCAL" />
       <updated>1552416873598</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fix overflowX">
+      <created>1552417281550</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1552417281550</updated>
+    </task>
+    <task id="LOCAL-00016" summary="remove stray console statement">
+      <created>1552417406080</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1552417406080</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9433000" />
+    <option name="totallyTimeSpent" value="10095000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1136" extended-state="0" />
@@ -411,7 +425,9 @@
     <MESSAGE value="fix drawer zIndex" />
     <MESSAGE value="fix search input color" />
     <MESSAGE value="reset ArticleContainer scroll on path change" />
-    <option name="LAST_COMMIT_MESSAGE" value="reset ArticleContainer scroll on path change" />
+    <MESSAGE value="fix overflowX" />
+    <MESSAGE value="remove stray console statement" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove stray console statement" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -646,8 +662,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MapPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="749">
-          <caret line="77" column="21" lean-forward="true" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
+        <state relative-caret-position="473">
+          <caret line="181" column="17" lean-forward="true" selection-start-line="181" selection-start-column="17" selection-end-line="181" selection-end-column="17" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
           </folding>

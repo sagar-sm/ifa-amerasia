@@ -76,7 +76,8 @@ const styles = theme => ({
     height: '100%',
     overflowX: 'hidden',
     overflowY: 'auto'
-  }
+  },
+  locationPin: {}
 });
 
 export class MapPage extends Component {
@@ -85,6 +86,7 @@ export class MapPage extends Component {
 
   state = {
     drawerOpen: false,
+    showPins: true,
     selectedHtml: ''
   };
 
@@ -153,7 +155,7 @@ export class MapPage extends Component {
       const clickHandler = this.makeMarkerClickHandler(point);
 
       const locationMarker = (
-        <IconButton className={'overlay'} id={point.id} aria-label={point.id} onClick={clickHandler}>
+        <IconButton className={'locationPin'} id={point.id} aria-label={point.id} onClick={clickHandler}>
           <LocationOn style={{fontSize: '1em', color: yellow[400], cursor: 'pointer'}} />
         </IconButton>
       );
@@ -175,8 +177,18 @@ export class MapPage extends Component {
     });
   };
 
-  // Added by Jason to create function to remove/clear pins
-  togglePins = () => {};
+  togglePins = () => {
+    this.setState(
+      state => ({
+        showPins: !state.showPins
+      }),
+      () => {
+        document.querySelectorAll(`.locationPin`).forEach(elem => {
+          elem.style.display = this.state.showPins ? 'block' : 'none';
+        });
+      }
+    );
+  };
 
   onDrawerClose = () => {
     this.setState({drawerOpen: false});
