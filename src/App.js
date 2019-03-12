@@ -1,5 +1,14 @@
-import {CssBaseline, MuiThemeProvider} from '@material-ui/core';
-import Dialog from '@material-ui/core/Dialog/Dialog';
+import {
+  Button,
+  CssBaseline,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+  Grid,
+  MuiThemeProvider
+} from '@material-ui/core';
 import React, {Component} from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import './base.css';
@@ -19,19 +28,20 @@ class App extends Component {
   };
 
   componentDidMount() {
-    const MIN_INTERVAL = 300000; // 5 minutes
-    const lastSeen = window.localStorage.getItem(lsKey) || 0;
+    const MIN_INTERVAL = 300000; // milliseconds = 5 minutes
+    const lastSeen = Number(window.localStorage.getItem(lsKey)) || 0;
 
+    // Only show welcome dialog if the page MIN_INTERVAL time has elapsed since the last time you saw the dialog
     if (Date.now() - lastSeen > MIN_INTERVAL) {
       this.setState({
         welcomeDialogOpen: true
       });
-      window.localStorage.setItem(lsKey, Date.now());
+      window.localStorage.setItem(lsKey, Date.now().toString());
     }
   }
 
   closeWelcomeDialog = () => {
-    window.localStorage.setItem(lsKey, Date.now());
+    window.localStorage.setItem(lsKey, Date.now().toString());
     this.setState({welcomeDialogOpen: false});
   };
 
