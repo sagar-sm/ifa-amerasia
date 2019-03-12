@@ -113,7 +113,6 @@ export class MapPage extends Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.match.params.id !== this.props.match.params.id) {
-      console.log(this.articleContainer.current);
       this.articleContainer.current.scrollTop = 0; // reset the scroll inside the Drawer
 
       const point = find(DATA, {id: this.props.match.params.id});
