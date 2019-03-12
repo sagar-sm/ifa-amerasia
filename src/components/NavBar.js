@@ -10,13 +10,12 @@ import Tooltip from '@material-ui/core/Tooltip/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import SearchIcon from '@material-ui/icons/Search';
-import {flow} from 'lodash';
 import React from 'react';
 import Autocomplete from 'react-autocomplete';
 import {Link, withRouter} from 'react-router-dom';
 import {DATA} from '../data';
 
-export const headerHeight = 68;
+export const headerHeight = 64;
 
 const styles = theme => ({
   root: {
@@ -246,4 +245,4 @@ class NavBar extends React.Component {
   }
 }
 
-export default flow([withRouter, withStyles(styles)])(NavBar);
+export default withRouter(withStyles(styles)(NavBar));
