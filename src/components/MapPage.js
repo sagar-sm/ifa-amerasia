@@ -74,7 +74,8 @@ const styles = theme => ({
   },
   articleContainer: {
     height: '100%',
-    overflow: 'auto'
+    overflowX: 'hidden',
+    overflowY: 'auto'
   }
 });
 
