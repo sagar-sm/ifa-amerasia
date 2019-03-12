@@ -55,7 +55,6 @@ const styles = theme => ({
     width: drawerWidthSm,
     height: '50vh',
     padding: 2 * theme.spacing.unit,
-    paddingBottom: 100,
 
     [theme.breakpoints.up('sm')]: {
       width: drawerWidthMd,
@@ -72,11 +71,16 @@ const styles = theme => ({
   mapContainer: {
     background: '#4c221a',
     transition: theme.transitions.create(['width', 'height'])
+  },
+  articleContainer: {
+    height: '100%',
+    overflow: 'auto'
   }
 });
 
 export class MapPage extends Component {
   container = React.createRef();
+  articleContainer = React.createRef();
 
   state = {
     drawerOpen: false,
@@ -108,6 +112,9 @@ export class MapPage extends Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.match.params.id !== this.props.match.params.id) {
+      console.log(this.articleContainer.current);
+      this.articleContainer.current.scrollTop = 0; // reset the scroll inside the Drawer
+
       const point = find(DATA, {id: this.props.match.params.id});
       if (point) {
         this.navigateTo(point);
@@ -269,7 +276,11 @@ export class MapPage extends Component {
               </Tooltip>
             </Grid>
           </Grid>
-          <div id='ArticleContainer' dangerouslySetInnerHTML={{__html: this.state.selectedHtml}} />
+          <div
+            className={classes.articleContainer}
+            ref={this.articleContainer}
+            dangerouslySetInnerHTML={{__html: this.state.selectedHtml}}
+          />
         </Drawer>
       </>
     );
