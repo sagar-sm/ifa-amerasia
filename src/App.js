@@ -56,7 +56,27 @@ class App extends Component {
             </>
           </BrowserRouter>
           <Dialog open={this.state.welcomeDialogOpen} onClose={this.closeWelcomeDialog}>
-            Hello World
+            <DialogTitle>Amerasia</DialogTitle>
+            <DialogContent>
+              <DialogContentText>
+                By considering texts, maps, objects, and images produced between 1450 and 1700, Amerasia: A Renaissance
+                Discovery will reveal that the association of America and Asia dominated the geographical imagination of
+                Europe for over a century after 1492.
+              </DialogContentText>
+              <DialogContentText>
+                The Amerasia project is composed primarily of an interactive map, and a navigational menu to multiple
+                pages. Readers interact with this extremely detailed/high resolution scan (24,000 x 16,000 pixels)and
+                access pin points which open content boxes. The content is cross referenced with other points on the
+                same map.
+              </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+              <Grid container justify={'center'}>
+                <Button variant={'raised'} color={'primary'} onClick={this.closeWelcomeDialog}>
+                  Explore
+                </Button>
+              </Grid>
+            </DialogActions>
           </Dialog>
         </MuiThemeProvider>
       </>
