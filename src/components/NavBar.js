@@ -27,8 +27,7 @@ const styles = theme => ({
     textDecoration: 'none'
   },
   headerItem: {
-    width: '33.33%',
-    paddingTop: '10px'
+    width: '33.33%'
   },
   menuButton: {
     marginLeft: -12,
@@ -95,9 +94,8 @@ const styles = theme => ({
     [theme.breakpoints.down('sm')]: {
       display: 'none'
     },
-    fontSize: '13px',
-    marginBottom: '10px',
-    marginLeft: '1%'
+    fontSize: 13,
+    paddingLeft: 2 // correct visual aberration
   }
 });
 
@@ -173,10 +171,7 @@ class NavBar extends React.Component {
             <Grid container justify={'space-between'} alignItems={'center'}>
               <Grid item className={`${classes.headerItem} ${classes.titleContainer}`}>
                 <Link to={'/'} className={classes.navLink}>
-                  <span className={classes.logo}>
-                    <img src={'amerasia-logo-black.png'} height={'25px'} />
-                  </span>
-
+                  <img src={'amerasia-logo-black.png'} height={22} />
                   <Typography className={classes.byline}>An inquiry into early modern imaginative geography</Typography>
                 </Link>
               </Grid>
