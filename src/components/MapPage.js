@@ -13,6 +13,7 @@ import Place from '@material-ui/icons/Place';
 import ZoomIn from '@material-ui/icons/ZoomIn';
 import ZoomOut from '@material-ui/icons/ZoomOut';
 import ZoomOutMap from '@material-ui/icons/ZoomOutMap';
+import cx from 'classnames';
 import {find, flow} from 'lodash';
 import OpenSeadragon from 'openseadragon';
 import React, {Component} from 'react';
@@ -49,6 +50,9 @@ const styles = theme => ({
   icon: {
     width: 20,
     height: 20
+  },
+  highlightedIcon: {
+    color: theme.palette.secondary.main
   },
   drawerPaper: {
     zIndex: 1, // so it appears below the NavBar
@@ -99,7 +103,7 @@ export class MapPage extends Component {
       zoomInButton: 'zoom-in-button',
       zoomOutButton: 'zoom-out-button',
       homeButton: 'home-button',
-      removePinButton: 'remove-pin-button' // added by Jason to create for Remove Pin button
+      removePinButton: 'toggle-pin-button'
     });
     this.viewer.viewport.minZoomLevel = 0.5;
     this.viewer.gestureSettingsMouse.clickToZoom = false;
@@ -247,14 +251,19 @@ export class MapPage extends Component {
                   <ZoomOutMap className={classes.icon} />
                 </ButtonBase>
               </Tooltip>
-              <Tooltip title={'Remove Pins'} placement={'left'}>
+              <Tooltip title={this.state.showPins ? 'Hide Pins' : 'Show Pins'} placement={'left'}>
                 <ButtonBase
                   onClick={this.togglePins}
                   className={classes.actionButton}
-                  id={'remove-pin-button'}
-                  aria-label={'remove-pins'}
+                  id={'toggle-pin-button'}
+                  aria-label={'toggle pins'}
                 >
-                  <Place className={classes.icon} />
+                  <Place
+                    className={cx({
+                      [classes.icon]: true,
+                      [classes.highlightedIcon]: !this.state.showPins
+                    })}
+                  />
                 </ButtonBase>
               </Tooltip>
             </Grid>
