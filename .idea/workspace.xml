@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8cca36d4-bd73-4630-822b-8c87116aa3d4" name="Default Changelist" comment="remove yarn lock for now :(">
+    <list default="true" id="8cca36d4-bd73-4630-822b-8c87116aa3d4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/jest/cssTransform.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/jest/fileTransform.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/webpack.config.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.config.dev.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/webpack.config.prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.config.prod.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/webpackDevServer.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpackDevServer.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AboutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AccessibilityPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AccessibilityPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CreditsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CreditsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MapDebugPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MapDebugPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MapPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MapPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Wrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Wrapper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -63,27 +82,31 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="2" />
-          <entry key="json" value="1" />
+          <entry key="js" value="12" />
+          <entry key="json" value="2" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="2" />
+          <entry key="JSON" value="2" />
+          <entry key="JavaScript" value="12" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="js" value="370" />
           <entry key="json" value="5" />
           <entry key="lock" value="2" />
-          <entry key="txt" value="27" />
+          <entry key="txt" value="130" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="5" />
-          <entry key="PLAIN_TEXT" value="27" />
+          <entry key="JavaScript" value="370" />
+          <entry key="PLAIN_TEXT" value="130" />
           <entry key="yarn.lock" value="2" />
         </counts>
       </usages-collector>
@@ -99,37 +122,102 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/MapPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="142" column="5" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
+            <state relative-caret-position="255">
+              <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/AboutPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
               <folding>
-                <element signature="e#0#55#0" expanded="true" />
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/CreditsPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/MapDebugPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="92" column="12" lean-forward="true" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/start.js">
+        <entry file="file://$PROJECT_DIR$/config/webpack.config.dev.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-640" />
+            <state relative-caret-position="501">
+              <caret line="172" column="23" lean-forward="true" selection-start-line="172" selection-start-column="23" selection-end-line="172" selection-end-column="23" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/config/webpackDevServer.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            <state relative-caret-position="975">
+              <caret line="65" column="16" lean-forward="true" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/webpack.config.prod.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="242" column="61" selection-start-line="242" selection-start-column="61" selection-end-line="242" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-171">
+              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.eslintrc.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>jest</find>
+      <find>import \{withStyles\, withWidth\} from \'\@material\-ui\/core\'\nimport ButtonBase from \'\@material\-ui\/core\/ButtonBase\/ButtonBase\'\nimport \{yellow\} from \'\@material\-ui\/core\/colors\'\nimport Drawer from \'\@material\-ui\/core\/Drawer\/Drawer\'\nimport Grid from \'\@material\-ui\/core\/Grid\/Grid\'\nimport IconButton from \'\@material\-ui\/core\/IconButton\/IconButton\'\nimport Tooltip from \'\@material\-ui\/core\/Tooltip\/Tooltip\'\nimport \{isWidthUp\} from \'\@material\-ui\/core\/withWidth\'\nimport Close from \'\@material\-ui\/icons\/Close\'\nimport LocationOn from \'\@material\-ui\/icons\/LocationOn\'\nimport MyLocation from \'\@material\-ui\/icons\/MyLocation\'\nimport ZoomIn from \'\@material\-ui\/icons\/ZoomIn\'\nimport ZoomOut from \'\@material\-ui\/icons\/ZoomOut\'\nimport ZoomOutMap from \'\@material\-ui\/icons\/ZoomOutMap\'\nimport Place from \'\@material\-ui\/icons\/Place\'\nimport \{find\, flow\} from \'lodash\'\nimport OpenSeadragon from \'openseadragon\'\nimport React\, \{Component\} from \'react\'\nimport ReactDOM from \'react\-dom\'\nimport \{DATA\} from \'\.\.\/data\'\nimport \{headerHeight\} from \'\.\/NavBar\'\n\nconst IMMEDIATE_PAN_NAVIGATION \= false\n\nconst drawerWidth \= 500\nconst drawerWidthMd \= 350\nconst drawerWidthSm \= \'100vw\'\n\nconst styles \= \(theme\) \=\&gt; \(\{\n  buttons\: \{\n    position\: \'absolute\'\,\n    display\: \'flex\'\,\n    alignItems\: \'flex\-start\'\,\n    justifyContent\: \'flex\-start\'\,\n    zIndex\: theme\.zIndex\.appBar\,\n  \}\,\n  actionButton\: \{\n    width\: 28\,\n    height\: 28\,\n    padding\: 4\,\n    margin\: 4\,\n    borderRadius\: theme\.shape\.borderRadius\,\n    transition\: theme\.transitions\.create\(\[\'background\'\]\)\,\n    background\: \'rgba\(255\, 255\, 255\, 0\.7\)\'\,\n    \'\&amp;\:hover\'\: \{\n      background\: \'rgba\(255\, 255\, 255\, 1\)\'\,\n    \}\n  \}\,\n  icon\: \{\n    width\: 20\,\n    height\: 20\,\n  \}\,\n  drawerPaper\: \{\n    width\: drawerWidthSm\,\n    height\: \'50vh\'\,\n    padding\: 2 \* theme\.spacing\.unit\,\n    paddingBottom\: 100\,\n\n    \[theme\.breakpoints\.up\(\'sm\'\)\]\: \{\n      width\: drawerWidthMd\,\n      marginTop\: headerHeight\,\n      height\: \`calc\(100vh \- \$\{headerHeight\}px\)\`\,\n    \}\,\n\n    \[theme\.breakpoints\.up\(\'md\'\)\]\: \{\n      width\: drawerWidth\,\n      marginTop\: headerHeight\,\n      height\: \`calc\(100vh \- \$\{headerHeight\}px\)\`\,\n    \}\,\n  \}\,\n  mapContainer\: \{\n    background\: \'\#4c221a\'\,\n    transition\: theme\.transitions\.create\(\[\'width\'\, \'height\'\]\)\,\n  \}\,\n\}\)\n\nexport class MapPage extends Component \{\n  container \= React\.createRef\(\)\n\n  state \= \{\n    drawerOpen\: false\,\n    selectedHtml\: \'\'\,\n  \}\n\n  componentDidMount\(\) \{\n    this\.viewer \= OpenSeadragon\(\{\n        element\: this\.container\.current\,\n        prefixUrl\: \`\$\{process\.env\.PUBLIC_URL\}\/map\/vopel_files\/\`\,\n        tileSources\: \`\$\{process\.env\.PUBLIC_URL\}\/map\/vopel\.dzi\`\,\n        overlays\: this\.createOverlaysFromData\(\)\,\n        zoomInButton\: \'zoom\-in\-button\'\,\n        zoomOutButton\: \'zoom\-out\-button\'\,\n        homeButton\: \'home\-button\'\,\n        removePinButton\: \'remove\-pin\-button\'\, \/\/ added by Jason to create for Remove Pin button\n    \}\)\n    this\.viewer\.viewport\.minZoomLevel \= 0\.5\n    this\.viewer\.gestureSettingsMouse\.clickToZoom \= false\n    this\.viewer\.gestureSettingsMouse\.dblClickToZoom \= true\; \/\/ added by Jason to create double click zoom capability\n\n\n    if \(this\.props\.match\.params\.id\) \{\n        const point \= find\(DATA\, \{id\: this\.props\.match\.params\.id\}\)\n        if \(point\) \{\n            setTimeout\(\(\) \=\&gt; this\.navigateTo\(point\)\, 700\)\n        \}\n\n    \}\n\}\n\n\ncomponentDidUpdate\(prevProps\) \{\n    if \(prevProps\.match\.params\.id \!\=\= this\.props\.match\.params\.id\) \{\n        const point \= find\(DATA\, \{id\: this\.props\.match\.params\.id\}\)\n        if \(point\) \{\n            this\.navigateTo\(point\)\n        \}\n    \}\n\}\n\nnavigateTo \= \(point\) \=\&gt; \{\n    const target \= new OpenSeadragon\.Point\(point\.x\, point\.y\)\n    this\.viewer\.viewport\.panTo\(target\, IMMEDIATE_PAN_NAVIGATION\)\n    \/\/ Timeout to cancel out race condition with zoom animation\n    setTimeout\(\(\) \=\&gt; \{\n        this\.viewer\.viewport\.zoomTo\(9\, target\)\n    \}\, 700\)\n    this\.setState\(\{\n        drawerOpen\: true\,\n        selectedHtml\: point\.html\,\n    \}\)\n\}\n\nmakeMarkerClickHandler \= \(point\) \=\&gt; \(\) \=\&gt; \{\n    if \(this\.props\.match\.params\.id \!\=\= point\.id\) \{\n        this\.props\.history\.push\(point\.id\)\n    \}\n\}\n\nfocusPointOnMap \= \(\) \=\&gt; \{\n    const point \= find\(DATA\, \{id\: this\.props\.match\.params\.id\}\)\n    if \(point\) \{\n        this\.navigateTo\(point\)\n    \}\n\}\n\ncreateOverlaysFromData \= \(\) \=\&gt; \{\n    return DATA\.map\(\(point\) \=\&gt; \{\n        const clickHandler \= this\.makeMarkerClickHandler\(point\)\n\n        const locationMarker \= \(\n            \&lt;IconButton className\=\{\'overlay\'\} id\=\{point\.id\} aria\-label\=\{point\.id\} onClick\=\{clickHandler\}\&gt;\n                \&lt;LocationOn style\=\{\{fontSize\: \'1em\'\, color\: yellow\[400\]\, cursor\: \'pointer\'\}\}\/\&gt;\n            \&lt;\/IconButton\&gt;\n        \)\n\n        const locationMarkerContainer \= document\.createElement\(\'div\'\)\n        ReactDOM\.render\(locationMarker\, locationMarkerContainer\)\n\n        \/\/ Note\: we only need this for mobile support for now\n        new OpenSeadragon\.MouseTracker\(\{\n            element\: locationMarkerContainer\,\n            clickHandler\: clickHandler\,\n        \}\)\n\n        return \(\{\n            \.\.\.point\,\n            placement\: OpenSeadragon\.Placement\.CENTER\,\n            element\: locationMarkerContainer\,\n        \}\)\n    \}\)\n\}\n\n\/\/ Added by Jason to create function to remove\/clear pins\ntogglePins \= \(\) \=\&gt;\n\{\n\}\n\n\nonDrawerClose \= \(\) \=\&gt; \{\n    this\.setState\(\{drawerOpen\: false\}\)\n    this\.props\.history\.push\(\'\/\'\)\n\}\n\ncalcMapDimensions \= \(\) \=\&gt; \{\n    if \(\!this\.state\.drawerOpen\) \{\n        return \{\n            width\: \'100vw\'\,\n            height\: \`calc\(100vh \- \$\{headerHeight\}px\)\`\,\n        \}\n    \}\n\n    const height \= isWidthUp\(\'sm\'\, this\.props\.width\)\n        \? \`calc\(100vh \- \$\{headerHeight\}px\)\`\n        \: \`calc\(50vh \- \$\{headerHeight\}px\)\`\n\n    if \(isWidthUp\(\'sm\'\, this\.props\.width\)\) \{\n        return \{\n            width\: \`calc\(100vw \- \$\{drawerWidthMd\}px\)\`\,\n            height\,\n        \}\n    \} else if \(isWidthUp\(\'md\'\, this\.props\.width\)\) \{\n        return \{\n            width\: \`calc\(100vw \- \$\{drawerWidth\}px\)\`\,\n            height\,\n        \}\n    \}\n\n    return \{\n        width\: drawerWidthSm\,\n        height\,\n    \}\n\}\n\nrender\(\) \{\n    const \{classes\, width\} \= this\.props\n    return \(\n        \&lt;\&gt;\n            \&lt;div\n                ref\=\{this\.container\}\n                className\=\{classes\.mapContainer\}\n                style\=\{this\.calcMapDimensions\(\)\}\n            \&gt;\n                \&lt;div className\=\{classes\.buttons\}\&gt;\n                    \&lt;Grid container direction\=\{\'column\'\}\&gt;\n                        \&lt;Tooltip title\=\{\'Zoom In\'\} placement\=\{\'left\'\}\&gt;\n                            \&lt;ButtonBase className\=\{classes\.actionButton\} id\=\{\'zoom\-in\-button\'\} aria\-label\=\{\'zoom\-in\'\}\&gt;\n                                \&lt;ZoomIn className\=\{classes\.icon\}\/\&gt;\n                            \&lt;\/ButtonBase\&gt;\n                        \&lt;\/Tooltip\&gt;\n                        \&lt;Tooltip title\=\{\'Zoom Out\'\} placement\=\{\'left\'\}\&gt;\n                            \&lt;ButtonBase className\=\{classes\.actionButton\} id\=\{\'zoom\-out\-button\'\} aria\-label\=\{\'zoom\-out\'\}\&gt;\n                                \&lt;ZoomOut className\=\{classes\.icon\}\/\&gt;\n                            \&lt;\/ButtonBase\&gt;\n                        \&lt;\/Tooltip\&gt;\n                        \&lt;Tooltip title\=\{\'Reset Zoom\'\} placement\=\{\'left\'\}\&gt;\n                            \&lt;ButtonBase className\=\{classes\.actionButton\} id\=\{\'home\-button\'\} aria\-label\=\{\'home\'\}\&gt;\n                                \&lt;ZoomOutMap className\=\{classes\.icon\}\/\&gt;\n                            \&lt;\/ButtonBase\&gt;\n                        \&lt;\/Tooltip\&gt;\n                \&lt;Tooltip title\=\{\'Remove Pins\'\} placement\=\{\'left\'\}\&gt;\n                    \&lt;ButtonBase onClick\=\{this\.togglePins\} className\=\{classes\.actionButton\} id\=\{\'remove\-pin\-button\'\} aria\-label\=\{\'remove\-pins\'\}\&gt;\n                        \&lt;Place className\=\{classes\.icon\}\/\&gt;\n                    \&lt;\/ButtonBase\&gt;\n                \&lt;\/Tooltip\&gt;\n                    \&lt;\/Grid\&gt;\n                \&lt;\/div\&gt;\n            \&lt;\/div\&gt;\n            \&lt;Drawer\n                variant\=\{\'persistent\'\}\n                anchor\=\{isWidthUp\(\'sm\'\, width\) \? \'right\' \: \'bottom\'\}\n                open\=\{this\.state\.drawerOpen\}\n                onClose\=\{this\.onDrawerClose\}\n                BackdropProps\=\{\{invisible\: true\}\}\n                classes\=\{\{paper\: classes\.drawerPaper\}\}\n            \&gt;\n                \&lt;Grid container justify\=\{\'flex\-end\'\}\&gt;\n                    \&lt;Grid item\&gt;\n                        \&lt;Tooltip title\=\{\'Locate on map \'\}\&gt;\n                            \&lt;ButtonBase className\=\{classes\.actionButton\} aria\-label\=\{\'Locate on map\'\} onClick\=\{this\.focusPointOnMap\}\&gt;\n                                \&lt;MyLocation className\=\{classes\.icon\}\/\&gt;\n                            \&lt;\/ButtonBase\&gt;\n                        \&lt;\/Tooltip\&gt;\n                    \&lt;\/Grid\&gt;\n                    \&lt;Grid item\&gt;\n                        \&lt;Tooltip title\=\{\'Close\'\}\&gt;\n                            \&lt;ButtonBase className\=\{classes\.actionButton\} aria\-label\=\{\'Close sidebar\'\} onClick\=\{this\.onDrawerClose\}\&gt;\n                                \&lt;Close className\=\{classes\.icon\}\/\&gt;\n                            \&lt;\/ButtonBase\&gt;\n                        \&lt;\/Tooltip\&gt;\n                    \&lt;\/Grid\&gt;\n                \&lt;\/Grid\&gt;\n                \&lt;div id\=\&quot;ArticleContainer\&quot; dangerouslySetInnerHTML\=\{\{__html\: this\.state\.selectedHtml\}\}\/\&gt;\n            \&lt;\/Drawer\&gt;\n        \&lt;\/\&gt;\n    \)\n\}\n\}\n\nexport default flow\(\[\n    withWidth\(\)\,\n    withStyles\(styles\, \{withTheme\: true\}\)\n\]\)\(MapPage\)\n</find>
+      <find>eslint-pl</find>
+      <find>esl</find>
+      <find>eslnint</find>
+      <find>eslint</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -140,6 +228,10 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/components/MapPage.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/config/.eslintrc.js" />
+        <option value="$PROJECT_DIR$/.eslintrc.js" />
+        <option value="$PROJECT_DIR$/src/components/MapDebugPage.js" />
+        <option value="$PROJECT_DIR$/config/webpack.config.dev.js" />
       </list>
     </option>
   </component>
@@ -180,12 +272,18 @@
             <path>
               <item name="amerasia" type="b2602c69:ProjectViewProjectNode" />
               <item name="amerasia" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="amerasia" type="b2602c69:ProjectViewProjectNode" />
               <item name="amerasia" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="amerasia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="amerasia" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -197,13 +295,21 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -228,7 +334,7 @@
       <option name="presentableId" value="Default" />
       <updated>1542041891058</updated>
       <workItem from="1542041893608" duration="3007000" />
-      <workItem from="1552410411501" duration="398000" />
+      <workItem from="1552410411501" duration="2727000" />
     </task>
     <task id="LOCAL-00001" summary="height fix for Safari mobile">
       <created>1542043474788</created>
@@ -265,11 +371,25 @@
       <option name="project" value="LOCAL" />
       <updated>1552410693151</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="remove testing infrastructure, update WDS to fix vulnerability warnings">
+      <created>1552411005400</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1552411005400</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix workspace">
+      <created>1552411033764</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1552411033764</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3405000" />
+    <option name="totallyTimeSpent" value="5734000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1136" extended-state="0" />
@@ -306,18 +426,20 @@
     <MESSAGE value="check in .idea folder" />
     <MESSAGE value="fix drawer margin" />
     <MESSAGE value="remove yarn lock for now :(" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove yarn lock for now :(" />
+    <MESSAGE value="remove testing infrastructure, update WDS to fix vulnerability warnings" />
+    <MESSAGE value="fix workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix workspace" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/MapPage.js">
+    <entry file="file://$PROJECT_DIR$/scripts/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="142" column="5" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -326,20 +448,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/start.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-640" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/AccessibilityPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="43" lean-forward="true" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/CreditsPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/AboutPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MapPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-171">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintrc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-dev-utils/errorOverlayMiddleware.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/webpackDevServer.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="16" lean-forward="true" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/webpack.config.prod.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="242" column="61" selection-start-line="242" selection-start-column="61" selection-end-line="242" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MapDebugPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="92" column="12" lean-forward="true" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/webpack.config.dev.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="172" column="23" lean-forward="true" selection-start-line="172" selection-start-column="23" selection-end-line="172" selection-end-column="23" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
