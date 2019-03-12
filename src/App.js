@@ -1,6 +1,6 @@
 import {CssBaseline, MuiThemeProvider} from '@material-ui/core';
 import React, {Component} from 'react';
-import {HashRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import './base.css';
 import AboutPage from './components/AboutPage';
 import AccessibilityPage from './components/AccessibilityPage';
@@ -16,7 +16,7 @@ class App extends Component {
       <>
         <MuiThemeProvider theme={theme}>
           <CssBaseline />
-          <HashRouter hashType={'noslash'}>
+          <BrowserRouter>
             <>
               <NavBar />
               <Switch>
@@ -30,7 +30,7 @@ class App extends Component {
                 <Route exact path={'/:id'} component={MapPage} />
               </Switch>
             </>
-          </HashRouter>
+          </BrowserRouter>
         </MuiThemeProvider>
       </>
     );
