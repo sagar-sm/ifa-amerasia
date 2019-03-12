@@ -9,14 +9,7 @@ export const DATA = [
   //   title: 'Dumbo, Brooklyn',                 // Title to be displayed in search results
   //   keywords: 'Sample, list, of, keywords',   // Keywords to be used for search
   //   pinColor: '#ffee58'                       // Any valid CSS string for indicating Pin colors. Default if no value is provided is #ffee58
-  // },
-  // {
-  //   id: 'asia',
-  //   x: 0.621,
-  //   y: 0.147,
-  //   html: require('./articles/asia.html'),
-  //   title: 'West Lake, China',
-  //   keywords: 'Sun, moon, drama, saturn',
+  //   pinTooltip: 'Sample tooltip'              // Tooltip that shows when a user hovers over a pin
   // },
   {
     id: 'cartouche-temixitan',
@@ -25,7 +18,8 @@ export const DATA = [
     html: require('./articles/cartouche-temixitan.html'),
     title: 'Cartouche Temixitan/TenochtitlanTranscription and Translation',
     keywords: 'Tenochtitlan, Quinsay, Marco Polo, Montezuma, Cortes',
-    pinColor: blue[300] // NOTE: Jason will fix this
+    pinColor: blue[300], // NOTE: Jason will fix this
+    pinTooltip: 'Cartouche Temixitan/TenochtitlanTranscription and Translation'
   },
   {
     id: 'lipsman-parrots',

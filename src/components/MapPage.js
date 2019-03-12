@@ -81,7 +81,10 @@ const styles = theme => ({
     overflowX: 'hidden',
     overflowY: 'auto'
   },
-  locationPin: {}
+  pinTooltip: {
+    background: theme.palette.background.default,
+    color: theme.palette.text.primary
+  }
 });
 
 export class MapPage extends Component {
@@ -155,13 +158,16 @@ export class MapPage extends Component {
   };
 
   createOverlaysFromData = () => {
+    const {classes} = this.props;
+
     return DATA.map(point => {
       const clickHandler = this.makeMarkerClickHandler(point);
-
       const locationMarker = (
-        <IconButton className={'locationPin'} id={point.id} aria-label={point.id} onClick={clickHandler}>
-          <LocationOn style={{fontSize: '1em', color: point.pinColor || yellow[400], cursor: 'pointer'}} />
-        </IconButton>
+        <Tooltip title={point.pinTooltip || point.title} classes={{tooltip: classes.pinTooltip}}>
+          <IconButton className={'locationPin'} id={point.id} aria-label={point.id} onClick={clickHandler}>
+            <LocationOn style={{fontSize: '1em', color: point.pinColor || yellow[400], cursor: 'pointer'}} />
+          </IconButton>
+        </Tooltip>
       );
 
       const locationMarkerContainer = document.createElement('div');
