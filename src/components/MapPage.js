@@ -94,7 +94,8 @@ export class MapPage extends Component {
   state = {
     drawerOpen: false,
     showPins: true,
-    selectedHtml: ''
+    selectedHtml: '',
+    welcomeDialogOpen: true
   };
 
   componentDidMount() {
@@ -233,6 +234,10 @@ export class MapPage extends Component {
       width: drawerWidthSm,
       height
     };
+  };
+
+  closeWelcomeDialog = () => {
+    this.setState({welcomeDialogOpen: false});
   };
 
   render() {

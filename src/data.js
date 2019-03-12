@@ -9,7 +9,7 @@ export const DATA = [
   //   title: 'Dumbo, Brooklyn',                 // Title to be displayed in search results
   //   keywords: 'Sample, list, of, keywords',   // Keywords to be used for search
   //   pinColor: '#ffee58'                       // Any valid CSS string for indicating Pin colors. Default if no value is provided is #ffee58
-  //   pinTooltip: 'Sample tooltip'              // Tooltip that shows when a user hovers over a pin
+  //   pinTooltip: 'Sample tooltip'              // Tooltip that shows when a user hovers over a pin. Default tooltip if no value is provided is the title
   // },
   {
     id: 'cartouche-temixitan',
@@ -19,7 +19,7 @@ export const DATA = [
     title: 'Cartouche Temixitan/TenochtitlanTranscription and Translation',
     keywords: 'Tenochtitlan, Quinsay, Marco Polo, Montezuma, Cortes',
     pinColor: blue[300], // NOTE: Jason will fix this
-    pinTooltip: 'Cartouche Temixitan/TenochtitlanTranscription and Translation'
+    pinTooltip: 'My custom tooltip' // NOTE: Jason will fix this
   },
   {
     id: 'lipsman-parrots',

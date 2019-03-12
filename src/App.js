@@ -1,4 +1,5 @@
 import {CssBaseline, MuiThemeProvider} from '@material-ui/core';
+import Dialog from '@material-ui/core/Dialog/Dialog';
 import React, {Component} from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import './base.css';
@@ -10,7 +11,30 @@ import MapPage from './components/MapPage';
 import NavBar from './components/NavBar';
 import {theme} from './theme';
 
+const lsKey = 'welcomeDialogLastSeen';
+
 class App extends Component {
+  state = {
+    welcomeDialogOpen: false
+  };
+
+  componentDidMount() {
+    const MIN_INTERVAL = 300000; // 5 minutes
+    const lastSeen = window.localStorage.getItem(lsKey) || 0;
+
+    if (Date.now() - lastSeen > MIN_INTERVAL) {
+      this.setState({
+        welcomeDialogOpen: true
+      });
+      window.localStorage.setItem(lsKey, Date.now());
+    }
+  }
+
+  closeWelcomeDialog = () => {
+    window.localStorage.setItem(lsKey, Date.now());
+    this.setState({welcomeDialogOpen: false});
+  };
+
   render() {
     return (
       <>
@@ -31,6 +55,9 @@ class App extends Component {
               </Switch>
             </>
           </BrowserRouter>
+          <Dialog open={this.state.welcomeDialogOpen} onClose={this.closeWelcomeDialog}>
+            Hello World
+          </Dialog>
         </MuiThemeProvider>
       </>
     );
