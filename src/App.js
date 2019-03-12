@@ -1,14 +1,14 @@
-import {CssBaseline, MuiThemeProvider} from '@material-ui/core'
-import React, {Component} from 'react'
-import {HashRouter, Route, Switch} from 'react-router-dom'
-import './base.css'
-import AboutPage from './components/AboutPage'
-import AccessibilityPage from './components/AccessibilityPage'
-import CreditsPage from './components/CreditsPage'
-import MapDebugPage from './components/MapDebugPage'
-import MapPage from './components/MapPage'
-import NavBar from './components/NavBar'
-import {theme} from './theme'
+import {CssBaseline, MuiThemeProvider} from '@material-ui/core';
+import React, {Component} from 'react';
+import {HashRouter, Route, Switch} from 'react-router-dom';
+import './base.css';
+import AboutPage from './components/AboutPage';
+import AccessibilityPage from './components/AccessibilityPage';
+import CreditsPage from './components/CreditsPage';
+import MapDebugPage from './components/MapDebugPage';
+import MapPage from './components/MapPage';
+import NavBar from './components/NavBar';
+import {theme} from './theme';
 
 class App extends Component {
   render() {
@@ -33,8 +33,8 @@ class App extends Component {
           </HashRouter>
         </MuiThemeProvider>
       </>
-    )
+    );
   }
 }
 
-export default App
+export default App;

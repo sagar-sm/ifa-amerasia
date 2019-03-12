@@ -1,49 +1,47 @@
-import AppBar from '@material-ui/core/AppBar'
-import Grid from '@material-ui/core/Grid/Grid'
-import IconButton from '@material-ui/core/IconButton/IconButton'
-import InputBase from '@material-ui/core/InputBase'
-import Menu from '@material-ui/core/Menu/Menu'
-import MenuItem from '@material-ui/core/MenuItem/MenuItem'
-import {withStyles} from '@material-ui/core/styles'
-import {fade} from '@material-ui/core/styles/colorManipulator'
-import Toolbar from '@material-ui/core/Toolbar'
-import Tooltip from '@material-ui/core/Tooltip/Tooltip'
-import Typography from '@material-ui/core/Typography'
-import MoreVertIcon from '@material-ui/icons/MoreVert'
-import SearchIcon from '@material-ui/icons/Search'
-import {flow} from 'lodash'
-import React from 'react'
-import Autocomplete from 'react-autocomplete'
-import {Link, withRouter} from 'react-router-dom'
-import {DATA} from '../data'
+import AppBar from '@material-ui/core/AppBar';
+import Grid from '@material-ui/core/Grid/Grid';
+import IconButton from '@material-ui/core/IconButton/IconButton';
+import InputBase from '@material-ui/core/InputBase';
+import Menu from '@material-ui/core/Menu/Menu';
+import MenuItem from '@material-ui/core/MenuItem/MenuItem';
+import {withStyles} from '@material-ui/core/styles';
+import Toolbar from '@material-ui/core/Toolbar';
+import Tooltip from '@material-ui/core/Tooltip/Tooltip';
+import Typography from '@material-ui/core/Typography';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+import SearchIcon from '@material-ui/icons/Search';
+import {flow} from 'lodash';
+import React from 'react';
+import Autocomplete from 'react-autocomplete';
+import {Link, withRouter} from 'react-router-dom';
+import {DATA} from '../data';
 
-export const headerHeight = 64
+export const headerHeight = 64;
 
 const styles = theme => ({
   root: {
     width: '100%',
-    zIndex: theme.zIndex.drawer + 1,
+    zIndex: theme.zIndex.drawer + 1
   },
   navLink: {
-    textDecoration: 'none',
-
+    textDecoration: 'none'
   },
   headerItem: {
     width: '33.33%',
-      paddingTop: '10px',
+    paddingTop: '10px'
   },
   menuButton: {
     marginLeft: -12,
-    marginRight: 20,
+    marginRight: 20
   },
   titleContainer: {
     [theme.breakpoints.down('sm')]: {
-      width: '25%',
-    },
+      width: '25%'
+    }
   },
   title: {
     [theme.breakpoints.down('sm')]: {
-      fontSize: 16,
+      fontSize: 16
     }
   },
   search: {
@@ -52,12 +50,12 @@ const styles = theme => ({
     backgroundColor: 'lightgray',
 
     marginLeft: 0,
-    width: '100%',
+    width: '100%'
   },
   searchContainer: {
     [theme.breakpoints.down('sm')]: {
-      width: '60%',
-    },
+      width: '60%'
+    }
   },
   searchIcon: {
     width: theme.spacing.unit * 5,
@@ -66,72 +64,72 @@ const styles = theme => ({
     pointerEvents: 'none',
     display: 'flex',
     alignItems: 'center',
-    paddingLeft: theme.spacing.unit,
+    paddingLeft: theme.spacing.unit
   },
   inputRoot: {
     color: 'inherit',
-    width: '100%',
+    width: '100%'
   },
   inputInput: {
     paddingTop: theme.spacing.unit,
     paddingRight: theme.spacing.unit,
     paddingBottom: theme.spacing.unit,
     paddingLeft: theme.spacing.unit * 6,
-    width: '100%',
+    width: '100%'
   },
   navLinksContainer: {
     display: 'flex',
     [theme.breakpoints.down('sm')]: {
       display: 'none',
-      width: '20%',
-    },
+      width: '20%'
+    }
   },
   minifiedAppBar: {
     display: 'none',
     [theme.breakpoints.down('sm')]: {
-      display: 'flex',
-    },
+      display: 'flex'
+    }
   },
 
   byline: {
-      [theme.breakpoints.down('sm')]: {
-          display: 'none',
-      },
-      fontSize: '13px',
-      marginBottom: '10px',
-      marginLeft: '1%',
-  },
-})
+    [theme.breakpoints.down('sm')]: {
+      display: 'none'
+    },
+    fontSize: '13px',
+    marginBottom: '10px',
+    marginLeft: '1%'
+  }
+});
 
 class NavBar extends React.Component {
   state = {
     minifiedNavMenuOpen: false,
-    searchValue: '',
-  }
+    searchValue: ''
+  };
 
-  anchorEl = null
+  anchorEl = null;
 
-  openNavMenu = (event) => {
-    this.anchorEl = event.target
-    this.setState({minifiedNavMenuOpen: true})
-  }
+  openNavMenu = event => {
+    this.anchorEl = event.target;
+    this.setState({minifiedNavMenuOpen: true});
+  };
 
   closeNavMenu = () => {
-    this.anchorEl = null
-    this.setState({minifiedNavMenuOpen: false})
-  }
+    this.anchorEl = null;
+    this.setState({minifiedNavMenuOpen: false});
+  };
   renderInput = ({value, ref, onChange, ...rest}) => {
-    const {classes} = this.props
+    const {classes} = this.props;
     return (
       <div className={classes.search}>
         <div className={classes.searchIcon}>
-          <SearchIcon/>
+          <SearchIcon />
         </div>
         <InputBase
           placeholder='Search'
           classes={{
             root: classes.inputRoot,
-            input: classes.inputInput,
+            input: classes.inputInput
           }}
           value={value}
           onChange={onChange}
@@ -142,31 +140,31 @@ class NavBar extends React.Component {
           {...rest}
         />
       </div>
-    )
-  }
+    );
+  };
 
   renderSearchResult = (item, isHighlighted) => {
-    return <MenuItem key={`search-result-${item.id}`} style={{background: isHighlighted ? 'lightgray' : 'white'}}>
-      {item.title}
-    </MenuItem>
-  }
+    return (
+      <MenuItem key={`search-result-${item.id}`} style={{background: isHighlighted ? 'lightgray' : 'white'}}>
+        {item.title}
+      </MenuItem>
+    );
+  };
 
-  onSearchValueChange = (e) =>
-    this.setState({searchValue: e.target.value})
+  onSearchValueChange = e => this.setState({searchValue: e.target.value});
 
   onSearchValueSelect = (val, item) => {
-    this.setState({searchValue: val})
-    this.props.history.push(item.id)
-  }
+    this.setState({searchValue: val});
+    this.props.history.push(item.id);
+  };
 
-  getItemValue = (item) => item.title
+  getItemValue = item => item.title;
 
   shouldItemRender = (item, value) =>
-    value.length > 0 &&
-      `${item.id} ${item.title} ${item.keywords}`.toLowerCase().includes(value.toLowerCase())
+    value.length > 0 && `${item.id} ${item.title} ${item.keywords}`.toLowerCase().includes(value.toLowerCase());
 
   render() {
-    const {classes} = this.props
+    const {classes} = this.props;
     return (
       <div className={classes.root}>
         <AppBar position={'relative'} color={'default'}>
@@ -174,10 +172,11 @@ class NavBar extends React.Component {
             <Grid container justify={'space-between'} alignItems={'center'}>
               <Grid item className={`${classes.headerItem} ${classes.titleContainer}`}>
                 <Link to={'/'} className={classes.navLink}>
-<span className={classes.logo}>
-    <img src={"amerasia-logo-black.png"}  height={"25px"}></img></span>
+                  <span className={classes.logo}>
+                    <img src={'amerasia-logo-black.png'} height={'25px'} />
+                  </span>
 
-                    <Typography className={classes.byline}>An inquiry into early modern imaginative geography</Typography>
+                  <Typography className={classes.byline}>An inquiry into early modern imaginative geography</Typography>
                 </Link>
               </Grid>
               <Grid item className={`${classes.headerItem} ${classes.searchContainer}`}>
@@ -215,16 +214,14 @@ class NavBar extends React.Component {
               <Grid item className={classes.minifiedAppBar}>
                 <Grid container justify={'flex-end'}>
                   <Tooltip title={'More'}>
-                    <IconButton onClick={this.openNavMenu}><MoreVertIcon/></IconButton>
+                    <IconButton onClick={this.openNavMenu}>
+                      <MoreVertIcon />
+                    </IconButton>
                   </Tooltip>
                 </Grid>
               </Grid>
             </Grid>
-            <Menu
-              anchorEl={this.anchorEl}
-              open={this.state.minifiedNavMenuOpen}
-              onClose={this.closeNavMenu}
-            >
+            <Menu anchorEl={this.anchorEl} open={this.state.minifiedNavMenuOpen} onClose={this.closeNavMenu}>
               <Link to={'/'} className={classes.navLink}>
                 <MenuItem onClick={this.closeNavMenu}>
                   <Typography variant={'button'}>HOME</Typography>
@@ -249,11 +246,8 @@ class NavBar extends React.Component {
           </Toolbar>
         </AppBar>
       </div>
-    )
+    );
   }
 }
 
-export default flow([
-  withRouter,
-  withStyles(styles)
-])(NavBar)
+export default flow([withRouter, withStyles(styles)])(NavBar);

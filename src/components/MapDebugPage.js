@@ -1,35 +1,35 @@
-import {Typography, withStyles} from '@material-ui/core'
-import Button from '@material-ui/core/Button/Button'
-import {yellow} from '@material-ui/core/colors'
-import Grid from '@material-ui/core/Grid/Grid'
-import LocationOn from '@material-ui/icons/LocationOn'
-import {round} from 'lodash'
-import OpenSeadragon from 'openseadragon'
-import React, {Component} from 'react'
-import ReactDOM from 'react-dom'
-import {headerHeight} from './NavBar'
+import {Typography, withStyles} from '@material-ui/core';
+import Button from '@material-ui/core/Button/Button';
+import {yellow} from '@material-ui/core/colors';
+import Grid from '@material-ui/core/Grid/Grid';
+import LocationOn from '@material-ui/icons/LocationOn';
+import {round} from 'lodash';
+import OpenSeadragon from 'openseadragon';
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
+import {headerHeight} from './NavBar';
 
-const styles = (theme) => ({
+const styles = theme => ({
   mapContainer: {
     width: '80vw',
-    height: `calc(100vh - ${headerHeight}px)`,
+    height: `calc(100vh - ${headerHeight}px)`
   },
   debugContainer: {
     width: '20vw',
     padding: 2 * theme.spacing.unit,
-    borderLeft: `2px solid ${theme.palette.grey[300]}`,
+    borderLeft: `2px solid ${theme.palette.grey[300]}`
   },
   pre: {
-    fontFamily: 'monospace',
-  },
-})
+    fontFamily: 'monospace'
+  }
+});
 
 class MapDebugPage extends Component {
-  container = React.createRef()
+  container = React.createRef();
   state = {
     coordinates: '',
-    frozen: false,
-  }
+    frozen: false
+  };
 
   componentDidMount() {
     this.viewer = OpenSeadragon({
@@ -39,89 +39,79 @@ class MapDebugPage extends Component {
       zoomInButton: 'zoom-in-button',
       zoomOutButton: 'zoom-out-button',
       homeButton: 'home-button',
-      clickHandler: this.onClick,
-    })
-    this.viewer.addHandler('canvas-click', this.onClick)
-    this.viewer.viewport.minZoomLevel = 0.5
+      clickHandler: this.onClick
+    });
+    this.viewer.addHandler('canvas-click', this.onClick);
+    this.viewer.viewport.minZoomLevel = 0.5;
     this.viewer.gestureSettingsMouse.clickToZoom = false;
 
     new OpenSeadragon.MouseTracker({
       element: this.container.current,
-      moveHandler: this.onMouseTrackerMove,
-    }).setTracking(true)
+      moveHandler: this.onMouseTrackerMove
+    }).setTracking(true);
   }
 
-  getNormalizedPointCoords = (event) =>
-    new OpenSeadragon.Point(
-      event.position.x,
-      event.position.y + headerHeight,
-    )
+  getNormalizedPointCoords = event => new OpenSeadragon.Point(event.position.x, event.position.y + headerHeight);
 
-  onMouseTrackerMove = (event) => {
-    const normalizedPoint = this.getNormalizedPointCoords(event)
+  onMouseTrackerMove = event => {
+    const normalizedPoint = this.getNormalizedPointCoords(event);
     const viewportPoint = this.viewer.viewport.windowToViewportCoordinates(normalizedPoint);
     if (!this.state.frozen) {
       this.setState({
-        coordinates: `{\n  x: ${round(viewportPoint.x, 3)},\n  y: ${round(viewportPoint.y, 3)},\n}`,
-      })
+        coordinates: `{\n  x: ${round(viewportPoint.x, 3)},\n  y: ${round(viewportPoint.y, 3)},\n}`
+      });
     }
-  }
+  };
 
-  onClick = (event) => {
+  onClick = event => {
     if (!this.overlay) {
-      const locationMarker = (
-        <LocationOn style={{color: yellow[400]}}/>
-      )
+      const locationMarker = <LocationOn style={{color: yellow[400]}} />;
 
-      this.overlay = document.createElement('div')
-      ReactDOM.render(locationMarker, this.overlay)
+      this.overlay = document.createElement('div');
+      ReactDOM.render(locationMarker, this.overlay);
 
       // normalize mouse coordinates
-      const normalizedPoint = this.getNormalizedPointCoords(event)
+      const normalizedPoint = this.getNormalizedPointCoords(event);
 
       this.viewer.addOverlay(
         this.overlay,
         this.viewer.viewport.windowToViewportCoordinates(normalizedPoint),
         OpenSeadragon.Placement.CENTER
-      )
-      this.setState({frozen: true})
+      );
+      this.setState({frozen: true});
     } else {
-      this.unfreeze()
+      this.unfreeze();
     }
-  }
+  };
 
   unfreeze = () => {
-    this.viewer.removeOverlay(this.overlay)
-    this.overlay = null
-    this.setState({frozen: false})
-  }
+    this.viewer.removeOverlay(this.overlay);
+    this.overlay = null;
+    this.setState({frozen: false});
+  };
 
   render() {
-    const {classes} = this.props
+    const {classes} = this.props;
     return (
       <>
         <Grid container>
-          <div
-            ref={this.container}
-            id={'test'}
-            className={classes.mapContainer}
-            onMouseEnter={this.onCanvasEnter}
-            onMouseLeave={this.onCanvasLeave}
-          />
+          <div ref={this.container} id={'test'} className={classes.mapContainer} />
           <div className={classes.debugContainer}>
             <Typography variant={'subtitle1'}>Debug Mode</Typography>
-            <Typography variant={'caption'}>Click map to drop a pin. Use maximum zoom level before clicking for the most accurate position.</Typography>
-            <pre className={classes.pre}>
-              {this.state.coordinates}
-            </pre>
-            {this.state.frozen &&
-              <Button size={'small'} onClick={this.unfreeze}>Reset pin</Button>
-            }
+            <Typography variant={'caption'}>
+              Click map to drop a pin. Use maximum zoom level before clicking for the most accurate position.
+            </Typography>
+            <pre className={classes.pre}>{this.state.coordinates}</pre>
+            {this.state.frozen && (
+              <Button size={'small'} onClick={this.unfreeze}>
+                Reset pin
+              </Button>
+            )}
           </div>
         </Grid>
       </>
-    )
+    );
   }
 }
 
-export default withStyles(styles)(MapDebugPage)
+export default withStyles(styles)(MapDebugPage);
