@@ -16,7 +16,7 @@ import Autocomplete from 'react-autocomplete';
 import {Link, withRouter} from 'react-router-dom';
 import {DATA} from '../data';
 
-export const headerHeight = 64;
+export const headerHeight = 68;
 
 const styles = theme => ({
   root: {
@@ -47,7 +47,7 @@ const styles = theme => ({
   search: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: 'lightgray',
+    backgroundColor: 'rgba(220, 220, 220, 0.6)',
 
     marginLeft: 0,
     width: '100%'
@@ -118,6 +118,7 @@ class NavBar extends React.Component {
     this.anchorEl = null;
     this.setState({minifiedNavMenuOpen: false});
   };
+
   renderInput = ({value, ref, onChange, ...rest}) => {
     const {classes} = this.props;
     return (
