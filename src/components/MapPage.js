@@ -51,6 +51,7 @@ const styles = theme => ({
     height: 20
   },
   drawerPaper: {
+    zIndex: 1, // so it appears below the NavBar
     width: drawerWidthSm,
     height: '50vh',
     padding: 2 * theme.spacing.unit,
