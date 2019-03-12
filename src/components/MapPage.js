@@ -160,7 +160,7 @@ export class MapPage extends Component {
 
       const locationMarker = (
         <IconButton className={'locationPin'} id={point.id} aria-label={point.id} onClick={clickHandler}>
-          <LocationOn style={{fontSize: '1em', color: yellow[400], cursor: 'pointer'}} />
+          <LocationOn style={{fontSize: '1em', color: point.pinColor || yellow[400], cursor: 'pointer'}} />
         </IconButton>
       );
 

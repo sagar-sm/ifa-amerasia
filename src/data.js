@@ -1,3 +1,5 @@
+import {blue, pink} from '@material-ui/core/colors';
+
 export const DATA = [
   // {
   //   id: 'america',                            // This is the URL
@@ -6,6 +8,7 @@ export const DATA = [
   //   html: require('./articles/america.html'), // link to the HTML page in the articles directory
   //   title: 'Dumbo, Brooklyn',                 // Title to be displayed in search results
   //   keywords: 'Sample, list, of, keywords',   // Keywords to be used for search
+  //   pinColor: '#ffee58'                       // Any valid CSS string for indicating Pin colors. Default if no value is provided is #ffee58
   // },
   // {
   //   id: 'asia',
@@ -21,7 +24,8 @@ export const DATA = [
     y: 0.264,
     html: require('./articles/cartouche-temixitan.html'),
     title: 'Cartouche Temixitan/TenochtitlanTranscription and Translation',
-    keywords: 'Tenochtitlan, Quinsay, Marco Polo, Montezuma, Cortes'
+    keywords: 'Tenochtitlan, Quinsay, Marco Polo, Montezuma, Cortes',
+    pinColor: blue[300] // NOTE: Jason will fix this
   },
   {
     id: 'lipsman-parrots',
@@ -29,7 +33,8 @@ export const DATA = [
     y: 0.377,
     html: require('./articles/lipsman-parrots.html'),
     title: 'The Parrot’s Tale: the Bird’s Fall from Exotic Temptation to Common Commodity',
-    keywords: 'Parrot, Macaw, Van Eyck, Dürer, Sarto, Rubens, Brazil, Cantino, Mappamundi, Paradise, Adam, Eve'
+    keywords: 'Parrot, Macaw, Van Eyck, Dürer, Sarto, Rubens, Brazil, Cantino, Mappamundi, Paradise, Adam, Eve',
+    pinColor: pink[400] // NOTE: Jason will fix this
   },
   {
     id: 'cartouche-reader',
