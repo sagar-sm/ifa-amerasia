@@ -1,13 +1,13 @@
 {
-  "main.css": "/ifa-amerasia/static/css/main.709bc70d.chunk.css",
-  "main.js": "/ifa-amerasia/static/js/main.f545fffa.chunk.js",
-  "main.js.map": "/ifa-amerasia/static/js/main.f545fffa.chunk.js.map",
-  "static/js/1.887b58e4.chunk.js": "/ifa-amerasia/static/js/1.887b58e4.chunk.js",
-  "static/js/1.887b58e4.chunk.js.map": "/ifa-amerasia/static/js/1.887b58e4.chunk.js.map",
-  "runtime~main.js": "/ifa-amerasia/static/js/runtime~main.e31a20dc.js",
-  "runtime~main.js.map": "/ifa-amerasia/static/js/runtime~main.e31a20dc.js.map",
-  "static/css/main.709bc70d.chunk.css.map": "/ifa-amerasia/static/css/main.709bc70d.chunk.css.map",
-  "index.html": "/ifa-amerasia/index.html",
-  "precache-manifest.b354396b981172c2de111815b8302810.js": "/ifa-amerasia/precache-manifest.b354396b981172c2de111815b8302810.js",
-  "service-worker.js": "/ifa-amerasia/service-worker.js"
+  "main.css": "/amerasia/static/css/main.324832bb.chunk.css",
+  "main.js": "/amerasia/static/js/main.1382fc15.chunk.js",
+  "main.js.map": "/amerasia/static/js/main.1382fc15.chunk.js.map",
+  "static/js/1.deb45ef1.chunk.js": "/amerasia/static/js/1.deb45ef1.chunk.js",
+  "static/js/1.deb45ef1.chunk.js.map": "/amerasia/static/js/1.deb45ef1.chunk.js.map",
+  "runtime~main.js": "/amerasia/static/js/runtime~main.33ccb3fe.js",
+  "runtime~main.js.map": "/amerasia/static/js/runtime~main.33ccb3fe.js.map",
+  "static/css/main.324832bb.chunk.css.map": "/amerasia/static/css/main.324832bb.chunk.css.map",
+  "index.html": "/amerasia/index.html",
+  "precache-manifest.43bfa4867b2dba9e6983f12d46b44019.js": "/amerasia/precache-manifest.43bfa4867b2dba9e6983f12d46b44019.js",
+  "service-worker.js": "/amerasia/service-worker.js"
 }
