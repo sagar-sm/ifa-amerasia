@@ -9,11 +9,11 @@ p {
     line-height: 20px;
 }
 
-.MuiAppBar-colorDefault-21 {
-
-    background-color: #c2ab8a !important;
-}
-
-.logo {
-    margin-top: 100px !important;
-}
+/**
+ * WARNING:
+ * --------
+ * Only define global styles here for tag names or class names that are NOT auto-generated.
+ *
+ * Auto-generated class names are those that are defined within any js files alongside
+ * the React components. Edit the Javascript classes definition to change those styles instead.
+ */

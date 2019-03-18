@@ -22,6 +22,9 @@ const styles = theme => ({
     width: '100%',
     zIndex: theme.zIndex.drawer + 1
   },
+  appBar: {
+    backgroundColor: '#c2ab8a'
+  },
   navLink: {
     textDecoration: 'none'
   },
@@ -165,7 +168,7 @@ class NavBar extends React.Component {
     const {classes} = this.props;
     return (
       <div className={classes.root}>
-        <AppBar position={'relative'} color={'default'}>
+        <AppBar position={'relative'} color={'default'} className={classes.appBar}>
           <Toolbar>
             <Grid container justify={'space-between'} alignItems={'center'}>
               <Grid item className={`${classes.headerItem} ${classes.titleContainer}`}>
