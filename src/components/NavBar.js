@@ -91,7 +91,15 @@ const styles = theme => ({
       display: 'flex'
     }
   },
-
+  logo: {
+    height: 22,
+    [theme.breakpoints.down('sm')]: {
+      height: 20
+    },
+    [theme.breakpoints.down('xs')]: {
+      height: 13
+    }
+  },
   byline: {
     [theme.breakpoints.down('sm')]: {
       display: 'none'
@@ -173,7 +181,7 @@ class NavBar extends React.Component {
             <Grid container justify={'space-between'} alignItems={'center'}>
               <Grid item className={`${classes.headerItem} ${classes.titleContainer}`}>
                 <Link to={'/'} className={classes.navLink}>
-                  <img src={'amerasia-logo-black.png'} height={22} />
+                  <img src={'amerasia-logo-black.png'} className={classes.logo} />
                   <Typography className={classes.byline}>An inquiry into early modern imaginative geography</Typography>
                 </Link>
               </Grid>
