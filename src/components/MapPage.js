@@ -87,6 +87,8 @@ const styles = theme => ({
   }
 });
 
+const articleUrls = new Set(DATA.map(d => d.id));
+
 export class MapPage extends Component {
   container = React.createRef();
   articleContainer = React.createRef();
@@ -123,7 +125,10 @@ export class MapPage extends Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.match.params.id !== this.props.match.params.id) {
-      this.articleContainer.current.scrollTop = 0; // reset the scroll inside the Drawer
+      // HACK: only reset zoom if the hash url is an actual article url and not an anchor tag
+      if (articleUrls.has(this.props.match.params.id)) {
+        this.articleContainer.current.scrollTop = 0; // reset the scroll inside the Drawer
+      }
 
       const point = find(DATA, {id: this.props.match.params.id});
       if (point) {
