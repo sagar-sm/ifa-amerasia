@@ -10,7 +10,7 @@ import {
   MuiThemeProvider
 } from '@material-ui/core';
 import React, {Component} from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {HashRouter, Route, Switch} from 'react-router-dom';
 import './base.css';
 import AboutPage from './components/AboutPage';
 import AccessibilityPage from './components/AccessibilityPage';
@@ -50,7 +50,7 @@ class App extends Component {
       <>
         <MuiThemeProvider theme={theme}>
           <CssBaseline />
-          <BrowserRouter>
+          <HashRouter basename={process.env.PUBLIC_URL} hashType={'noslash'}>
             <>
               <NavBar />
               <Switch>
@@ -64,7 +64,7 @@ class App extends Component {
                 <Route exact path={'/:id'} component={MapPage} />
               </Switch>
             </>
-          </BrowserRouter>
+          </HashRouter>
           <Dialog open={this.state.welcomeDialogOpen} onClose={this.closeWelcomeDialog}>
             <DialogTitle>Amerasia</DialogTitle>
             <DialogContent>
