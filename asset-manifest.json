@@ -1,13 +1,13 @@
 {
-  "main.css": "/amerasia/static/css/main.56eb4eba.chunk.css",
-  "main.js": "/amerasia/static/js/main.47448cb7.chunk.js",
-  "main.js.map": "/amerasia/static/js/main.47448cb7.chunk.js.map",
-  "static/js/1.342a9cf6.chunk.js": "/amerasia/static/js/1.342a9cf6.chunk.js",
-  "static/js/1.342a9cf6.chunk.js.map": "/amerasia/static/js/1.342a9cf6.chunk.js.map",
-  "runtime~main.js": "/amerasia/static/js/runtime~main.33ccb3fe.js",
-  "runtime~main.js.map": "/amerasia/static/js/runtime~main.33ccb3fe.js.map",
-  "static/css/main.56eb4eba.chunk.css.map": "/amerasia/static/css/main.56eb4eba.chunk.css.map",
-  "index.html": "/amerasia/index.html",
-  "precache-manifest.977bf161b7be24adcbbcb1317550d8bd.js": "/amerasia/precache-manifest.977bf161b7be24adcbbcb1317550d8bd.js",
-  "service-worker.js": "/amerasia/service-worker.js"
+  "main.css": "/static/css/main.66dfdffd.chunk.css",
+  "main.js": "/static/js/main.efbdeb9b.chunk.js",
+  "main.js.map": "/static/js/main.efbdeb9b.chunk.js.map",
+  "static/js/1.697eceee.chunk.js": "/static/js/1.697eceee.chunk.js",
+  "static/js/1.697eceee.chunk.js.map": "/static/js/1.697eceee.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
+  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
+  "static/css/main.66dfdffd.chunk.css.map": "/static/css/main.66dfdffd.chunk.css.map",
+  "index.html": "/index.html",
+  "precache-manifest.7ac94998712675a3ef5063c59431c20f.js": "/precache-manifest.7ac94998712675a3ef5063c59431c20f.js",
+  "service-worker.js": "/service-worker.js"
 }
