@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/amerasia/static/js/runtime~main.33ccb3fe.js"
   },
   {
-    "revision": "62dddedede1af1d6b3a9",
-    "url": "/amerasia/static/js/main.62dddede.chunk.js"
+    "revision": "47448cb7c759f187b654",
+    "url": "/amerasia/static/js/main.47448cb7.chunk.js"
   },
   {
     "revision": "342a9cf648be112287b2",
     "url": "/amerasia/static/js/1.342a9cf6.chunk.js"
   },
   {
-    "revision": "62dddedede1af1d6b3a9",
+    "revision": "47448cb7c759f187b654",
     "url": "/amerasia/static/css/main.56eb4eba.chunk.css"
   },
   {
-    "revision": "ffa4cbc3f64c81d33a657d148763595f",
+    "revision": "6e50748db2bb8f2a6a83ef73ede806fe",
     "url": "/amerasia/index.html"
   }
 ];
