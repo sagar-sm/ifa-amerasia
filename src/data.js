@@ -27,8 +27,7 @@ export const DATA = [
     y: 0.377,
     html: require('./articles/lipsman-parrots.html'),
     title: 'The Parrot’s Tale: the Bird’s Fall from Exotic Temptation to Common Commodity',
-    keywords: 'Parrot, Macaw, Van Eyck, Dürer, Sarto, Rubens, Brazil, Cantino, Mappamundi, Paradise, Adam, Eve',
-    pinColor: pink[400] // NOTE: Jason will fix this
+    keywords: 'Parrot, Macaw, Van Eyck, Dürer, Sarto, Rubens, Brazil, Cantino, Mappamundi, Paradise, Adam, Eve'
   },
   {
     id: 'cartouche-reader',
@@ -36,7 +35,8 @@ export const DATA = [
     y: 0.329,
     html: require('./articles/cartouche-reader.html'),
     title: 'Cartouche Benevolent Reader: Transcription and Translation',
-    keywords: 'Hyginus, Ptolemy, Charles V, latitude, longitude, America'
+    keywords: 'Hyginus, Ptolemy, Charles V, latitude, longitude, America',
+    pinColor: blue[300]
   },
   {
     id: 'cartouche-magellan',
@@ -44,7 +44,8 @@ export const DATA = [
     y: 0.306,
     html: require('./articles/cartouche-magellan.html'),
     title: 'Cartouche on Magellan: Transcription and Translation',
-    keywords: 'Magellan, China, Charles V, Hesperides, Moluccas, Indian Ocean, Seville'
+    keywords: 'Magellan, China, Charles V, Hesperides, Moluccas, Indian Ocean, Seville',
+    pinColor: blue[300]
   },
   {
     id: 'cartouche-america',
@@ -52,7 +53,8 @@ export const DATA = [
     y: 0.436,
     html: require('./articles/cartouche-america.html'),
     title: 'Cartouche on America/Vespucci: Transcription and Translation',
-    keywords: 'America, Vespucci, continents, Asia, Europe, Africa, cannibals'
+    keywords: 'America, Vespucci, continents, Asia, Europe, Africa, cannibals',
+    pinColor: blue[300]
   },
   {
     id: 'walsh-utopia',
