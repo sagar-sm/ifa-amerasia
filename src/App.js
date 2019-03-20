@@ -9,8 +9,9 @@ import {
   Grid,
   MuiThemeProvider
 } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography/Typography';
 import React, {Component} from 'react';
-import {HashRouter, Route, Switch} from 'react-router-dom';
+import {HashRouter, Link, Route, Switch} from 'react-router-dom';
 import './base.css';
 import AboutPage from './components/AboutPage';
 import AccessibilityPage from './components/AccessibilityPage';
@@ -21,7 +22,6 @@ import NavBar from './components/NavBar';
 import {theme} from './theme';
 
 const lsKey = 'welcomeDialogLastSeen';
-
 class App extends Component {
   state = {
     welcomeDialogOpen: false
@@ -66,24 +66,35 @@ class App extends Component {
             </>
           </HashRouter>
           <Dialog open={this.state.welcomeDialogOpen} onClose={this.closeWelcomeDialog}>
-            <DialogTitle>Amerasia</DialogTitle>
+            <DialogTitle>
+              <img src={'amerasia-logo-black.png'} width={200} />
+            </DialogTitle>
             <DialogContent>
               <DialogContentText>
-                By considering texts, maps, objects, and images produced between 1450 and 1700, Amerasia: A Renaissance
-                Discovery will reveal that the association of America and Asia dominated the geographical imagination of
-                Europe for over a century after 1492.
+                By considering texts, maps, objects, and images produced between 1450 and 1700,{' '}
+                <i>Amerasia: A Renaissance Discovery</i> will reveal that the association of America and Asia dominated
+                the geographical imagination of Europe for over a century after 1492.
               </DialogContentText>
+              &nbsp; &nbsp;
               <DialogContentText>
-                The Amerasia project is composed primarily of an interactive map, and a navigational menu to multiple
-                pages. Readers interact with this extremely detailed/high resolution scan (24,000 x 16,000 pixels)and
-                access pin points which open content boxes. The content is cross referenced with other points on the
-                same map.
+                The website is composed primarily of an interactive high definition map. Two different types of
+                removable pins appear on the map: blue pins indicate translated cartouches and yellow pins indicate
+                longer essays. Pins are removable using the controls in the upper left hand corner.
               </DialogContentText>
             </DialogContent>
+
             <DialogActions>
               <Grid container justify={'center'}>
-                <Button variant={'raised'} color={'primary'} onClick={this.closeWelcomeDialog}>
-                  Explore
+                <Button variant={'raised'} onClick={this.closeWelcomeDialog}>
+                  <a href='index' style={{textDecoration: 'none'}}>
+                    Explore the Map
+                  </a>
+                </Button>
+                &nbsp; &nbsp;
+                <Button variant={'raised'} onClick={this.closeWelcomeDialog}>
+                  <a href='#about' style={{textDecoration: 'none'}}>
+                    Read More about the Project
+                  </a>
                 </Button>
               </Grid>
             </DialogActions>
