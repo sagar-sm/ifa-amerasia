@@ -1,4 +1,4 @@
-import {withStyles} from '@material-ui/core';
+import {DialogContentText, withStyles} from '@material-ui/core';
 import React, {Component} from 'react';
 import Wrapper from './Wrapper';
 
@@ -10,30 +10,34 @@ class AboutPage extends Component {
   render() {
     return (
       <Wrapper>
-        <h2>About IFA Amerasia</h2>
+        <img src={'amerasia-logo-black.png'} width={200} alt={''} />
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae purus semper leo feugiat mollis. Nullam
-          erat odio, pharetra ac euismod at, tristique at nulla. In commodo gravida quam eget porta. Praesent et
-          imperdiet augue. Etiam elementum risus sit amet mauris tempor, eu iaculis tortor gravida. Proin vitae
-          dignissim orci. Phasellus volutpat erat quis hendrerit eleifend. Nam at orci leo. Maecenas venenatis lacus ac
-          libero egestas, vel dignissim ante sollicitudin. Nulla eget ornare velit. Fusce aliquet elementum ex, viverra
-          viverra nunc pulvinar quis.
+          <b>Liz Horodowich</b> and <b>Alexander Nagel</b>
         </p>
         <p>
-          Aenean vitae interdum metus. Etiam rutrum leo elit, eget mattis magna congue vel. Sed tincidunt, erat nec
-          consequat rhoncus, diam dolor scelerisque nibh, vitae mollis purus nulla eget orci. Sed mollis mauris egestas,
-          volutpat orci quis, vestibulum sem. Nunc vel ipsum vulputate felis gravida iaculis et placerat metus. Integer
-          pulvinar varius magna, nec iaculis mauris hendrerit sit amet. Donec at ultricies mi, nec imperdiet mauris.
-          Aliquam vel lacus dapibus arcu vehicula volutpat. Nam facilisis lorem nec erat maximus facilisis.
+          Studies devoted to the New World discoveries routinely acknowledge that Europeans confused the Americas with
+          Asia well into the sixteenth century, but no study has ever focused specifically on this confusion and its
+          broader implications. Early modern European cartographers, writers, editors, and artists systematically
+          blurred Asia and the Americas, placing Asian ports in Latin America, Marco Polo`s lions and tigers in Canada,
+          and identifying Aztec temples as mosques. We propose that the confusion evident in the cartographic record
+          needs to be understood in relation to a wide array of texts and images, all of which we will consider as maps
+          of different sorts. These confusions pose a fundamental methodological challenge, making it necessary to
+          suspend the definition of the words “America,” “Asia,” and even mutual redefinition. To take the confusion
+          seriously is to resist imposing later cartographic and cultural definitions on the earlier period, and to
+          re-imagine a proximity of thinking and discovery connecting one to the other. It is tempting to say that in
+          the early modern global movement of people, commodities, ideas, and images, ideas about Asia influenced
+          representations of the Americas, and (a less familiar hypothesis) ideas about the New World also influenced
+          representations of Asia. But the challenge is precisely not to frame the problem in such a way that America on
+          one side and Asia on the other. When a Tupinamba king appears in a scene of the Adoration of the Magi, the
+          challenge is to see it not as a strange intrusion of “New World” information into traditional iconography, but
+          rather as an instance of expanding eastern imaginary incorporating evidence from the most recent discoveries—a
+          malleable situation also evident in contemporary cartographic representations.
         </p>
+        <h3>The Website</h3>
         <p>
-          Nullam posuere auctor est vel consequat. Aenean sapien turpis, vestibulum ut pretium quis, pellentesque eget
-          magna. Duis mollis est nec nunc tempus, ut faucibus eros dapibus. Cras id quam at augue laoreet eleifend a ac
-          enim. Sed vulputate auctor justo, sed volutpat nulla convallis et. Donec felis tellus, mollis eget dolor a,
-          consequat vestibulum felis. Aenean nisl nisl, congue vel consectetur et, suscipit mattis tortor. Pellentesque
-          auctor pretium lacus ut volutpat. Morbi pharetra id lorem pellentesque luctus. Proin vitae imperdiet ipsum,
-          eget tristique massa. Ut in elit sed est mollis sagittis. Fusce posuere velit eget est laoreet, a convallis
-          odio aliquet.
+          The website is composed primarily of an interactive high definition map. Two different types of removable pins
+          appear on the map: blue pins indicate translated cartouches and yellow pins indicate longer essays. Pins are
+          removable using the controls in the upper left hand corner. <a href={'#index'}>Explore the map</a>
         </p>
       </Wrapper>
     );
