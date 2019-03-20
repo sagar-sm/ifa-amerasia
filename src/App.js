@@ -49,7 +49,7 @@ class App extends Component {
       <>
         <MuiThemeProvider theme={theme}>
           <CssBaseline />
-          <HashRouter basename={process.env.PUBLIC_URL} hashType={'noslash'}>
+          <HashRouter hashType={'noslash'}>
             <>
               <NavBar />
               <Switch>
