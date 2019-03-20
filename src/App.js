@@ -9,7 +9,6 @@ import {
   Grid,
   MuiThemeProvider
 } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography/Typography';
 import React, {Component} from 'react';
 import {HashRouter, Link, Route, Switch} from 'react-router-dom';
 import './base.css';
@@ -63,42 +62,40 @@ class App extends Component {
                 {/* IMPORTANT NOTE: This route MUST be at the end */}
                 <Route exact path={'/:id'} component={MapPage} />
               </Switch>
+              <Dialog open={this.state.welcomeDialogOpen} onClose={this.closeWelcomeDialog}>
+                <DialogTitle>
+                  <img src={'amerasia-logo-black.png'} width={200} />
+                </DialogTitle>
+                <DialogContent>
+                  <DialogContentText>
+                    By considering texts, maps, objects, and images produced between 1450 and 1700,{' '}
+                    <i>Amerasia: A Renaissance Discovery</i> will reveal that the association of America and Asia
+                    dominated the geographical imagination of Europe for over a century after 1492.
+                  </DialogContentText>
+                  &nbsp; &nbsp;
+                  <DialogContentText>
+                    The website is composed primarily of an interactive high definition map. Two different types of
+                    removable pins appear on the map: blue pins indicate translated cartouches and yellow pins indicate
+                    longer essays. Pins are removable using the controls in the upper left hand corner.
+                  </DialogContentText>
+                </DialogContent>
+
+                <DialogActions>
+                  <Grid container justify={'center'}>
+                    <Link to={'/'} style={{textDecoration: 'none'}}>
+                      <Button color={'textPrimary'} onClick={this.closeWelcomeDialog}>
+                        Explore the Map
+                      </Button>
+                    </Link>
+                    &nbsp; &nbsp;
+                    <Link to={'/about'} style={{textDecoration: 'none'}}>
+                      <Button onClick={this.closeWelcomeDialog}>Read More about the Project</Button>
+                    </Link>
+                  </Grid>
+                </DialogActions>
+              </Dialog>
             </>
           </HashRouter>
-          <Dialog open={this.state.welcomeDialogOpen} onClose={this.closeWelcomeDialog}>
-            <DialogTitle>
-              <img src={'amerasia-logo-black.png'} width={200} />
-            </DialogTitle>
-            <DialogContent>
-              <DialogContentText>
-                By considering texts, maps, objects, and images produced between 1450 and 1700,{' '}
-                <i>Amerasia: A Renaissance Discovery</i> will reveal that the association of America and Asia dominated
-                the geographical imagination of Europe for over a century after 1492.
-              </DialogContentText>
-              &nbsp; &nbsp;
-              <DialogContentText>
-                The website is composed primarily of an interactive high definition map. Two different types of
-                removable pins appear on the map: blue pins indicate translated cartouches and yellow pins indicate
-                longer essays. Pins are removable using the controls in the upper left hand corner.
-              </DialogContentText>
-            </DialogContent>
-
-            <DialogActions>
-              <Grid container justify={'center'}>
-                <Button variant={'raised'} onClick={this.closeWelcomeDialog}>
-                  <a href='index' style={{textDecoration: 'none'}}>
-                    Explore the Map
-                  </a>
-                </Button>
-                &nbsp; &nbsp;
-                <Button variant={'raised'} onClick={this.closeWelcomeDialog}>
-                  <a href='#about' style={{textDecoration: 'none'}}>
-                    Read More about the Project
-                  </a>
-                </Button>
-              </Grid>
-            </DialogActions>
-          </Dialog>
         </MuiThemeProvider>
       </>
     );
