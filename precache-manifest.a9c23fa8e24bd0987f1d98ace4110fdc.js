@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "822dececae47098f6215",
-    "url": "/amerasia/static/css/main.674e6a3b.chunk.css"
+    "revision": "fc73ed0e1f6ede877934",
+    "url": "/amerasia/static/css/main.b447474d.chunk.css"
   },
   {
-    "revision": "822dececae47098f6215",
-    "url": "/amerasia/static/js/main.822decec.chunk.js"
+    "revision": "fc73ed0e1f6ede877934",
+    "url": "/amerasia/static/js/main.fc73ed0e.chunk.js"
   },
   {
     "revision": "db8e4e2c726e81f02527",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/amerasia/static/js/runtime~main.33ccb3fe.js"
   },
   {
-    "revision": "e87d87a662f7049986edd04083248c34",
+    "revision": "db2a4182696f5467dce51c7d384e7635",
     "url": "/amerasia/index.html"
   }
 ];
