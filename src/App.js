@@ -68,15 +68,17 @@ class App extends Component {
                 </DialogTitle>
                 <DialogContent>
                   <DialogContentText>
-                    By considering texts, maps, objects, and images produced between 1450 and 1700,{' '}
-                    <i>Amerasia: A Renaissance Discovery</i> will reveal that the association of America and Asia
-                    dominated the geographical imagination of Europe for over a century after 1492.
+                    In 1545, the German mathematician and cartographer Caspar Vopel (1511-1561) designed a famous and
+                    influential map of the world, <i>A New Complete and Universal Description of the Whole
+                    World</i>{' '}
+                    that depicts Asia and America overlapping on the same landmass.
                   </DialogContentText>
                   &nbsp; &nbsp;
                   <DialogContentText>
-                    The website is composed primarily of an interactive high definition map. Two different types of
-                    removable pins appear on the map: blue pins indicate translated cartouches and yellow pins indicate
-                    longer essays. Pins are removable using the controls in the upper left hand corner.
+                    Using an interactive, high-definition interface, this website explores the map’s content. Blue pins
+                    indicate translated cartouches, and pink pins offer more extended essays pegged to sites with
+                    particular Amerasian significance. To explore the map without the pins, please use the controls in
+                    the upper left-hand corner of the home page.
                   </DialogContentText>
                 </DialogContent>
 

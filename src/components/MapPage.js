@@ -171,7 +171,13 @@ export class MapPage extends Component {
       const locationMarker = (
         <Tooltip title={point.pinTooltip || point.title} classes={{tooltip: classes.pinTooltip}}>
           <IconButton className={'locationPin'} id={point.id} aria-label={point.id} onClick={clickHandler}>
-            <LocationOn style={{fontSize: '1em', color: point.pinColor || yellow[400], cursor: 'pointer'}} />
+            <LocationOn
+              style={{
+                fontSize: '.7em',
+                color: point.pinColor || yellow[400],
+                cursor: 'pointer'
+              }}
+            />
           </IconButton>
         </Tooltip>
       );

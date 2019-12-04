@@ -99,7 +99,8 @@ class MapDebugPage extends Component {
           <div className={classes.debugContainer}>
             <Typography variant={'subtitle1'}>Debug Mode</Typography>
             <Typography variant={'caption'}>
-              Click map to drop a pin. Use maximum zoom level before clicking for the most accurate position.
+              Click map to drop a pin. Use the + and - keys to zoom in and out, and your mouse or the arrow keys to pan.
+              Use the maximum zoom level before clicking for the most accurate position.
             </Typography>
             <pre className={classes.pre}>{this.state.coordinates}</pre>
             {this.state.frozen && (

@@ -1,9 +1,224 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8cca36d4-bd73-4630-822b-8c87116aa3d4" name="Default Changelist" comment="">
+    <list default="true" id="8cca36d4-bd73-4630-822b-8c87116aa3d4" name="Default Changelist" comment="new articles">
+      <change afterPath="$PROJECT_DIR$/package.json(old)" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pdfs/HorodowichNagelAmerasiaarticleJEMHoffprint.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/agnew-images/agnew-fig1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/agnew-images/agnew-fig10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/agnew-images/agnew-fig11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/agnew-images/agnew-fig12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/agnew-images/agnew-fig13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/agnew-images/agnew-fig14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/agnew-images/agnew-fig15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/agnew-images/agnew-fig16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/agnew-images/agnew-fig17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/agnew-images/agnew-fig2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/agnew-images/agnew-fig3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/agnew-images/agnew-fig4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/agnew-images/agnew-fig5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/agnew-images/agnew-fig6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/agnew-images/agnew-fig7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/agnew-images/agnew-fig8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/agnew-images/agnew-fig9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/lipsman-images/lipsman-fig1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/lipsman-images/lipsman-fig2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/lipsman-images/lipsman-fig3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/lipsman-images/lipsman-fig4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/neh-header.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pivar-images/pivar-fig10a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pivar-images/pivar-fig10b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pivar-images/pivar-fig1a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pivar-images/pivar-fig1b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pivar-images/pivar-fig2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pivar-images/pivar-fig3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pivar-images/pivar-fig4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pivar-images/pivar-fig5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pivar-images/pivar-fig6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pivar-images/pivar-fig7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pivar-images/pivar-fig8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pivar-images/pivar-fig9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/raitt-images/raitt-fig1a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/raitt-images/raitt-fig1b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/raitt-images/raitt-fig1c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/raitt-images/raitt-fig1d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/raitt-images/raitt-fig1e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/raitt-images/raitt-fig2a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/raitt-images/raitt-fig2b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/raitt-images/raitt-fig2c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/raitt-images/raitt-fig3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/raitt-images/raitt-fig4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/raitt-images/raitt-fig5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/raitt-images/raitt-fig6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/raitt-images/raitt-fig7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/raitt-images/raitt-fig8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/raitt-images/raitt-fig9a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/raitt-images/raitt-fig9b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/riccioindian-images/riccioindian-fig1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/riccioindian-images/riccioindian-fig2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/riccioindian-images/riccioindian-fig3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/riccioindian-images/riccioindian-fig4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/strauss-images/strauss-fig1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/strauss-images/strauss-fig2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/Iucatana.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/aethiopia.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/amazones.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/archipelagus.coppo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/archipelagus.münster.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/archipelagus.ortelius.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/archipelagus.schöner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/calicut.molyneux.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/cambalu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/canibales.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/cattigora.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/cuba.santaella.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/cuba.waldseemuller.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/hispaniola.jode.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/hispaniola.ruysch.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/iava.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/indiaextragangem.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/indiaextragangem2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/indiaextragangem3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/london.eden.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/mare.cathayum.nancy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/pego.gastaldi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/pego.rosaccio.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/quemquinafu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/serica.zorzi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/sibilia.ribeiro.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/tholoma.gastaldi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vopel-images/tholoma.rosaccio.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/walshthomas-images/WalshThomas-fig1a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/walshthomas-images/WalshThomas-fig1b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/walshthomas-images/WalshThomas-fig2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/walshthomas-images/WalshThomas-fig3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/walshthomas-images/WalshThomas-fig4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/walshthomas-images/WalshThomas-fig5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/walshthomas-images/WalshThomas-fig6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/walshthomas-images/WalshThomas-fig7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/walshthomas-images/WalshThomas-fig8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/walshutopia-images/walshutopia-fig1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/walshutopia-images/walshutopia-fig10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/walshutopia-images/walshutopia-fig2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/walshutopia-images/walshutopia-fig3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/walshutopia-images/walshutopia-fig4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/walshutopia-images/walshutopia-fig5a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/walshutopia-images/walshutopia-fig5b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/walshutopia-images/walshutopia-fig6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/walshutopia-images/walshutopia-fig7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/walshutopia-images/walshutopia-fig8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/walshutopia-images/walshutopia-fig9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/weitzman-images/Weitzman-fig1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/weitzman-images/Weitzman-fig10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/weitzman-images/Weitzman-fig11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/weitzman-images/Weitzman-fig12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/weitzman-images/Weitzman-fig13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/weitzman-images/Weitzman-fig14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/weitzman-images/Weitzman-fig15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/weitzman-images/Weitzman-fig16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/weitzman-images/Weitzman-fig2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/weitzman-images/Weitzman-fig3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/weitzman-images/Weitzman-fig4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/weitzman-images/Weitzman-fig5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/weitzman-images/Weitzman-fig6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/weitzman-images/Weitzman-fig7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/weitzman-images/Weitzman-fig8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/weitzman-images/Weitzman-fig9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/aethiopia-media.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/amazones.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/america-nova-orbis-pars.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/archipelagus.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/bangala.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/bargu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/calicut.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/cambalu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/canibales.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/carolus-imperator-quintus.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/cattigora.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/chatay.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/corte-realis-insula.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/cuba.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/culuacana.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/draconis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/goch.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/hic-rinoceron.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/hispaniola-zipanga.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/iava-major.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/india-extra-gangem.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/india-orientalis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/iucatana.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/london.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/magellan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/mangi.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/mare-cathayum.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/margaritas.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/messigo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/moluccae.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/pego.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/peru-provincia.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/qvemquinafv.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/riccio-ophir.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/santa-maria.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/serica.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/sibilia.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/subuth.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/tangut.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/tartaria-magna.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/temixtitan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/tharsis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/tholoma.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/venetiae.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/walsh-thomas.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/zaphala.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/articles/zonal-hemispherical-maps.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pivar-images/image001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pivar-images/image002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pivar-images/image003.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pivar-images/image004.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pivar-images/image005.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pivar-images/image006.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pivar-images/image007.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pivar-images/image008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pivar-images/image009.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pivar-images/image010.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pivar-images/image011.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pivar-images/image012.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pivar-images/image013.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pivar-images/image014.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pivar-images/image015.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pivar-images/image016.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/strauss-images/image001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/strauss-images/image002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/articles/agnew-hieroglyphics.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/articles/agnew-hieroglyphics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/articles/america.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/articles/america.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/articles/asia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/articles/asia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/articles/cartouche-america.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/articles/cartouche-america.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/articles/cartouche-magellan.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/articles/cartouche-magellan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/articles/cartouche-reader.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/articles/cartouche-reader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/articles/cartouche-temixitan.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/articles/cartouche-temixitan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/articles/chang-paradise.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/articles/lipsman-parrots.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/articles/lipsman-parrots.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/articles/pivar-presterjohn.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/articles/pivar-presterjohn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/articles/raitt-florentinecodex.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/articles/raitt-florentinecodex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/articles/riccio-india.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/articles/riccio-india.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/articles/strauss-magi.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/articles/strauss-magi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/articles/walsh-utopia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/articles/walsh-utopia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/articles/weitzman-armeria.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/articles/weitzman-armeria.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/articles/wu-tangut-cathay-mangi.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/articles/wu-tangut-cathay-mangi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AboutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AccessibilityPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AccessibilityPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CreditsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CreditsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MapDebugPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MapDebugPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MapPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MapPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -14,160 +229,31 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="451930952">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="gitignore" value="1" />
-          <entry key="js" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JavaScript" value="1" />
-          <entry key="PLAIN_TEXT" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.js.language.service.starts">
-        <counts>
-          <entry key="ESLintLanguageService" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="js" value="43" />
-          <entry key="txt" value="87" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JavaScript" value="43" />
-          <entry key="PLAIN_TEXT" value="87" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-118537752">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="html" value="18" />
-          <entry key="js" value="26" />
-          <entry key="json" value="3" />
-          <entry key="md" value="1" />
-          <entry key="ts" value="2" />
-          <entry key="xml" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="HTML" value="18" />
-          <entry key="JSON" value="3" />
-          <entry key="JavaScript" value="26" />
-          <entry key="Markdown" value="1" />
-          <entry key="TypeScript" value="2" />
-          <entry key="XML" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="html" value="14" />
-          <entry key="js" value="4427" />
-          <entry key="json" value="5" />
-          <entry key="lock" value="2" />
-          <entry key="txt" value="746" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="HTML" value="14" />
-          <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="4427" />
-          <entry key="PLAIN_TEXT" value="746" />
-          <entry key="yarn.lock" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.js.language.service.starts">
-        <counts>
-          <entry key="ESLintLanguageService" value="2" />
-          <entry key="TypeScriptServerServiceImpl" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/data.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/MapPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4410">
-              <caret line="320" column="17" selection-start-line="320" selection-start-column="17" selection-end-line="320" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#56#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="329">
+              <caret line="312" column="19" lean-forward="true" selection-start-line="312" selection-start-column="19" selection-end-line="312" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.js">
+        <entry file="file://$PROJECT_DIR$/src/articles/cambalu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/CreditsPage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/theme.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/NavBar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="e#0#46#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="360">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -176,21 +262,44 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>jest</find>
-      <find>import \{withStyles\, withWidth\} from \'\@material\-ui\/core\'\nimport ButtonBase from \'\@material\-ui\/core\/ButtonBase\/ButtonBase\'\nimport \{yellow\} from \'\@material\-ui\/core\/colors\'\nimport Drawer from \'\@material\-ui\/core\/Drawer\/Drawer\'\nimport Grid from \'\@material\-ui\/core\/Grid\/Grid\'\nimport IconButton from \'\@material\-ui\/core\/IconButton\/IconButton\'\nimport Tooltip from \'\@material\-ui\/core\/Tooltip\/Tooltip\'\nimport \{isWidthUp\} from \'\@material\-ui\/core\/withWidth\'\nimport Close from \'\@material\-ui\/icons\/Close\'\nimport LocationOn from \'\@material\-ui\/icons\/LocationOn\'\nimport MyLocation from \'\@material\-ui\/icons\/MyLocation\'\nimport ZoomIn from \'\@material\-ui\/icons\/ZoomIn\'\nimport ZoomOut from \'\@material\-ui\/icons\/ZoomOut\'\nimport ZoomOutMap from \'\@material\-ui\/icons\/ZoomOutMap\'\nimport Place from \'\@material\-ui\/icons\/Place\'\nimport \{find\, flow\} from \'lodash\'\nimport OpenSeadragon from \'openseadragon\'\nimport React\, \{Component\} from \'react\'\nimport ReactDOM from \'react\-dom\'\nimport \{DATA\} from \'\.\.\/data\'\nimport \{headerHeight\} from \'\.\/NavBar\'\n\nconst IMMEDIATE_PAN_NAVIGATION \= false\n\nconst drawerWidth \= 500\nconst drawerWidthMd \= 350\nconst drawerWidthSm \= \'100vw\'\n\nconst styles \= \(theme\) \=\&gt; \(\{\n  buttons\: \{\n    position\: \'absolute\'\,\n    display\: \'flex\'\,\n    alignItems\: \'flex\-start\'\,\n    justifyContent\: \'flex\-start\'\,\n    zIndex\: theme\.zIndex\.appBar\,\n  \}\,\n  actionButton\: \{\n    width\: 28\,\n    height\: 28\,\n    padding\: 4\,\n    margin\: 4\,\n    borderRadius\: theme\.shape\.borderRadius\,\n    transition\: theme\.transitions\.create\(\[\'background\'\]\)\,\n    background\: \'rgba\(255\, 255\, 255\, 0\.7\)\'\,\n    \'\&amp;\:hover\'\: \{\n      background\: \'rgba\(255\, 255\, 255\, 1\)\'\,\n    \}\n  \}\,\n  icon\: \{\n    width\: 20\,\n    height\: 20\,\n  \}\,\n  drawerPaper\: \{\n    width\: drawerWidthSm\,\n    height\: \'50vh\'\,\n    padding\: 2 \* theme\.spacing\.unit\,\n    paddingBottom\: 100\,\n\n    \[theme\.breakpoints\.up\(\'sm\'\)\]\: \{\n      width\: drawerWidthMd\,\n      marginTop\: headerHeight\,\n      height\: \`calc\(100vh \- \$\{headerHeight\}px\)\`\,\n    \}\,\n\n    \[theme\.breakpoints\.up\(\'md\'\)\]\: \{\n      width\: drawerWidth\,\n      marginTop\: headerHeight\,\n      height\: \`calc\(100vh \- \$\{headerHeight\}px\)\`\,\n    \}\,\n  \}\,\n  mapContainer\: \{\n    background\: \'\#4c221a\'\,\n    transition\: theme\.transitions\.create\(\[\'width\'\, \'height\'\]\)\,\n  \}\,\n\}\)\n\nexport class MapPage extends Component \{\n  container \= React\.createRef\(\)\n\n  state \= \{\n    drawerOpen\: false\,\n    selectedHtml\: \'\'\,\n  \}\n\n  componentDidMount\(\) \{\n    this\.viewer \= OpenSeadragon\(\{\n        element\: this\.container\.current\,\n        prefixUrl\: \`\$\{process\.env\.PUBLIC_URL\}\/map\/vopel_files\/\`\,\n        tileSources\: \`\$\{process\.env\.PUBLIC_URL\}\/map\/vopel\.dzi\`\,\n        overlays\: this\.createOverlaysFromData\(\)\,\n        zoomInButton\: \'zoom\-in\-button\'\,\n        zoomOutButton\: \'zoom\-out\-button\'\,\n        homeButton\: \'home\-button\'\,\n        removePinButton\: \'remove\-pin\-button\'\, \/\/ added by Jason to create for Remove Pin button\n    \}\)\n    this\.viewer\.viewport\.minZoomLevel \= 0\.5\n    this\.viewer\.gestureSettingsMouse\.clickToZoom \= false\n    this\.viewer\.gestureSettingsMouse\.dblClickToZoom \= true\; \/\/ added by Jason to create double click zoom capability\n\n\n    if \(this\.props\.match\.params\.id\) \{\n        const point \= find\(DATA\, \{id\: this\.props\.match\.params\.id\}\)\n        if \(point\) \{\n            setTimeout\(\(\) \=\&gt; this\.navigateTo\(point\)\, 700\)\n        \}\n\n    \}\n\}\n\n\ncomponentDidUpdate\(prevProps\) \{\n    if \(prevProps\.match\.params\.id \!\=\= this\.props\.match\.params\.id\) \{\n        const point \= find\(DATA\, \{id\: this\.props\.match\.params\.id\}\)\n        if \(point\) \{\n            this\.navigateTo\(point\)\n        \}\n    \}\n\}\n\nnavigateTo \= \(point\) \=\&gt; \{\n    const target \= new OpenSeadragon\.Point\(point\.x\, point\.y\)\n    this\.viewer\.viewport\.panTo\(target\, IMMEDIATE_PAN_NAVIGATION\)\n    \/\/ Timeout to cancel out race condition with zoom animation\n    setTimeout\(\(\) \=\&gt; \{\n        this\.viewer\.viewport\.zoomTo\(9\, target\)\n    \}\, 700\)\n    this\.setState\(\{\n        drawerOpen\: true\,\n        selectedHtml\: point\.html\,\n    \}\)\n\}\n\nmakeMarkerClickHandler \= \(point\) \=\&gt; \(\) \=\&gt; \{\n    if \(this\.props\.match\.params\.id \!\=\= point\.id\) \{\n        this\.props\.history\.push\(point\.id\)\n    \}\n\}\n\nfocusPointOnMap \= \(\) \=\&gt; \{\n    const point \= find\(DATA\, \{id\: this\.props\.match\.params\.id\}\)\n    if \(point\) \{\n        this\.navigateTo\(point\)\n    \}\n\}\n\ncreateOverlaysFromData \= \(\) \=\&gt; \{\n    return DATA\.map\(\(point\) \=\&gt; \{\n        const clickHandler \= this\.makeMarkerClickHandler\(point\)\n\n        const locationMarker \= \(\n            \&lt;IconButton className\=\{\'overlay\'\} id\=\{point\.id\} aria\-label\=\{point\.id\} onClick\=\{clickHandler\}\&gt;\n                \&lt;LocationOn style\=\{\{fontSize\: \'1em\'\, color\: yellow\[400\]\, cursor\: \'pointer\'\}\}\/\&gt;\n            \&lt;\/IconButton\&gt;\n        \)\n\n        const locationMarkerContainer \= document\.createElement\(\'div\'\)\n        ReactDOM\.render\(locationMarker\, locationMarkerContainer\)\n\n        \/\/ Note\: we only need this for mobile support for now\n        new OpenSeadragon\.MouseTracker\(\{\n            element\: locationMarkerContainer\,\n            clickHandler\: clickHandler\,\n        \}\)\n\n        return \(\{\n            \.\.\.point\,\n            placement\: OpenSeadragon\.Placement\.CENTER\,\n            element\: locationMarkerContainer\,\n        \}\)\n    \}\)\n\}\n\n\/\/ Added by Jason to create function to remove\/clear pins\ntogglePins \= \(\) \=\&gt;\n\{\n\}\n\n\nonDrawerClose \= \(\) \=\&gt; \{\n    this\.setState\(\{drawerOpen\: false\}\)\n    this\.props\.history\.push\(\'\/\'\)\n\}\n\ncalcMapDimensions \= \(\) \=\&gt; \{\n    if \(\!this\.state\.drawerOpen\) \{\n        return \{\n            width\: \'100vw\'\,\n            height\: \`calc\(100vh \- \$\{headerHeight\}px\)\`\,\n        \}\n    \}\n\n    const height \= isWidthUp\(\'sm\'\, this\.props\.width\)\n        \? \`calc\(100vh \- \$\{headerHeight\}px\)\`\n        \: \`calc\(50vh \- \$\{headerHeight\}px\)\`\n\n    if \(isWidthUp\(\'sm\'\, this\.props\.width\)\) \{\n        return \{\n            width\: \`calc\(100vw \- \$\{drawerWidthMd\}px\)\`\,\n            height\,\n        \}\n    \} else if \(isWidthUp\(\'md\'\, this\.props\.width\)\) \{\n        return \{\n            width\: \`calc\(100vw \- \$\{drawerWidth\}px\)\`\,\n            height\,\n        \}\n    \}\n\n    return \{\n        width\: drawerWidthSm\,\n        height\,\n    \}\n\}\n\nrender\(\) \{\n    const \{classes\, width\} \= this\.props\n    return \(\n        \&lt;\&gt;\n            \&lt;div\n                ref\=\{this\.container\}\n                className\=\{classes\.mapContainer\}\n                style\=\{this\.calcMapDimensions\(\)\}\n            \&gt;\n                \&lt;div className\=\{classes\.buttons\}\&gt;\n                    \&lt;Grid container direction\=\{\'column\'\}\&gt;\n                        \&lt;Tooltip title\=\{\'Zoom In\'\} placement\=\{\'left\'\}\&gt;\n                            \&lt;ButtonBase className\=\{classes\.actionButton\} id\=\{\'zoom\-in\-button\'\} aria\-label\=\{\'zoom\-in\'\}\&gt;\n                                \&lt;ZoomIn className\=\{classes\.icon\}\/\&gt;\n                            \&lt;\/ButtonBase\&gt;\n                        \&lt;\/Tooltip\&gt;\n                        \&lt;Tooltip title\=\{\'Zoom Out\'\} placement\=\{\'left\'\}\&gt;\n                            \&lt;ButtonBase className\=\{classes\.actionButton\} id\=\{\'zoom\-out\-button\'\} aria\-label\=\{\'zoom\-out\'\}\&gt;\n                                \&lt;ZoomOut className\=\{classes\.icon\}\/\&gt;\n                            \&lt;\/ButtonBase\&gt;\n                        \&lt;\/Tooltip\&gt;\n                        \&lt;Tooltip title\=\{\'Reset Zoom\'\} placement\=\{\'left\'\}\&gt;\n                            \&lt;ButtonBase className\=\{classes\.actionButton\} id\=\{\'home\-button\'\} aria\-label\=\{\'home\'\}\&gt;\n                                \&lt;ZoomOutMap className\=\{classes\.icon\}\/\&gt;\n                            \&lt;\/ButtonBase\&gt;\n                        \&lt;\/Tooltip\&gt;\n                \&lt;Tooltip title\=\{\'Remove Pins\'\} placement\=\{\'left\'\}\&gt;\n                    \&lt;ButtonBase onClick\=\{this\.togglePins\} className\=\{classes\.actionButton\} id\=\{\'remove\-pin\-button\'\} aria\-label\=\{\'remove\-pins\'\}\&gt;\n                        \&lt;Place className\=\{classes\.icon\}\/\&gt;\n                    \&lt;\/ButtonBase\&gt;\n                \&lt;\/Tooltip\&gt;\n                    \&lt;\/Grid\&gt;\n                \&lt;\/div\&gt;\n            \&lt;\/div\&gt;\n            \&lt;Drawer\n                variant\=\{\'persistent\'\}\n                anchor\=\{isWidthUp\(\'sm\'\, width\) \? \'right\' \: \'bottom\'\}\n                open\=\{this\.state\.drawerOpen\}\n                onClose\=\{this\.onDrawerClose\}\n                BackdropProps\=\{\{invisible\: true\}\}\n                classes\=\{\{paper\: classes\.drawerPaper\}\}\n            \&gt;\n                \&lt;Grid container justify\=\{\'flex\-end\'\}\&gt;\n                    \&lt;Grid item\&gt;\n                        \&lt;Tooltip title\=\{\'Locate on map \'\}\&gt;\n                            \&lt;ButtonBase className\=\{classes\.actionButton\} aria\-label\=\{\'Locate on map\'\} onClick\=\{this\.focusPointOnMap\}\&gt;\n                                \&lt;MyLocation className\=\{classes\.icon\}\/\&gt;\n                            \&lt;\/ButtonBase\&gt;\n                        \&lt;\/Tooltip\&gt;\n                    \&lt;\/Grid\&gt;\n                    \&lt;Grid item\&gt;\n                        \&lt;Tooltip title\=\{\'Close\'\}\&gt;\n                            \&lt;ButtonBase className\=\{classes\.actionButton\} aria\-label\=\{\'Close sidebar\'\} onClick\=\{this\.onDrawerClose\}\&gt;\n                                \&lt;Close className\=\{classes\.icon\}\/\&gt;\n                            \&lt;\/ButtonBase\&gt;\n                        \&lt;\/Tooltip\&gt;\n                    \&lt;\/Grid\&gt;\n                \&lt;\/Grid\&gt;\n                \&lt;div id\=\&quot;ArticleContainer\&quot; dangerouslySetInnerHTML\=\{\{__html\: this\.state\.selectedHtml\}\}\/\&gt;\n            \&lt;\/Drawer\&gt;\n        \&lt;\/\&gt;\n    \)\n\}\n\}\n\nexport default flow\(\[\n    withWidth\(\)\,\n    withStyles\(styles\, \{withTheme\: true\}\)\n\]\)\(MapPage\)\n</find>
-      <find>eslint-pl</find>
-      <find>esl</find>
-      <find>eslnint</find>
-      <find>eslint</find>
-      <find>entry by</find>
-      <find>entry</find>
-      <find>Nav</find>
-      <find>autocom</find>
-      <find>toggle</find>
-      <find>color</find>
-      <find>Typograph</find>
-      <find>byline</find>
+      <find>&lt;a href</find>
+      <find>image</find>
+      <find>1a</find>
+      <find>10a</find>
+      <find>Õ</find>
+      <find>&lt;p class=&quot;BodyA&quot;&gt;</find>
+      <find>.jpg.</find>
+      <find>�</find>
+      <find>thomas</find>
+      <find>&lt;p class=Body&gt;</find>
+      <find>jpg</find>
+      <find>&lt;p body=class&gt;</find>
+      <find>img</find>
+      <find>walsh</find>
+      <find>element</find>
+      <find>png</find>
+      <find>&lt;p class=MsoEndnoteText&gt;</find>
+      <find>essay</find>
+      <find>&lt;p&gt;&lt;b&gt;</find>
+      <find>raitt</find>
+      <find>&lt;p class=MsoEndnoteTextCxSpFirst&gt;</find>
+      <find>&lt;p class=&quot;Body&quot;&gt;</find>
+      <find>link</find>
+      <find>appears very</find>
+      <find>ethi</find>
+      <find>ethiop</find>
+      <find>ethiopi</find>
+      <find>et</find>
+      <find>ethiopia</find>
+      <find>backgrounf</find>
     </findStrings>
+    <replaceStrings>
+      <replace>.jpg</replace>
+      <replace>&quot;</replace>
+      <replace>'</replace>
+      <replace>&lt;img width=&quot;100%&quot;</replace>
+      <replace>&lt;p&gt;</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -198,54 +307,70 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/config/.eslintrc.js" />
-        <option value="$PROJECT_DIR$/.eslintrc.js" />
-        <option value="$PROJECT_DIR$/config/webpack.config.dev.js" />
-        <option value="$PROJECT_DIR$/src/components/MapDebugPage.js" />
-        <option value="$PROJECT_DIR$/src/components/AboutPage.js" />
-        <option value="$PROJECT_DIR$/src/articles/agnew-hieroglyphics.html" />
-        <option value="$PROJECT_DIR$/src/articles/cartouche-magellan.html" />
+        <option value="$PROJECT_DIR$/src/articles/cattigora.html" />
+        <option value="$PROJECT_DIR$/src/articles/chatay.html" />
+        <option value="$PROJECT_DIR$/src/articles/corte-realis-insula.html" />
+        <option value="$PROJECT_DIR$/src/articles/culuacana.html" />
+        <option value="$PROJECT_DIR$/src/articles/draconis.html" />
+        <option value="$PROJECT_DIR$/src/articles/goch.html" />
+        <option value="$PROJECT_DIR$/src/articles/iava-major2.html" />
+        <option value="$PROJECT_DIR$/src/articles/iava-major.html" />
+        <option value="$PROJECT_DIR$/src/articles/london.html" />
+        <option value="$PROJECT_DIR$/src/articles/magellan.html" />
+        <option value="$PROJECT_DIR$/src/articles/mangi.html" />
+        <option value="$PROJECT_DIR$/src/articles/mare-cathayum.html" />
+        <option value="$PROJECT_DIR$/src/articles/margaritas.html" />
+        <option value="$PROJECT_DIR$/src/articles/messigo.html" />
+        <option value="$PROJECT_DIR$/src/articles/moluccae.html" />
+        <option value="$PROJECT_DIR$/src/articles/pego.html" />
+        <option value="$PROJECT_DIR$/src/articles/peru-provincia.html" />
+        <option value="$PROJECT_DIR$/src/articles/qvemquinafv.html" />
+        <option value="$PROJECT_DIR$/src/articles/serica.html" />
+        <option value="$PROJECT_DIR$/src/articles/subuth.html" />
+        <option value="$PROJECT_DIR$/src/articles/tangut.html" />
+        <option value="$PROJECT_DIR$/src/articles/tartaria-magna.html" />
+        <option value="$PROJECT_DIR$/src/articles/temixtitan.html" />
+        <option value="$PROJECT_DIR$/src/articles/tharsis.html" />
+        <option value="$PROJECT_DIR$/src/articles/tholoma.html" />
+        <option value="$PROJECT_DIR$/src/articles/zonal-hemispherical-maps.html" />
+        <option value="$PROJECT_DIR$/src/articles/venetiae.html" />
+        <option value="$PROJECT_DIR$/src/articles/walsh-thomas.htm" />
+        <option value="$PROJECT_DIR$/src/articles/walsh-thomas.html" />
+        <option value="$PROJECT_DIR$/src/articles/riccio-ophir.html" />
         <option value="$PROJECT_DIR$/src/articles/raitt-florentinecodex.html" />
-        <option value="$PROJECT_DIR$/src/articles/weitzman-armeria.html" />
-        <option value="$PROJECT_DIR$/src/articles/riccio-india.html" />
-        <option value="$PROJECT_DIR$/src/data.js" />
-        <option value="$PROJECT_DIR$/src/components/MapPage.js" />
-        <option value="$PROJECT_DIR$/src/theme.js" />
-        <option value="$PROJECT_DIR$/src/components/NavBar.js" />
+        <option value="$PROJECT_DIR$/src/articles/agnew-hieroglyphics.html" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/CreditsPage.js" />
+        <option value="$PROJECT_DIR$/src/components/AboutPage.js" />
+        <option value="$PROJECT_DIR$/src/components/AccessibilityPage.js" />
+        <option value="$PROJECT_DIR$/src/articles/riccio-india.html" />
+        <option value="$PROJECT_DIR$/src/articles/lipsman-parrots.html" />
+        <option value="$PROJECT_DIR$/src/articles/india-orientalis.html" />
+        <option value="$PROJECT_DIR$/src/articles/cuba.html" />
+        <option value="$PROJECT_DIR$/src/articles/iucatana.html" />
+        <option value="$PROJECT_DIR$/src/articles/wu-tangut-cathay-mangi.html" />
+        <option value="$PROJECT_DIR$/src/articles/india-extra-gangem.html" />
+        <option value="$PROJECT_DIR$/src/articles/zaphala.html" />
+        <option value="$PROJECT_DIR$/src/articles/pivar-presterjohn.html" />
+        <option value="$PROJECT_DIR$/src/articles/hic-rinoceron.html" />
+        <option value="$PROJECT_DIR$/src/articles/hispaniola-zipanga.html" />
+        <option value="$PROJECT_DIR$/src/articles/santa-maria.html" />
+        <option value="$PROJECT_DIR$/src/articles/sibilia.html" />
+        <option value="$PROJECT_DIR$/src/components/MapPage.js" />
+        <option value="$PROJECT_DIR$/src/data.js" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
-    <package-json value="$PROJECT_DIR$/package.json" />
-  </component>
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/package.json" />
-    </packageJsonPaths>
-  </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1136" />
+    <option name="width" value="1440" />
+    <option name="height" value="873" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -256,7 +381,18 @@
             <path>
               <item name="amerasia" type="b2602c69:ProjectViewProjectNode" />
               <item name="amerasia" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="amerasia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="amerasia" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="amerasia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="amerasia" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="articles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="amerasia" type="b2602c69:ProjectViewProjectNode" />
@@ -268,11 +404,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/articles" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -283,10 +421,14 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/articles" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -303,6 +445,16 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="cambalu.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/amerasia/src/articles/cambalu.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.cambalu.html" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -316,6 +468,26 @@
       <workItem from="1542041893608" duration="3007000" />
       <workItem from="1552410411501" duration="4137000" />
       <workItem from="1552414768185" duration="7439000" />
+      <workItem from="1554296271181" duration="2240000" />
+      <workItem from="1554492770050" duration="107000" />
+      <workItem from="1554492909284" duration="223000" />
+      <workItem from="1554493176947" duration="4633000" />
+      <workItem from="1555123997311" duration="104000" />
+      <workItem from="1555954994650" duration="7290000" />
+      <workItem from="1556546096676" duration="7734000" />
+      <workItem from="1560880916375" duration="1532000" />
+      <workItem from="1562705950132" duration="698000" />
+      <workItem from="1564428890082" duration="11353000" />
+      <workItem from="1567091751273" duration="1431000" />
+      <workItem from="1567094743693" duration="6277000" />
+      <workItem from="1568136160506" duration="3029000" />
+      <workItem from="1569950498621" duration="395000" />
+      <workItem from="1571930899115" duration="8442000" />
+      <workItem from="1572622018016" duration="747000" />
+      <workItem from="1572650403519" duration="8571000" />
+      <workItem from="1573845712007" duration="1257000" />
+      <workItem from="1575399457939" duration="2708000" />
+      <workItem from="1575490956062" duration="2164000" />
     </task>
     <task id="LOCAL-00001" summary="height fix for Safari mobile">
       <created>1542043474788</created>
@@ -496,29 +668,38 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15435000" />
+    <option name="totallyTimeSpent" value="86697000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1136" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17956819" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27554616" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32950193" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49048626" weight="0.3290653" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3290653" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50951374" side_tool="true" weight="0.3290653" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32950193" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.3290653" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
+      <window_info anchor="bottom" id="Inspection Results" order="13" sideWeight="0.49682876" weight="0.3290653" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -527,11 +708,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="height fix for Safari mobile" />
     <MESSAGE value="check in .idea folder" />
     <MESSAGE value="fix drawer margin" />
     <MESSAGE value="remove yarn lock for now :(" />
@@ -556,279 +733,382 @@
     <MESSAGE value="fix logo spacing in header" />
     <MESSAGE value="fix links on the welcome dialog" />
     <MESSAGE value="remove basename" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove basename" />
+    <MESSAGE value="new articles" />
+    <option name="LAST_COMMIT_MESSAGE" value="new articles" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/test.js" />
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/articles/peru-provincia.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        <state relative-caret-position="675">
+          <caret line="45" lean-forward="true" selection-end-line="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/start.js">
+    <entry file="file://$PROJECT_DIR$/src/articles/qvemquinafv.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-640" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/AccessibilityPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="43" lean-forward="true" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+        <state relative-caret-position="435">
+          <caret line="29" column="5" lean-forward="true" selection-end-line="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-dev-utils/errorOverlayMiddleware.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.eslintrc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/webpack.config.prod.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="242" column="61" selection-start-line="242" selection-start-column="61" selection-end-line="242" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/webpackDevServer.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/webpack.config.dev.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="150" column="88" selection-start-line="150" selection-start-column="88" selection-end-line="150" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MapDebugPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/env.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/AboutPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="86" lean-forward="true" selection-start-line="17" selection-start-column="86" selection-end-line="17" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/articles/agnew-hieroglyphics.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="259" column="25" selection-start-line="259" selection-start-column="25" selection-end-line="259" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/articles/america.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/articles/asia.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/articles/cartouche-america.html">
+    <entry file="file://$PROJECT_DIR$/src/articles/serica.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/articles/cartouche-magellan.html">
+    <entry file="file://$PROJECT_DIR$/src/articles/subuth.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="106" selection-start-line="3" selection-start-column="106" selection-end-line="3" selection-end-column="106" />
+          <caret line="3" column="19" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/articles/cartouche-reader.html">
+    <entry file="file://$PROJECT_DIR$/src/articles/tangut.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" selection-start-column="25" selection-end-column="25" />
+        <state relative-caret-position="645">
+          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/articles/cartouche-temixitan.html">
+    <entry file="file://$PROJECT_DIR$/src/articles/tartaria-magna.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="84" selection-start-line="3" selection-start-column="84" selection-end-line="3" selection-end-column="84" />
+        <state relative-caret-position="405">
+          <caret line="55" column="41" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/articles/wu-tangut-cathay-mangi.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/articles/walsh-utopia.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/articles/strauss-magi.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="320" column="57" selection-start-line="320" selection-start-column="57" selection-end-line="320" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/articles/riccio-india.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="210" column="74" selection-start-line="210" selection-start-column="69" selection-end-line="210" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/articles/weitzman-armeria.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="565" column="14" lean-forward="true" selection-start-line="565" selection-start-column="14" selection-end-line="565" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/articles/raitt-florentinecodex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3390">
-          <caret line="226" column="35" lean-forward="true" selection-start-line="226" selection-start-column="35" selection-end-line="226" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/articles/pivar-presterjohn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="302" column="41" selection-start-line="302" selection-start-column="41" selection-end-line="302" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/articles/lipsman-parrots.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="106" column="93" selection-start-line="106" selection-start-column="93" selection-end-line="106" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/articles/chang-paradise.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="267" column="60" selection-start-line="267" selection-start-column="60" selection-end-line="267" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@material-ui/core/colors/yellow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="15" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@material-ui/core/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data.js">
+    <entry file="file://$PROJECT_DIR$/src/articles/temixtitan.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+          <caret line="18" column="41" lean-forward="true" selection-end-line="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@material-ui/core/colors/yellow.d.ts">
+    <entry file="file://$PROJECT_DIR$/src/articles/tharsis.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/tholoma.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="35" column="37" lean-forward="true" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/zonal-hemispherical-maps.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="80" column="36" selection-end-line="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/venetiae.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" lean-forward="true" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/walsh-thomas.htm" />
+    <entry file="file://$PROJECT_DIR$/src/articles/walsh-thomas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="592" column="17" selection-start-line="592" selection-start-column="17" selection-end-line="592" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Wrapper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="309">
-            <caret line="154" column="5" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/theme.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MapPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4410">
-          <caret line="320" column="17" selection-start-line="320" selection-start-column="17" selection-end-line="320" selection-end-column="17" />
           <folding>
-            <element signature="e#0#56#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/NavBar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="235">
+          <caret line="183" column="16" selection-start-line="183" selection-start-column="16" selection-end-line="183" selection-end-column="82" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/src/articles/raitt-florentinecodex.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+        <state relative-caret-position="7830">
+          <caret line="522" column="31" selection-start-line="522" selection-start-column="31" selection-end-line="522" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
+    <entry file="file://$PROJECT_DIR$/src/base.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/AboutPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+        <state relative-caret-position="990">
+          <caret line="68" column="11" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/AccessibilityPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/india-orientalis.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/india-extra-gangem.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="37" column="2" lean-forward="true" selection-end-line="181" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/iucatana.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="21" column="40" lean-forward="true" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/cuba.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="42" column="39" lean-forward="true" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/agnew-hieroglyphics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="74" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
+          <folding>
+            <element signature="e#35049#35054#0" expanded="true" />
+            <element signature="e#39589#39594#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/CreditsPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+        <state relative-caret-position="1860">
+          <caret line="127" column="49" selection-start-line="127" selection-start-column="49" selection-end-line="127" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/lipsman-parrots.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/wu-tangut-cathay-mangi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="220" column="17" selection-start-line="220" selection-start-column="14" selection-end-line="220" selection-end-column="17" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#11405#11425#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/weitzman-armeria.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="108" column="70" selection-start-line="108" selection-start-column="70" selection-end-line="108" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/riccio-india.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="391" column="41" selection-start-line="391" selection-start-column="33" selection-end-line="391" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/riccio-ophir.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="428" column="72" selection-start-line="428" selection-start-column="64" selection-end-line="428" selection-end-column="72" />
+          <folding>
+            <element signature="e#16722#16728#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/walsh-utopia.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="18" column="68" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/pivar-presterjohn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+          <folding>
+            <element signature="e#13015#13021#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/hispaniola-zipanga.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="36" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/hic-rinoceron.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/zaphala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="70" column="6" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/santa-maria.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/sibilia.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/london.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/colors/safe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/colors/lib/colors.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2146">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/colors/examples/normal-usage.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/magellan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/margaritas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/messigo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1410">
+          <caret line="94" column="35" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/moluccae.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/serviceWorker.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="881">
+          <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#168#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MapPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="312" column="19" lean-forward="true" selection-start-line="312" selection-start-column="19" selection-end-line="312" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/articles/cambalu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
         </state>
       </provider>
     </entry>
