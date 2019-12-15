@@ -100,7 +100,6 @@ export default function MapPage(props) {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [showPins, setShowPins] = useState(true);
   const [selectedHtml, setSelectedHtml] = useState('');
-  const [welcomeDialogOpen, setWelcomeDialogOpen] = useState(true);
 
   let viewer;
   useEffect(() => {
@@ -151,9 +150,7 @@ export default function MapPage(props) {
   }
 
   const makeMarkerClickHandler = point => () => {
-    // if (props.match.params.id !== point.id) {
-    //   props.history.push(point.id);
-    // }
+    history.pushState(null, null, `#${point.id}`);
     navigateTo(point);
   };
 
@@ -207,7 +204,7 @@ export default function MapPage(props) {
 
   const onDrawerClose = () => {
     setDrawerOpen(false);
-    props.history.push('/');
+    history.pushState(null, null, '#');
   };
 
   const calcMapDimensions = () => {
@@ -236,10 +233,6 @@ export default function MapPage(props) {
       width: drawerWidthSm,
       height
     };
-  };
-
-  const closeWelcomeDialog = () => {
-    setWelcomeDialogOpen(false);
   };
 
   return (
