@@ -4,15 +4,14 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8cca36d4-bd73-4630-822b-8c87116aa3d4" name="Default Changelist" comment="new articles">
+    <list default="true" id="8cca36d4-bd73-4630-822b-8c87116aa3d4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/useWidth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MapDebugPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MapDebugPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MapPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MapPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Wrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Wrapper.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +108,7 @@
       <workItem from="1573845712007" duration="1257000" />
       <workItem from="1575399457939" duration="2708000" />
       <workItem from="1575490956062" duration="2164000" />
-      <workItem from="1576381229537" duration="10843000" />
+      <workItem from="1576381229537" duration="13778000" />
     </task>
     <task id="LOCAL-00001" summary="height fix for Safari mobile">
       <created>1542043474788</created>
@@ -286,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553113173933</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="upgrade MUI and react">
+      <created>1576393711192</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1576393711192</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView">
@@ -313,7 +319,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="check in .idea folder" />
     <MESSAGE value="fix drawer margin" />
     <MESSAGE value="remove yarn lock for now :(" />
     <MESSAGE value="remove testing infrastructure, update WDS to fix vulnerability warnings" />
@@ -338,7 +343,8 @@
     <MESSAGE value="fix links on the welcome dialog" />
     <MESSAGE value="remove basename" />
     <MESSAGE value="new articles" />
-    <option name="LAST_COMMIT_MESSAGE" value="new articles" />
+    <MESSAGE value="upgrade MUI and react" />
+    <option name="LAST_COMMIT_MESSAGE" value="upgrade MUI and react" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

@@ -5,7 +5,7 @@ import {headerHeight} from './NavBar';
 const styles = theme => ({
   root: {
     width: '50vw',
-    padding: 2 * theme.spacing.unit,
+    padding: theme.spacing(2),
     margin: 'auto',
     marginTop: headerHeight
   },

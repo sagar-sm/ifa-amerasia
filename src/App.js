@@ -9,6 +9,7 @@ import {
   Grid,
   MuiThemeProvider
 } from '@material-ui/core';
+import {createHashHistory} from 'history';
 import React, {Component} from 'react';
 import {HashRouter, Link, Route, Switch} from 'react-router-dom';
 import './base.css';
@@ -21,6 +22,7 @@ import NavBar from './components/NavBar';
 import {theme} from './theme';
 
 const lsKey = 'welcomeDialogLastSeen';
+const history = createHashHistory();
 class App extends Component {
   state = {
     welcomeDialogOpen: false
@@ -49,7 +51,7 @@ class App extends Component {
       <>
         <MuiThemeProvider theme={theme}>
           <CssBaseline />
-          <HashRouter hashType={'noslash'}>
+          <HashRouter hashType={'noslash'} history={history}>
             <>
               <NavBar />
               <Switch>
@@ -69,8 +71,7 @@ class App extends Component {
                 <DialogContent>
                   <DialogContentText>
                     In 1545, the German mathematician and cartographer Caspar Vopel (1511-1561) designed a famous and
-                    influential map of the world, <i>A New Complete and Universal Description of the Whole
-                    World</i>{' '}
+                    influential map of the world, <i>A New Complete and Universal Description of the Whole World</i>{' '}
                     that depicts Asia and America overlapping on the same landmass.
                   </DialogContentText>
                   &nbsp; &nbsp;

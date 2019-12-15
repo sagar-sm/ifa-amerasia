@@ -1,4 +1,4 @@
-import {withStyles, withWidth} from '@material-ui/core';
+import {makeStyles} from '@material-ui/core';
 import ButtonBase from '@material-ui/core/ButtonBase/ButtonBase';
 import {yellow} from '@material-ui/core/colors';
 import Drawer from '@material-ui/core/Drawer/Drawer';
@@ -14,11 +14,12 @@ import ZoomIn from '@material-ui/icons/ZoomIn';
 import ZoomOut from '@material-ui/icons/ZoomOut';
 import ZoomOutMap from '@material-ui/icons/ZoomOutMap';
 import cx from 'classnames';
-import {find, flow} from 'lodash';
+import {find} from 'lodash';
 import OpenSeadragon from 'openseadragon';
-import React, {Component} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import ReactDOM from 'react-dom';
 import {DATA} from '../data';
+import {useWidth} from '../useWidth';
 import {headerHeight} from './NavBar';
 
 const IMMEDIATE_PAN_NAVIGATION = false;
@@ -27,7 +28,7 @@ const drawerWidth = 500;
 const drawerWidthMd = 350;
 const drawerWidthSm = '100vw';
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   buttons: {
     position: 'absolute',
     display: 'flex',
@@ -85,93 +86,87 @@ const styles = theme => ({
     background: theme.palette.background.default,
     color: theme.palette.text.primary
   }
-});
+}));
 
 const articleUrls = new Set(DATA.map(d => d.id));
 
-export class MapPage extends Component {
-  container = React.createRef();
-  articleContainer = React.createRef();
+export default function MapPage(props) {
+  const classes = useStyles();
+  const width = useWidth();
 
-  state = {
-    drawerOpen: false,
-    showPins: true,
-    selectedHtml: '',
-    welcomeDialogOpen: true
-  };
+  const containerRef = useRef();
+  const articleContainerRef = useRef();
 
-  componentDidMount() {
-    this.viewer = OpenSeadragon({
-      element: this.container.current,
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [showPins, setShowPins] = useState(true);
+  const [selectedHtml, setSelectedHtml] = useState('');
+  const [welcomeDialogOpen, setWelcomeDialogOpen] = useState(true);
+
+  let viewer;
+  useEffect(() => {
+    viewer = OpenSeadragon({
+      element: containerRef.current,
       prefixUrl: `${process.env.PUBLIC_URL}/map/vopel_files/`,
       tileSources: `${process.env.PUBLIC_URL}/map/vopel.dzi`,
-      overlays: this.createOverlaysFromData(),
+      overlays: createOverlaysFromData(),
       zoomInButton: 'zoom-in-button',
       zoomOutButton: 'zoom-out-button',
       homeButton: 'home-button',
       removePinButton: 'toggle-pin-button'
     });
-    this.viewer.viewport.minZoomLevel = 0.5;
-    this.viewer.gestureSettingsMouse.clickToZoom = false;
-    this.viewer.gestureSettingsMouse.dblClickToZoom = true; // added by Jason to create double click zoom capability
+    viewer.viewport.minZoomLevel = 0.5;
+    viewer.gestureSettingsMouse.clickToZoom = false;
+    viewer.gestureSettingsMouse.dblClickToZoom = true; // added by Jason to create double click zoom capability
 
-    if (this.props.match.params.id) {
-      const point = find(DATA, {id: this.props.match.params.id});
+    if (props.match.params.id) {
+      const point = find(DATA, {id: props.match.params.id});
       if (point) {
-        setTimeout(() => this.navigateTo(point), 700);
+        setTimeout(() => navigateTo(point), 700);
       }
     }
-  }
+  }, []);
 
-  componentDidUpdate(prevProps) {
-    if (prevProps.match.params.id !== this.props.match.params.id) {
-      // HACK: only reset zoom if the hash url is an actual article url and not an anchor tag
-      if (articleUrls.has(this.props.match.params.id)) {
-        this.articleContainer.current.scrollTop = 0; // reset the scroll inside the Drawer
-      }
-
-      const point = find(DATA, {id: this.props.match.params.id});
-      if (point) {
-        this.navigateTo(point);
-      }
+  useEffect(() => {
+    // HACK: only reset zoom if the hash url is an actual article url and not an anchor tag
+    if (articleUrls.has(props.match.params.id)) {
+      articleContainerRef.current.scrollTop = 0; // reset the scroll inside the Drawer
     }
-  }
 
-  navigateTo = point => {
+    const point = find(DATA, {id: props.match.params.id});
+    if (point && viewer) {
+      navigateTo(point);
+    }
+  }, [props.match.params.id]);
+
+  function navigateTo(point) {
     const target = new OpenSeadragon.Point(point.x, point.y);
-    this.viewer.viewport.panTo(target, IMMEDIATE_PAN_NAVIGATION);
+    viewer.viewport.panTo(target, IMMEDIATE_PAN_NAVIGATION);
     // Timeout to cancel out race condition with zoom animation
     setTimeout(() => {
-      this.viewer.viewport.zoomTo(9, target);
+      viewer.viewport.zoomTo(9, target);
     }, 700);
-    this.setState({
-      drawerOpen: true,
-      selectedHtml: point.html
-    });
-  };
 
-  shouldComponentUpdate(nextProps, nextState, nextContext) {
-    return false;
+    setDrawerOpen(true);
+    setSelectedHtml(point.html);
   }
 
-  makeMarkerClickHandler = point => () => {
-    if (this.props.match.params.id !== point.id) {
-      this.props.history.push(point.id);
-    }
+  const makeMarkerClickHandler = point => () => {
+    // if (props.match.params.id !== point.id) {
+    //   props.history.push(point.id);
+    // }
+    navigateTo(point);
   };
 
-  focusPointOnMap = () => {
-    const point = find(DATA, {id: this.props.match.params.id});
+  const focusPointOnMap = () => {
+    const point = find(DATA, {id: props.match.params.id});
     if (point) {
-      this.navigateTo(point);
+      navigateTo(point);
     }
   };
 
-  createOverlaysFromData = () => {
-    const {classes} = this.props;
-
+  const createOverlaysFromData = () => {
     return DATA.map(point => {
-      const clickHandler = this.makeMarkerClickHandler(point);
+      const clickHandler = makeMarkerClickHandler(point);
       const locationMarker = (
         <Tooltip title={point.pinTooltip || point.title} classes={{tooltip: classes.pinTooltip}}>
           <IconButton className={'locationPin'} id={point.id} aria-label={point.id} onClick={clickHandler}>
@@ -203,42 +198,34 @@ export class MapPage extends Component {
     });
   };
 
-  togglePins = () => {
-    this.setState(
-      state => ({
-        showPins: !state.showPins
-      }),
-      () => {
-        document.querySelectorAll(`.locationPin`).forEach(elem => {
-          elem.style.display = this.state.showPins ? 'block' : 'none';
-        });
-      }
-    );
+  const togglePins = () => {
+    setShowPins(prevState => !prevState);
+    document.querySelectorAll(`.locationPin`).forEach(elem => {
+      elem.style.display = showPins ? 'block' : 'none';
+    });
   };
 
-  onDrawerClose = () => {
-    this.setState({drawerOpen: false});
-    this.props.history.push('/');
+  const onDrawerClose = () => {
+    setDrawerOpen(false);
+    props.history.push('/');
   };
 
-  calcMapDimensions = () => {
-    if (!this.state.drawerOpen) {
+  const calcMapDimensions = () => {
+    if (!drawerOpen) {
       return {
         width: '100vw',
         height: `calc(100vh - ${headerHeight}px)`
       };
     }
 
-    const height = isWidthUp('sm', this.props.width)
-      ? `calc(100vh - ${headerHeight}px)`
-      : `calc(50vh - ${headerHeight}px)`;
+    const height = isWidthUp('sm', width) ? `calc(100vh - ${headerHeight}px)` : `calc(50vh - ${headerHeight}px)`;
 
-    if (isWidthUp('sm', this.props.width)) {
+    if (isWidthUp('sm', width)) {
       return {
         width: `calc(100vw - ${drawerWidthMd}px)`,
         height
       };
-    } else if (isWidthUp('md', this.props.width)) {
+    } else if (isWidthUp('md', width)) {
       return {
         width: `calc(100vw - ${drawerWidth}px)`,
         height
@@ -251,87 +238,78 @@ export class MapPage extends Component {
     };
   };
 
-  closeWelcomeDialog = () => {
-    this.setState({welcomeDialogOpen: false});
+  const closeWelcomeDialog = () => {
+    setWelcomeDialogOpen(false);
   };
 
-  render() {
-    const {classes, width} = this.props;
-    return (
-      <>
-        <div ref={this.container} className={classes.mapContainer} style={this.calcMapDimensions()}>
-          <div className={classes.buttons}>
-            <Grid container direction={'column'}>
-              <Tooltip title={'Zoom In'} placement={'left'}>
-                <ButtonBase className={classes.actionButton} id={'zoom-in-button'} aria-label={'zoom-in'}>
-                  <ZoomIn className={classes.icon} />
-                </ButtonBase>
-              </Tooltip>
-              <Tooltip title={'Zoom Out'} placement={'left'}>
-                <ButtonBase className={classes.actionButton} id={'zoom-out-button'} aria-label={'zoom-out'}>
-                  <ZoomOut className={classes.icon} />
-                </ButtonBase>
-              </Tooltip>
-              <Tooltip title={'Reset Zoom'} placement={'left'}>
-                <ButtonBase className={classes.actionButton} id={'home-button'} aria-label={'home'}>
-                  <ZoomOutMap className={classes.icon} />
-                </ButtonBase>
-              </Tooltip>
-              <Tooltip title={this.state.showPins ? 'Hide Pins' : 'Show Pins'} placement={'left'}>
-                <ButtonBase
-                  onClick={this.togglePins}
-                  className={classes.actionButton}
-                  id={'toggle-pin-button'}
-                  aria-label={'toggle pins'}
-                >
-                  <Place
-                    className={cx({
-                      [classes.icon]: true,
-                      [classes.highlightedIcon]: !this.state.showPins
-                    })}
-                  />
-                </ButtonBase>
-              </Tooltip>
-            </Grid>
-          </div>
-        </div>
-        <Drawer
-          variant={'persistent'}
-          anchor={isWidthUp('sm', width) ? 'right' : 'bottom'}
-          open={this.state.drawerOpen}
-          onClose={this.onDrawerClose}
-          BackdropProps={{invisible: true}}
-          classes={{paper: classes.drawerPaper}}
-        >
-          <Grid container justify={'flex-end'}>
-            <Grid item>
-              <Tooltip title={'Locate on map '}>
-                <ButtonBase
-                  className={classes.actionButton}
-                  aria-label={'Locate on map'}
-                  onClick={this.focusPointOnMap}
-                >
-                  <MyLocation className={classes.icon} />
-                </ButtonBase>
-              </Tooltip>
-            </Grid>
-            <Grid item>
-              <Tooltip title={'Close'}>
-                <ButtonBase className={classes.actionButton} aria-label={'Close sidebar'} onClick={this.onDrawerClose}>
-                  <Close className={classes.icon} />
-                </ButtonBase>
-              </Tooltip>
-            </Grid>
+  return (
+    <>
+      <div ref={containerRef} className={classes.mapContainer} style={calcMapDimensions()}>
+        <div className={classes.buttons}>
+          <Grid container direction={'column'}>
+            <Tooltip title={'Zoom In'} placement={'left'}>
+              <ButtonBase className={classes.actionButton} id={'zoom-in-button'} aria-label={'zoom-in'}>
+                <ZoomIn className={classes.icon} />
+              </ButtonBase>
+            </Tooltip>
+            <Tooltip title={'Zoom Out'} placement={'left'}>
+              <ButtonBase className={classes.actionButton} id={'zoom-out-button'} aria-label={'zoom-out'}>
+                <ZoomOut className={classes.icon} />
+              </ButtonBase>
+            </Tooltip>
+            <Tooltip title={'Reset Zoom'} placement={'left'}>
+              <ButtonBase className={classes.actionButton} id={'home-button'} aria-label={'home'}>
+                <ZoomOutMap className={classes.icon} />
+              </ButtonBase>
+            </Tooltip>
+            <Tooltip title={showPins ? 'Hide Pins' : 'Show Pins'} placement={'left'}>
+              <ButtonBase
+                onClick={togglePins}
+                className={classes.actionButton}
+                id={'toggle-pin-button'}
+                aria-label={'toggle pins'}
+              >
+                <Place
+                  className={cx({
+                    [classes.icon]: true,
+                    [classes.highlightedIcon]: !showPins
+                  })}
+                />
+              </ButtonBase>
+            </Tooltip>
           </Grid>
-          <div
-            className={classes.articleContainer}
-            ref={this.articleContainer}
-            dangerouslySetInnerHTML={{__html: this.state.selectedHtml}}
-          />
-        </Drawer>
-      </>
-    );
-  }
+        </div>
+      </div>
+      <Drawer
+        variant={'persistent'}
+        anchor={isWidthUp('sm', width) ? 'right' : 'bottom'}
+        open={drawerOpen}
+        onClose={onDrawerClose}
+        BackdropProps={{invisible: true}}
+        classes={{paper: classes.drawerPaper}}
+      >
+        <Grid container justify={'flex-end'}>
+          <Grid item>
+            <Tooltip title={'Locate on map '}>
+              <ButtonBase className={classes.actionButton} aria-label={'Locate on map'} onClick={focusPointOnMap}>
+                <MyLocation className={classes.icon} />
+              </ButtonBase>
+            </Tooltip>
+          </Grid>
+          <Grid item>
+            <Tooltip title={'Close'}>
+              <ButtonBase className={classes.actionButton} aria-label={'Close sidebar'} onClick={onDrawerClose}>
+                <Close className={classes.icon} />
+              </ButtonBase>
+            </Tooltip>
+          </Grid>
+        </Grid>
+        <div
+          className={classes.articleContainer}
+          ref={articleContainerRef}
+          dangerouslySetInnerHTML={{__html: selectedHtml}}
+        />
+      </Drawer>
+    </>
+  );
 }
-
-export default flow([withWidth(), withStyles(styles, {withTheme: true})])(MapPage);

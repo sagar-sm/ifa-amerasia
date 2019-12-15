@@ -56,8 +56,7 @@ class CreditsPage extends Component {
             </a>
           </h4>
           Jason Varone is an artist and designer based in both the Berkshires and New York City. He has been the Web &
-          Electronic Media Manager at the Institute of Fine Arts since 2008. Examples of his artwork can be found
-          at{' '}
+          Electronic Media Manager at the Institute of Fine Arts since 2008. Examples of his artwork can be found at{' '}
           <a href={'http://varonearts.com/'} target={'_blank'} style={{textDecoration: 'underline', color: 'black'}}>
             varonearts.com
           </a>
@@ -130,9 +129,9 @@ class CreditsPage extends Component {
           identities tied to art objects in the age of globalization.
         </div>
         <div className={classes.credit}>
-          <img src={'neh-header.svg'}/>
-          <br/>
-          <br/>
+          <img src={'neh-header.svg'} />
+          <br />
+          <br />
           This project was generously funded by a National Endowment for the Humanities Collaborative Research Grant.
         </div>
       </Wrapper>

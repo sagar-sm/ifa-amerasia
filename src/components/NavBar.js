@@ -66,7 +66,7 @@ const styles = theme => ({
     pointerEvents: 'none',
     display: 'flex',
     alignItems: 'center',
-    paddingLeft: theme.spacing.unit
+    paddingLeft: theme.spacing(1)
   },
   inputRoot: {
     color: 'inherit',
