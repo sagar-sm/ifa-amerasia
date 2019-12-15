@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cca36d4-bd73-4630-822b-8c87116aa3d4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/AboutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +103,7 @@
       <workItem from="1573845712007" duration="1257000" />
       <workItem from="1575399457939" duration="2708000" />
       <workItem from="1575490956062" duration="2164000" />
-      <workItem from="1576381229537" duration="15422000" />
+      <workItem from="1576381229537" duration="15618000" />
     </task>
     <task id="LOCAL-00001" summary="height fix for Safari mobile">
       <created>1542043474788</created>
@@ -307,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576448290208</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="fix target blank security risks">
+      <created>1576448328008</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1576448328008</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TodoView">

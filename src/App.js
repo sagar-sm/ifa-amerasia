@@ -85,14 +85,16 @@ class App extends Component {
 
                 <DialogActions>
                   <Grid container justify={'center'}>
-                    <Link to={'/'} style={{textDecoration: 'none'}}>
-                      <Button color={'textPrimary'} onClick={this.closeWelcomeDialog}>
+                    <Link to={'/'} style={{textDecoration: 'none', color: 'inherit'}}>
+                      <Button color={'textPrimary'} onClick={this.closeWelcomeDialog} style={{padding: 8}}>
                         Explore the Map
                       </Button>
                     </Link>
                     &nbsp; &nbsp;
-                    <Link to={'/about'} style={{textDecoration: 'none'}}>
-                      <Button onClick={this.closeWelcomeDialog}>Read More about the Project</Button>
+                    <Link to={'/about'} style={{textDecoration: 'none', color: 'inherit'}}>
+                      <Button onClick={this.closeWelcomeDialog} style={{padding: 8}}>
+                        Read more about the project
+                      </Button>
                     </Link>
                   </Grid>
                 </DialogActions>
