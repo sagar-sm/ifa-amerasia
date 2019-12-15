@@ -26,6 +26,7 @@ const styles = theme => ({
     backgroundColor: '#c2ab8a'
   },
   navLink: {
+    color: 'inherit',
     textDecoration: 'none'
   },
   headerItem: {
@@ -59,7 +60,7 @@ const styles = theme => ({
     }
   },
   searchIcon: {
-    width: theme.spacing.unit * 5,
+    width: theme.spacing(5),
     height: '100%',
     position: 'absolute',
     pointerEvents: 'none',
@@ -72,10 +73,10 @@ const styles = theme => ({
     width: '100%'
   },
   inputInput: {
-    paddingTop: theme.spacing.unit,
-    paddingRight: theme.spacing.unit,
-    paddingBottom: theme.spacing.unit,
-    paddingLeft: theme.spacing.unit * 6,
+    paddingTop: theme.spacing(1),
+    paddingRight: theme.spacing(1),
+    paddingBottom: theme.spacing(1),
+    paddingLeft: theme.spacing(6),
     width: '100%'
   },
   navLinksContainer: {
@@ -154,7 +155,15 @@ class NavBar extends React.Component {
 
   renderSearchResult = (item, isHighlighted) => {
     return (
-      <MenuItem key={`search-result-${item.id}`} style={{background: isHighlighted ? 'lightgray' : 'white'}}>
+      <MenuItem
+        key={`search-result-${item.id}`}
+        style={{
+          width: '100%',
+          justifyContent: 'flex-start',
+          background: isHighlighted ? 'lightgray' : 'white',
+          padding: 8
+        }}
+      >
         {item.title}
       </MenuItem>
     );
@@ -195,11 +204,17 @@ class NavBar extends React.Component {
                   shouldItemRender={this.shouldItemRender}
                   renderInput={this.renderInput}
                   renderItem={this.renderSearchResult}
-                  wrapperStyle={{display: 'flex'}}
+                  wrapperStyle={{display: 'flex', flexDirection: 'column'}}
+                  menuStyle={{
+                    width: 300,
+                    overflowY: 'auto',
+                    position: 'fixed',
+                    background: '#ffffff'
+                  }}
                 />
               </Grid>
               <Grid item className={`${classes.headerItem} ${classes.navLinksContainer}`}>
-                <Grid container spacing={16} justify={'flex-end'}>
+                <Grid container spacing={2} justify={'flex-end'}>
                   <Grid item>
                     <Link to={'/about'} className={classes.navLink}>
                       <Typography variant={'button'}>ABOUT</Typography>

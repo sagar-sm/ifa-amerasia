@@ -16,7 +16,7 @@ const styles = theme => ({
   },
   debugContainer: {
     width: '20vw',
-    padding: 2 * theme.spacing.unit,
+    padding: theme.spacing(2),
     borderLeft: `2px solid ${theme.palette.grey[300]}`
   },
   pre: {

@@ -58,7 +58,7 @@ const styles = theme => ({
     zIndex: 1, // so it appears below the NavBar
     width: drawerWidthSm,
     height: '50vh',
-    padding: 2 * theme.spacing.unit,
+    padding: theme.spacing(2),
 
     [theme.breakpoints.up('sm')]: {
       width: drawerWidthMd,
@@ -149,6 +149,10 @@ export class MapPage extends Component {
       selectedHtml: point.html
     });
   };
+
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+    return false;
+  }
 
   makeMarkerClickHandler = point => () => {
     if (this.props.match.params.id !== point.id) {
