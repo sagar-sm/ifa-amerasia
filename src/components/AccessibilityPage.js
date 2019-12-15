@@ -16,6 +16,7 @@ class AccessibilityPage extends Component {
           <a
             href={'https://www.nyu.edu/footer/accessibility.html'}
             target={'_blank'}
+            rel='noopener noreferrer'
             style={{textDecoration: 'underline', color: 'black'}}
           >
             Read the University&#8217;s statement on accessibility

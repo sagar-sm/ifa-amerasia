@@ -65,6 +65,7 @@ class AboutPage extends Component {
           <a
             href={'http://www.ifaresearch.org/amerasia/pdfs/HorodowichNagelAmerasiaarticleJEMHoffprint.pdf'}
             target={'_blank'}
+            rel='noopener noreferrer'
             style={{textDecoration: 'underline', color: 'black'}}
           >
             &ldquo;Amerasia: European Reflections of an Emergent World, 1492-ca.1700,&rdquo;

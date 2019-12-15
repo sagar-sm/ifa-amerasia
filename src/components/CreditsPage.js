@@ -20,6 +20,7 @@ class CreditsPage extends Component {
             <a
               href={'https://history.nmsu.edu/people/faculty/horodowich/'}
               target={'_blank'}
+              rel='noopener noreferrer'
               style={{textDecoration: 'underline', color: 'black'}}
             >
               Elizabeth Horodowich
@@ -37,6 +38,7 @@ class CreditsPage extends Component {
             <a
               href={'https://www.nyu.edu/gsas/dept/fineart/people/faculty/nagel.htm'}
               target={'_blank'}
+              rel='noopener noreferrer'
               style={{textDecoration: 'underline', color: 'black'}}
             >
               Alexander Nagel
@@ -51,20 +53,35 @@ class CreditsPage extends Component {
           <h3>Lead Designer</h3>
           <h4>
             {' '}
-            <a href={'http://varonearts.com/'} target={'_blank'} style={{textDecoration: 'underline', color: 'black'}}>
+            <a
+              href={'http://varonearts.com/'}
+              target={'_blank'}
+              rel='noopener noreferrer'
+              style={{textDecoration: 'underline', color: 'black'}}
+            >
               Jason Varone
             </a>
           </h4>
           Jason Varone is an artist and designer based in both the Berkshires and New York City. He has been the Web &
           Electronic Media Manager at the Institute of Fine Arts since 2008. Examples of his artwork can be found at{' '}
-          <a href={'http://varonearts.com/'} target={'_blank'} style={{textDecoration: 'underline', color: 'black'}}>
+          <a
+            href={'http://varonearts.com/'}
+            target={'_blank'}
+            rel='noopener noreferrer'
+            style={{textDecoration: 'underline', color: 'black'}}
+          >
             varonearts.com
           </a>
         </div>
 
         <div className={classes.credit}>
           <h3>Data Visualization and Development</h3>
-          <a href={'https://ssm.wiki'} target={'_blank'} style={{textDecoration: 'underline', color: 'black'}}>
+          <a
+            href={'https://ssm.wiki'}
+            target={'_blank'}
+            rel='noopener noreferrer'
+            style={{textDecoration: 'underline', color: 'black'}}
+          >
             <h4>Sagar Mohite</h4>
           </a>
           Sagar Mohite is an interdisciplinary computational artist and an engineer based in New York City. Sagar
