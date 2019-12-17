@@ -1,7 +1,7 @@
 import {blue, pink} from '@material-ui/core/colors';
 
-// const myColor = '#ff58da';
-// const myColor2 = '#666';
+// const myPink = '#ff58da';
+// const myBlue = '#009cff';
 
 export const DATA = [
   // {
