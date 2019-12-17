@@ -1,4 +1,4 @@
-import {blue, pink} from '@material-ui/core/colors';
+import {blue, pink, yellow} from '@material-ui/core/colors';
 
 // const myPink = '#ff58da';
 // const myBlue = '#009cff';
@@ -32,7 +32,7 @@ export const DATA = [
     html: require('./articles/lipsman-parrots.html'),
     title: 'The Parrot’s Tale: the Bird’s Fall from Exotic Temptation to Common Commodity',
     keywords: 'Parrot, Macaw, Van Eyck, Dürer, Sarto, Rubens, Brazil, Cantino, Mappamundi, Paradise, Adam, Eve',
-    pinColor: pink[100]
+    pinColor: yellow[400]
   },
   {
     id: 'cartouche-reader',
@@ -62,6 +62,16 @@ export const DATA = [
     pinColor: blue[300]
   },
   {
+    id: 'cartouche-america-connected',
+    x: 0.342,
+    y: 0.201,
+    html: require('./articles/cartouche-america-connected.html'),
+    title: 'Cartouche: America connected to the eastern lands: Transcription and Translation',
+    keywords:
+      'Peter Martyr, Asia, Africa, Europe, India, Tartary, Florida, Acolhuacan, Columbus, Ganges, Hyperborean, Australian',
+    pinColor: blue[300]
+  },
+  {
     id: 'walsh-utopia',
     x: 0.376,
     y: 0.412,
@@ -69,7 +79,7 @@ export const DATA = [
     title: 'Antiquity Beyond the Horizon: Thomas More’s Utopia and the New World',
     keywords:
       'Thomas More, Vespucci, America, Utopia, New World, Ringmann, Waldseemüller, Thevet, Foucault, heterotopia',
-    pinColor: pink[100]
+    pinColor: yellow[400]
   },
   {
     id: 'weitzman-armeria',
@@ -79,7 +89,7 @@ export const DATA = [
     title: 'Conceptualizing Amerasia: Medici Worldview in Ludovico Buti’s Armory frescoes',
     keywords:
       'Ferdinando I de’ Medici, Uffizi, Buti, Mason, Markey, Keating, Asia, America, Brazil, Rhinoceros, Weiditz, Boone, Stradano, Vespucci, Sahagún, Lazzaro, Burgkmair, Hogenberg, Braun, Mason, Guardaroba, Ortelius, Danti',
-    pinColor: pink[100]
+    pinColor: yellow[400]
   },
   {
     id: 'wu-tangut-cathay-mangi',
@@ -89,7 +99,7 @@ export const DATA = [
     title: 'Tangut, Cathay, and Mangi on Sixteenth-Century World Maps',
     keywords:
       'Tangut, Cathay, Mangi, Marco Polo, Rosselli, Finé, Waldseemüller, Behaim, Zaiton, Gastaldi, Anian, Ortelius, Ruysch, Ramusio, Mexico, Gruzinski, O’Gorman',
-    pinColor: pink[100]
+    pinColor: yellow[400]
   },
   {
     id: 'pivar-presterjohn',
@@ -99,7 +109,7 @@ export const DATA = [
     title: 'Prester John and The Search for a Christian Utopia',
     keywords:
       'Prester John, Ethiopia, Africa, India, Marco Polo, Abyssinia, Mandeville, Dati, Schedel, Juan de la Cosa, Waldseemüller, Ringmann, Alvares, Olives, Ortelius, Orla, Larmessin, D’Almeida',
-    pinColor: pink[100]
+    pinColor: yellow[400]
   },
   {
     id: 'strauss-magi',
@@ -109,7 +119,7 @@ export const DATA = [
     title: 'Looking Westward: The Image of the American Magus in the Age of Exploration',
     keywords:
       'Tharsis, Balthasar, Melchior, Caspar, Magi, Fernandes, Cabral, Koerner, Prester John, Vespucci, Marco Polo, Inca, Tupinamba, Dürer, Holanda, Mason, Russo, Maino, Moctezuma,',
-    pinColor: pink[100]
+    pinColor: yellow[400]
   },
   {
     id: 'riccio-india',
@@ -119,7 +129,7 @@ export const DATA = [
     title: 'India and indiano: the persistence of Amerasia in the Italian language',
     keywords:
       'India, Indiano, Marco Polo, Danti, Guardaroba, Sarto, Ariosto, Tasso, Vasari, ALdrovandi, Benavides, Dürer, Altdorfer, Burgkmair',
-    pinColor: pink[100]
+    pinColor: yellow[400]
   },
   {
     id: 'agnew-hieroglyphics',
@@ -129,7 +139,7 @@ export const DATA = [
     title: '(Afro-)Amerasian Hieroglyphics?',
     keywords:
       'Cospi, hieroglyphic, Mixtec, China, writing, Legato, Mendoza, Thevet, Alciato, Valeriano, Dolendo, Mander, Kircher, Hakluyt',
-    pinColor: pink[100]
+    pinColor: yellow[400]
   },
   {
     id: 'raitt-florentinecodex',
@@ -139,7 +149,7 @@ export const DATA = [
     title: 'Another Indianness: Re-Imagining the Diversity of Figuration in the Florentine Codex',
     keywords:
       'Sahagún, Florentine Codex, Cortés, Tenochtitlan, Aztec, Nahua, Tlatelolco, Indians, tlacuilos, Gruzinksi, Markey, Ferdinando I de’ Medici, Weiditz, Mostaert, Zucchi, Collaert, Magaloni, Russo, Boone',
-    pinColor: pink[100]
+    pinColor: yellow[400]
   },
   {
     id: 'aethiopia-media',
@@ -554,7 +564,7 @@ export const DATA = [
     html: require('./articles/walsh-thomas.html'),
     title: 'Saint Thomas, Evangelist of the Indies',
     Keywords: 'Saint Thomas',
-    pinColor: pink[100]
+    pinColor: yellow[400]
   },
   {
     id: 'riccio-ophir',
@@ -563,7 +573,7 @@ export const DATA = [
     html: require('./articles/riccio-ophir.html'),
     title: 'Ophir displaced',
     Keywords: 'Ophir displaced',
-    pinColor: pink[100]
+    pinColor: yellow[400]
   },
   {
     id: 'riccio-ophir',
@@ -572,7 +582,7 @@ export const DATA = [
     html: require('./articles/riccio-ophir.html'),
     title: 'Ophir displaced',
     Keywords: 'Ophir displaced',
-    pinColor: pink[100]
+    pinColor: yellow[400]
   },
   {
     id: 'riccio-ophir',
@@ -581,7 +591,7 @@ export const DATA = [
     html: require('./articles/riccio-ophir.html'),
     title: 'Ophir displaced',
     Keywords: 'Ophir displaced',
-    pinColor: pink[100]
+    pinColor: yellow[400]
   },
   {
     id: 'zaphala',
