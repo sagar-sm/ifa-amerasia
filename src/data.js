@@ -1,7 +1,7 @@
 import {blue, pink} from '@material-ui/core/colors';
 
-const myColor = '#ff58da';
-const myColor2 = '#666';
+// const myColor = '#ff58da';
+// const myColor2 = '#666';
 
 export const DATA = [
   // {
@@ -22,7 +22,7 @@ export const DATA = [
     title: 'Cartouche Temixitan/TenochtitlanTranscription and Translation',
     keywords:
       'Tenochtitlan, Quinsay, Marco Polo, Montezuma, Cortes, Quinsai, Oderic of Pordenone, Venice, Cortés, Francis',
-    pinColor: myColor, // NOTE: Jason will fix this
+    pinColor: blue[300], // NOTE: Jason will fix this
     pinTooltip: 'Tenochtitlan: Transcription and Translation'
   },
   {
