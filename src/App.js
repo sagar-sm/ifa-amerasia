@@ -21,7 +21,7 @@ import MapPage from './components/MapPage';
 import NavBar from './components/NavBar';
 import {theme} from './theme';
 
-const lsKey = 'welcomeDialogLastSeen';
+const lsKey = "welcomeDialogLastSeen";
 const history = createHashHistory();
 class App extends Component {
   state = {
@@ -43,7 +43,7 @@ class App extends Component {
 
   closeWelcomeDialog = () => {
     window.localStorage.setItem(lsKey, Date.now().toString());
-    this.setState({welcomeDialogOpen: false});
+    this.setState({ welcomeDialogOpen: false });
   };
 
   render() {
@@ -51,48 +51,75 @@ class App extends Component {
       <>
         <MuiThemeProvider theme={theme}>
           <CssBaseline />
-          <HashRouter hashType={'noslash'} history={history}>
+          <HashRouter hashType={"noslash"} history={history}>
             <>
               <NavBar />
               <Switch>
-                <Route exact path={'/'} component={MapPage} />
-                <Route exact path={'/debug'} component={MapDebugPage} />
-                <Route exact path={'/about'} component={AboutPage} />
-                <Route exact path={'/credits'} component={CreditsPage} />
-                <Route exact path={'/accessibility'} component={AccessibilityPage} />
+                <Route exact path={"/"} component={MapPage} />
+                <Route exact path={"/debug"} component={MapDebugPage} />
+                <Route exact path={"/about"} component={AboutPage} />
+                <Route exact path={"/credits"} component={CreditsPage} />
+                <Route
+                  exact
+                  path={"/accessibility"}
+                  component={AccessibilityPage}
+                />
 
                 {/* IMPORTANT NOTE: This route MUST be at the end */}
-                <Route exact path={'/:id'} component={MapPage} />
+                <Route exact path={"/:id"} component={MapPage} />
               </Switch>
-              <Dialog open={this.state.welcomeDialogOpen} onClose={this.closeWelcomeDialog}>
+              <Dialog
+                open={this.state.welcomeDialogOpen}
+                onClose={this.closeWelcomeDialog}
+              >
                 <DialogTitle>
-                  <img src={'amerasia-logo-black.png'} width={200} />
+                  <img src={"amerasia-logo-black.png"} width={200} />
                 </DialogTitle>
                 <DialogContent>
                   <DialogContentText>
-                    In 1545, the German mathematician and cartographer Caspar Vopel (1511-1561) designed a famous and
-                    influential map of the world, <i>A New Complete and Universal Description of the Whole World</i>{' '}
-                    that depicts Asia and America overlapping on the same landmass.
+                    In 1545, the German mathematician and cartographer Caspar
+                    Vopel (1511-1561) designed a famous and influential map of
+                    the world,{" "}
+                    <i>
+                      A New Complete and Universal Description of the Whole
+                      World
+                    </i>
+                    , that depicts Asia and America overlapping on the same
+                    landmass.
                   </DialogContentText>
                   &nbsp; &nbsp;
                   <DialogContentText>
-                    Using an interactive, high-definition interface, this website explores the map’s content. Blue pins
-                    indicate translated cartouches, and pink pins offer more extended essays pegged to sites with
-                    particular Amerasian significance. To explore the map without the pins, please use the controls in
-                    the upper left-hand corner of the home page.
+                    Using an interactive, high-definition interface, this
+                    website explores the map’s content. Blue pins indicate
+                    translated cartouches, pink pins offer short entries on
+                    sites with particular Amerasian significance, and yellow
+                    pins offer extended essays on Amerasian themes.
                   </DialogContentText>
                 </DialogContent>
 
                 <DialogActions>
-                  <Grid container justify={'center'}>
-                    <Link to={'/'} style={{textDecoration: 'none', color: 'inherit'}}>
-                      <Button color={'textPrimary'} onClick={this.closeWelcomeDialog} style={{padding: 8}}>
+                  <Grid container justify={"center"}>
+                    <Link
+                      to={"/"}
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      <Button
+                        color={"textPrimary"}
+                        onClick={this.closeWelcomeDialog}
+                        style={{ padding: 8 }}
+                      >
                         Explore the Map
                       </Button>
                     </Link>
                     &nbsp; &nbsp;
-                    <Link to={'/about'} style={{textDecoration: 'none', color: 'inherit'}}>
-                      <Button onClick={this.closeWelcomeDialog} style={{padding: 8}}>
+                    <Link
+                      to={"/about"}
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      <Button
+                        onClick={this.closeWelcomeDialog}
+                        style={{ padding: 8 }}
+                      >
                         Read more about the project
                       </Button>
                     </Link>
