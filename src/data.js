@@ -193,8 +193,8 @@ export const DATA = [
   },
   {
     id: 'bangala',
-    x: 0.172,
-    y: 0.123,
+    x: 0.182,
+    y: 0.109,
     html: require('./articles/bangala.html'),
     title: 'Bangala',
     keywords: 'Bengal, Idolatry, maize, galanga, ginger, sugar, Bangella',
