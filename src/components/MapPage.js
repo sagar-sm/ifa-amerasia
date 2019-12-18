@@ -134,7 +134,7 @@ export default function MapPage(props) {
 
     const point = find(DATA, {id: props.match.params.id});
     if (point && viewer) {
-      navigateTo(point);
+      setTimeout(() => navigateTo(point), 700);
     }
   }, [props.match.params.id]);
 
