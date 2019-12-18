@@ -90,6 +90,8 @@ const useStyles = makeStyles(theme => ({
 
 const articleUrls = new Set(DATA.map(d => d.id));
 
+let viewer;
+
 export default function MapPage(props) {
   const classes = useStyles();
   const width = useWidth();
@@ -101,7 +103,6 @@ export default function MapPage(props) {
   const [showPins, setShowPins] = useState(true);
   const [selectedHtml, setSelectedHtml] = useState('');
 
-  let viewer;
   useEffect(() => {
     viewer = OpenSeadragon({
       element: containerRef.current,
