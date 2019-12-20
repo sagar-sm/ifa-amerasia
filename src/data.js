@@ -1,7 +1,7 @@
 import {blue, pink, yellow} from '@material-ui/core/colors';
 
-// const myPink = '#ff58da';
-// const myBlue = '#009cff';
+const myPink = '#ff58da';
+const myBlue = '#009cff';
 
 export const DATA = [
   // {
@@ -559,8 +559,8 @@ export const DATA = [
   },
   {
     id: 'walsh-thomas',
-    x: 0.2,
-    y: 0.2,
+    x: 0.106,
+    y: 0.128,
     html: require('./articles/walsh-thomas.html'),
     title: 'Saint Thomas, Evangelist of the Indies',
     Keywords: 'Saint Thomas',
@@ -575,15 +575,15 @@ export const DATA = [
     Keywords: 'Ophir displaced',
     pinColor: yellow[400]
   },
-  {
-    id: 'riccio-ophir',
-    x: 0.106,
-    y: 0.128,
-    html: require('./articles/riccio-ophir.html'),
-    title: 'Ophir displaced',
-    Keywords: 'Ophir displaced',
-    pinColor: yellow[400]
-  },
+  // {
+  //   id: 'riccio-ophir',
+  //   x: 0.106,
+  //   y: 0.128,
+  //   html: require('./articles/riccio-ophir.html'),
+  //   title: 'Ophir displaced',
+  //   Keywords: 'Ophir displaced',
+  //   pinColor: yellow[400]
+  // },
   {
     id: 'riccio-ophir',
     x: 0.424,
