@@ -109,7 +109,7 @@ export default function MapPage(props) {
   const articleContainerRef = useRef();
 
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [showPins, setShowPins] = useState(true);
+  const [hidePins, setHidePins] = useState(true);
   const [selectedHtml, setSelectedHtml] = useState('');
 
   useEffect(() => {
@@ -170,7 +170,7 @@ export default function MapPage(props) {
   const createOverlaysFromData = () => {
     return DATA.map(point => {
       const locationElement = document.createElement('button');
-      locationElement.className = classes.pinIcon;
+      locationElement.className = `${classes.pinIcon} pinToggler`;
       locationElement.style.cssText = `position: absolute; width: 32px; height: 32px; cursor: pointer; border: 0; background: transparent`;
       locationElement.setAttribute('aria-label', point.pinTooltip || point.title);
       locationElement.innerHTML = getPinIconSvgMarkup(point, classes.pinTooltip);
@@ -189,10 +189,10 @@ export default function MapPage(props) {
   };
 
   const togglePins = () => {
-    setShowPins(prevState => !prevState);
-    document.querySelectorAll(`.locationPin`).forEach(elem => {
-      elem.style.display = showPins ? 'block' : 'none';
+    document.querySelectorAll(`.pinToggler`).forEach(elem => {
+      elem.style.display = hidePins ? 'none' : 'block';
     });
+    setHidePins(prevState => !prevState);
   };
 
   const onDrawerClose = () => {
@@ -248,7 +248,7 @@ export default function MapPage(props) {
                 <ZoomOutMap className={classes.icon} />
               </ButtonBase>
             </Tooltip>
-            <Tooltip title={showPins ? 'Hide Pins' : 'Show Pins'} placement={'left'}>
+            <Tooltip title={hidePins ? 'Hide Pins' : 'Show Pins'} placement={'left'}>
               <ButtonBase
                 onClick={togglePins}
                 className={classes.actionButton}
@@ -258,7 +258,7 @@ export default function MapPage(props) {
                 <Place
                   className={cx({
                     [classes.icon]: true,
-                    [classes.highlightedIcon]: !showPins
+                    [classes.highlightedIcon]: !hidePins
                   })}
                 />
               </ButtonBase>
