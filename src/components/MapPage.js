@@ -1,13 +1,10 @@
 import {makeStyles} from '@material-ui/core';
 import ButtonBase from '@material-ui/core/ButtonBase/ButtonBase';
-import {yellow} from '@material-ui/core/colors';
 import Drawer from '@material-ui/core/Drawer/Drawer';
 import Grid from '@material-ui/core/Grid/Grid';
-import IconButton from '@material-ui/core/IconButton/IconButton';
 import Tooltip from '@material-ui/core/Tooltip/Tooltip';
 import {isWidthUp} from '@material-ui/core/withWidth';
 import Close from '@material-ui/icons/Close';
-import LocationOn from '@material-ui/icons/LocationOn';
 import MyLocation from '@material-ui/icons/MyLocation';
 import Place from '@material-ui/icons/Place';
 import ZoomIn from '@material-ui/icons/ZoomIn';
@@ -17,12 +14,10 @@ import cx from 'classnames';
 import {find} from 'lodash';
 import OpenSeadragon from 'openseadragon';
 import React, {useEffect, useRef, useState} from 'react';
-import ReactDOM from 'react-dom';
 import {DATA} from '../data';
 import {useWidth} from '../useWidth';
+import {getPinIconSvgMarkup} from './getPinIconSvgMarkup';
 import {headerHeight} from './NavBar';
-
-const IMMEDIATE_PAN_NAVIGATION = false;
 
 const drawerWidth = 500;
 const drawerWidthMd = 350;
@@ -82,9 +77,23 @@ const useStyles = makeStyles(theme => ({
     overflowX: 'hidden',
     overflowY: 'auto'
   },
+  pinIcon: {
+    '&:hover $pinTooltip': {
+      opacity: 1,
+      visibility: 'visible'
+    }
+  },
   pinTooltip: {
-    background: theme.palette.background.default,
-    color: theme.palette.text.primary
+    position: 'absolute',
+    top: '100%',
+    left: '100%',
+    zIndex: 10,
+    background: 'rgba(255,255,255,0.9)',
+    padding: '3px 5px',
+    borderRadius: 2,
+    opacity: 0,
+    transition: theme.transitions.create(['opacity']),
+    visibility: 'hidden'
   }
 }));
 
@@ -121,7 +130,7 @@ export default function MapPage(props) {
     if (props.match.params.id) {
       const point = find(DATA, {id: props.match.params.id});
       if (point) {
-        setTimeout(() => navigateTo(point), 700);
+        setTimeout(() => navigateTo(point), 1200); // hack: long timeout to allow for canvas load
       }
     }
   }, []);
@@ -134,26 +143,22 @@ export default function MapPage(props) {
 
     const point = find(DATA, {id: props.match.params.id});
     if (point && viewer) {
-      setTimeout(() => navigateTo(point), 700);
+      navigateTo(point);
     }
   }, [props.match.params.id]);
 
   function navigateTo(point) {
     const target = new OpenSeadragon.Point(point.x, point.y);
-    viewer.viewport.panTo(target, IMMEDIATE_PAN_NAVIGATION);
+    viewer.viewport.zoomTo(9, target);
+
     // Timeout to cancel out race condition with zoom animation
     setTimeout(() => {
-      viewer.viewport.zoomTo(9, target);
-    }, 700);
+      viewer.viewport.panTo(target);
+    }, 300);
 
     setDrawerOpen(true);
     setSelectedHtml(point.html);
   }
-
-  const makeMarkerClickHandler = point => () => {
-    history.pushState(null, null, `#${point.id}`);
-    navigateTo(point);
-  };
 
   const focusPointOnMap = () => {
     const point = find(DATA, {id: props.match.params.id});
@@ -164,34 +169,21 @@ export default function MapPage(props) {
 
   const createOverlaysFromData = () => {
     return DATA.map(point => {
-      const clickHandler = makeMarkerClickHandler(point);
-      const locationMarker = (
-        <Tooltip title={point.pinTooltip || point.title} classes={{tooltip: classes.pinTooltip}}>
-          <IconButton className={'locationPin'} id={point.id} aria-label={point.id} onClick={clickHandler}>
-            <LocationOn
-              style={{
-                fontSize: '.7em',
-                color: point.pinColor || yellow[400],
-                cursor: 'pointer'
-              }}
-            />
-          </IconButton>
-        </Tooltip>
-      );
+      const locationElement = document.createElement('button');
+      locationElement.className = classes.pinIcon;
+      locationElement.style.cssText = `position: absolute; width: 32px; height: 32px; cursor: pointer; border: 0; background: transparent`;
+      locationElement.setAttribute('aria-label', point.pinTooltip || point.title);
+      locationElement.innerHTML = getPinIconSvgMarkup(point, classes.pinTooltip);
 
-      const locationMarkerContainer = document.createElement('div');
-      ReactDOM.render(locationMarker, locationMarkerContainer);
+      const clickHandler = () => {
+        props.history.push(point.id);
+      };
 
-      // Note: we only need this for mobile support for now
-      new OpenSeadragon.MouseTracker({
-        element: locationMarkerContainer,
-        clickHandler: clickHandler
-      });
-
+      locationElement.onclick = clickHandler;
       return {
         ...point,
         placement: OpenSeadragon.Placement.CENTER,
-        element: locationMarkerContainer
+        element: locationElement
       };
     });
   };
@@ -205,7 +197,7 @@ export default function MapPage(props) {
 
   const onDrawerClose = () => {
     setDrawerOpen(false);
-    history.pushState(null, null, '#');
+    props.history.push('/');
   };
 
   const calcMapDimensions = () => {
