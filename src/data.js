@@ -548,7 +548,7 @@ export const DATA = [
     pinColor: pink[100]
   },
   {
-    id: 'zonal-hemispherical-maps',
+    id: 'zonal-hemispherical-maps2',
     x: 0.642,
     y: 0.032,
     html: require('./articles/zonal-hemispherical-maps.html'),
@@ -585,7 +585,7 @@ export const DATA = [
   //   pinColor: yellow[400]
   // },
   {
-    id: 'riccio-ophir',
+    id: 'riccio-ophir2',
     x: 0.424,
     y: 0.446,
     html: require('./articles/riccio-ophir.html'),
