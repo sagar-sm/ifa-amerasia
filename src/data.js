@@ -559,8 +559,10 @@ export const DATA = [
   },
   {
     id: 'walsh-thomas',
-    x: 0.106,
-    y: 0.128,
+    x: 0.758,
+    y: 0.139,
+    // x: 0.106,
+    // y: 0.128,
     html: require('./articles/walsh-thomas.html'),
     title: 'Saint Thomas, Evangelist of the Indies',
     Keywords: 'Saint Thomas',
@@ -568,8 +570,8 @@ export const DATA = [
   },
   {
     id: 'riccio-ophir',
-    x: 0.758,
-    y: 0.139,
+    x: 0.874,
+    y: 0.118,
     html: require('./articles/riccio-ophir.html'),
     title: 'Ophir displaced',
     Keywords: 'Ophir displaced',
@@ -595,8 +597,8 @@ export const DATA = [
   },
   {
     id: 'zaphala',
-    x: 0.647,
-    y: 0.42,
+    x: 0.711,
+    y: 0.379,
     html: require('./articles/zaphala.html'),
     title: 'Zaphala',
     Keywords:
