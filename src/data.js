@@ -577,24 +577,6 @@ export const DATA = [
     Keywords: 'Ophir displaced',
     pinColor: yellow[400]
   },
-  // {
-  //   id: 'riccio-ophir',
-  //   x: 0.106,
-  //   y: 0.128,
-  //   html: require('./articles/riccio-ophir.html'),
-  //   title: 'Ophir displaced',
-  //   Keywords: 'Ophir displaced',
-  //   pinColor: yellow[400]
-  // },
-  {
-    id: 'riccio-ophir2',
-    x: 0.424,
-    y: 0.446,
-    html: require('./articles/riccio-ophir.html'),
-    title: 'Ophir displaced',
-    Keywords: 'Ophir displaced',
-    pinColor: yellow[400]
-  },
   {
     id: 'zaphala',
     x: 0.711,
